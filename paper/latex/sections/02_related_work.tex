@@ -1,0 +1,198 @@
+% GENERATED from paper/draft/02_related_work.md by build.py — do not edit
+\section{Background and related work}
+
+\textbf{Delegation and trust in multi-agent systems.} \citet{castelfranchi1998delegation} define delegation as one agent
+relying on another for a task, and grade it from weak to strict and from open to closed. Their socio-cognitive account
+makes trust a decision to delegate, indexed by trustor, trustee, context, task and goal, and grounded in beliefs about
+competence, willingness and opportunity (\citealp{castelfranchi2000trust}). \citet{scerri2002adjustable} cast adjustable
+autonomy as a cost-sensitive transfer of control between agent and human, but their model \emph{assumes} a given quality
+of agent decisions. \citet{lee2004trust} ask for reliance calibrated to the system's real capability. Work on trust
+across tasks shows that trust can be transferred by matching task requirements to agent features
+(\citealp{falcone2008generalizing}; \citealp{venanzi2011facing}), that category priors should give way to direct evidence
+(\citealp{burnett2010bootstrapping}), and that transfer follows task similarity, from harder tasks to easier ones
+(\citealp{soh2020multitask}). \citet{tomasev2026delegation} bring this tradition to LLM agents. They propose authority
+graduated by trust, with ``algorithmic circuit breakers'' for revocation and behavioural metrics as trust signals, and
+they note that current systems ``lack robust mechanisms for the dynamic assessment of competence''. Their framework is
+conceptual, without a measurement procedure or evaluation. \emph{We give an operational instance, tested in a
+pre-registered pilot: competence is estimated per decision class from intervention tests rather than assumed (Scerri) or
+read from reputation.}
+
+\textbf{Reasons-responsiveness and meaningful human control.} \citet{fischer1998responsibility} ground responsibility in
+a decision mechanism that is moderately reasons-responsive: it recognises reasons and reacts to them across a range of
+circumstances. \citet{santonidesio2018mhc} recast this as the \emph{tracking} condition of meaningful human control. A
+system must ``demonstrably and verifiably'' respond to the relevant human reasons, and good results can come from
+``tracking the wrong property''. \citet{mecacci2020mhc} operationalise tracking for dual-mode vehicles, and
+\citet{veluwenkamp2022reasons} argues that the reasons tracked must be normative. CARE-Drive (\citealp{suryana2026caredrive})
+is the first behavioural test of tracking for a foundation model. It varies decision facts and prompt-supplied reasons
+for a single-step driving model and estimates the sensitivity of its decisions. It has no per-case ground truth for
+which fact should decide, no escalation option, and no link to delegation, and it does not separate recognising a reason
+from acting on it. \emph{DSA carries the tracking test to multi-step agents and to external evidence whose decisive role
+and redundancy are set by construction, relative to one reading of the policy. It scores receptivity and reactivity
+separately and uses the resulting profile to allocate autonomy.}
+
+\textbf{Traces, provenance and auditability.} Structured provenance has a long history (\citealp{w3c2013provo}). For LLM
+agents, LEDGER builds layered claim-to-evidence graphs over observed sessions and states the problem crisply:
+``Visibility, however, is not the same as auditability'' (\citealp{kim2026ledger}). TRACE specifies a typed record that must
+exist before any durable state change, and leaves to each consumer the policy that maps a verdict to an action
+(\citealp{chang2026trace}). DNative-Twin takes the committed decision as its unit of replay and comparison, and treats
+authority as ``granted in advance'' (\citealp{pang2026dnative}). DEMM grades whether a decision's evidence suffices for an
+external audit and warns against the ``container fallacy'' (\citealp{solozobov2026demm}). Graph of Trace records the agent's
+own declared dependencies as justification edges (\citealp{gao2026graphoftrace}). A recent survey organises the field around
+six trust functions: verification, attribution, debugging, safety enforcement, audit and recovery. It lists an
+authorization relation as open (\citealp{wang2026survey}). \emph{These systems make decisions inspectable. None tests whether
+the recorded grounds are what the decision depends on, and none decides what an agent may do next.}
+
+\textbf{Faithfulness and evidence interventions.} Stated reasons can be unfaithful (\citealp{turpin2023unfaithful};
+\citealp{lanham2023measuring}), and interventions are the standard test. \citet{atanasova2023faithfulness} insert inputs and
+reconstruct inputs from explanations. \citet{matton2025walk} compare the causal effect of input concepts with how often
+explanations cite them. \citet{pawar2026necessary} test necessity and sufficiency of the factors a model cites.
+\citet{khanzadeh2026ariadne} edits the agent's own reasoning steps. Closer to agents, AgentAbstain pairs should-act and
+should-abstain tasks that differ by one perturbation (\citealp{liu2026agentabstain}). \citet{liao2026provenance} changes the
+source authority of evidence in next-action tasks. ``Copies or Sources?'' (\citealp{gao2026copies}) and GraphEcho
+(\citealp{wang2026graphecho}) contrast copied with independent sources, and Nautil removes an investigator's cited grounds
+against a matched control (\citealp{bi2026nautil}). AUDITA formalises overdetermination with actual causation and shows that
+single-cause deletion fails under redundancy (\citealp{du2026audita}). The design itself, an input change with an expected
+response, has a longer lineage: metamorphic testing in software engineering (\citealp{segura2016metamorphic}), behavioural
+test suites such as CheckList (\citealp{ribeiro2020checklist}), contrast sets (\citealp{gardner2020contrast}) and counterfactually
+augmented data (\citealp{kaushik2020cad}), and the diagnosis of models that are right for the wrong reasons through heuristics
+(\citealp{mccoy2019right}) or shortcuts (\citealp{geirhos2020shortcut}). \emph{The operators exist. We compose them, adding an
+independent source and then removing the original, to separate redundancy from non-use for one decision. We read the
+result against the agent-declared grounds and use it prospectively to allocate autonomy, not retrospectively to
+attribute blame.}
+
+\textbf{The outcome--process gap.} Several 2026 benchmarks show that outcome checks pass agents whose process is
+defective: CXBench in regulated customer-experience workflows (\citealp{yu2026cxbench}), procedure-aware evaluation of τ-bench
+(\citealp{cao2026pae}), deterministic evidence-path checks in GroundEval (\citealp{flynt2026groundeval}), and ``lucky passes'' in
+software-engineering agents (\citealp{sahoo2026agentlens}). ToolChain-CRC (conformal risk control) proves that calibration on
+final answers cannot control unsupported intermediate steps (\citealp{opoku2026toolchain}). \citet{cao2026loopholes} adds a
+caution that applies to any benchmark of this kind, ours included: when a natural-language policy is silent, ambiguous
+or contradictory, a single gold answer scores policy ambiguity as agent error. \emph{These audits check procedure or
+evidence paths. We check whether the action depends on the evidence that should warrant it, which a procedurally
+compliant trace can hide, and we show that the same kind of ambiguity can decide which delegation rule appears to work
+(§6.1).}
+
+\textbf{Graduated autonomy and certified deployment.} Several systems already widen or narrow agent autonomy from
+experience. The Digital Apprentice promotes per-skill tiers when correction rates fall (\citealp{weber2026apprentice}). Hedwig
+learns check-in behaviour from a developer's approvals (\citealp{shukla2026hedwig}). Sovereign-OS moves permissions with
+audited outcomes (\citealp{yuan2026sovereign}). Minimal Oversight caps authority by a raw success rate, after correcting for
+masking (\citealp{azevedo2026minimal}). Trust Before Autonomy prescribes a gated, revocable ladder (\citealp{angelidis2026tba}).
+Earned Authority shows that self-produced evidence must not raise a fixed ceiling (\citealp{zhang2026earned}). The Agent
+Control Protocol accumulates only penalties from history (\citealp{fernandez2026acp}). Agent Reliability Profiles define
+action classes and autonomy tiers for financial services (\citealp{hsu2026arp}). On the statistical side, READY qualifies
+confidence-threshold escalation policies on held-out cases, with explicit review cost and an LLM-judged process defect
+(\citealp{chatrath2026ready}). \citet{shen2026provable} certifies per model--task pair; Role-Stratified CRC certifies per
+stratum (\citealp{rahman2026rolestratified}); Conformal Selective Acting certifies anytime (\citealp{khosravi2026csa}).
+\citet{pandey2026certified} gate actions on agreement among sources from separate control domains. \emph{Each delegates
+on outcomes, corrections, approvals, confidence, judged traces or source counts. We delegate on interventionally
+measured DSA, and we compare against these rules run through one certification engine.}
+
+\textbf{Answer keys as part of the instrument.} Every test of this kind needs an oracle that says what the correct
+response is, and the oracle problem is a central difficulty of software testing (\citealp{barr2015oracle}).
+\citet{knight1986independence} showed that independently written versions of a program fail on the same inputs far more
+often than independence would predict, because their authors find the same cases hard; the lesson carries to two oracles
+written from one specification. In machine learning, label errors in test sets change the ranking of models
+(\citealp{northcutt2021label}), and disagreement among human annotators is a property of the task rather than noise to be
+averaged away (\citealp{plank2022variation}). \citet{jacobs2021measurement} read such problems through measurement theory: a
+score is valid only if the construct it operationalises and the procedure that produces its labels are both examined.
+Multiverse analysis reports a result under every defensible analytic choice instead of one (\citealp{steegen2016multiverse}),
+and formalising law as code shows that statute text leaves choices the formaliser must make explicit
+(\citealp{merigoux2021catala}). \emph{We apply these lessons to the normative map of an agent evaluation: we log the readings
+of the policy that the oracles encode, report the primary result under every logged combination, and show that the
+choice of reading decided which delegation rule appeared to work (§6.1, §8).}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Legend: ✓ = present; ◐ = partial (see footnote); -- = absent. Columns: - \textbf{(a) Decision unit:} a single decision
+is the unit of analysis. - \textbf{(b) External-evidence interventions:} the agent's external evidence is changed and
+the agent is re-run. - \textbf{(c) Redundancy:} redundant or overdetermined evidence is handled. - \textbf{(d) Declared
+grounds:} the agent's own stated grounds are scored. - \textbf{(e) Per-class autonomy:} autonomy is allocated per class
+of decisions or tasks. - \textbf{(f) Revocation:} autonomy is withdrawn. - \textbf{(g) Held-out:} evaluation on held-out
+cases. - \textbf{(h) Shift:} evaluation under distribution shift. - \textbf{(i) Empirical:} empirical study with LLM
+agents.
+
+\begin{table*}
+\caption{Comparison with the closest work (✓ present; (✓) partial, see the notes; -- absent)}
+\small
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.4646}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.0595}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Work
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(a) decision unit
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(b) evidence interventions
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(c) redundancy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(d) declared grounds
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(e) per-class autonomy
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(f) revocation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(g) held-out
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(h) shift
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+(i) empirical
+\end{minipage} \\
+\midrule\noalign{}
+
+LEDGER (\citealp{kim2026ledger}) & -- & -- & -- & -- & -- & -- & -- & -- & ◐¹ \\
+TRACE (\citealp{chang2026trace}) & ◐² & -- & ◐³ & ✓ & -- & -- & -- & -- & -- \\
+DNative-Twin (\citealp{pang2026dnative}) & ✓ & ◐⁴ & -- & -- & -- & -- & -- & -- & -- \\
+DEMM (\citealp{solozobov2026demm}) & ✓ & -- & -- & -- & -- & -- & -- & -- & -- \\
+Project Ariadne (\citealp{khanzadeh2026ariadne}) & -- & -- & -- & ◐⁵ & -- & -- & -- & -- & ◐⁶ \\
+\citet{pawar2026necessary} & ◐⁷ & ◐⁸ & -- & ✓ & -- & -- & -- & -- & ✓ \\
+AgentAbstain (\citealp{liu2026agentabstain}) & ◐⁷ & ✓ & -- & -- & -- & -- & -- & -- & ✓ \\
+AUDITA (\citealp{du2026audita}) & -- & -- & ✓ & -- & -- & -- & -- & -- & ◐⁹ \\
+CARE-Drive (\citealp{suryana2026caredrive}) & ✓ & ◐¹⁰ & -- & -- & -- & -- & -- & -- & ✓ \\
+CXBench (\citealp{yu2026cxbench}) & -- & -- & -- & -- & -- & -- & -- & -- & ✓ \\
+\citet{pandey2026certified} & ✓ & ◐¹¹ & ✓ & -- & -- & -- & -- & -- & ✓ \\
+Intelligent AI Delegation (\citealp{tomasev2026delegation}) & -- & -- & -- & -- & ◐¹² & ◐¹² & -- & -- & -- \\
+Trust Before Autonomy (\citealp{angelidis2026tba}) & -- & ◐¹³ & -- & -- & ◐¹² & ◐¹² & -- & -- & -- \\
+Digital Apprentice (\citealp{weber2026apprentice}) & -- & -- & -- & -- & ✓ & ✓ & -- & -- & -- \\
+Hedwig (\citealp{shukla2026hedwig}) & -- & -- & -- & -- & ✓ & ✓ & -- & -- & ◐¹⁴ \\
+Minimal Oversight (\citealp{azevedo2026minimal}) & -- & -- & -- & -- & ✓ & ◐¹⁵ & -- & -- & -- \\
+READY (\citealp{chatrath2026ready}) & -- & -- & -- & -- & ◐¹⁶ & ◐¹⁷ & ✓ & -- & ✓ \\
+Certified deferral (\citealp{shen2026provable}) & ◐¹⁸ & -- & -- & -- & ◐¹⁹ & -- & ✓ & ◐²⁰ & ◐²¹ \\
+Role-Stratified CRC (\citealp{rahman2026rolestratified}) & ◐²² & ◐²³ & -- & -- & ◐²⁴ & -- & ✓ & ✓ & ✓ \\
+Conformal Selective Acting (\citealp{khosravi2026csa}) & ◐²⁵ & -- & -- & -- & -- & ◐²⁶ & ◐²⁷ & ✓ & ◐²⁸ \\
+\textbf{WorkTrace / DSA (this paper)} & ✓ & ✓ & ✓ & ✓ & ✓ & ◐²⁹ & ✓ & ✓ & ✓ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Footnotes: 1. LEDGER: two qualitative case studies, no metrics. 2. TRACE: one record per claim or commitment. 3. TRACE:
+argues that correlated sources add little (effective panel size); no tests. 4. DNative-Twin: replay under declared
+changes to recorded state; no LLM agent is re-run. 5. Ariadne: intervenes on the agent's generated reasoning steps, not
+on stated grounds about evidence. 6. Ariadne: single-model QA without tools; numbers internally inconsistent. 7. Pawar,
+AgentAbstain: single decision or task pair, not multi-step episodes. 8. Pawar: changes input factors of tool-free
+decisions. 9. AUDITA: live LLM pipelines, but evidence partly simulated. 10. CARE-Drive: varies facts written into a
+single prompt. 11. Pandey et al.: corrupted sources in synthetic payment episodes. 12. Prescribed, not implemented or
+evaluated. 13. Trust Before Autonomy: ``unanswerable variants'' correspond to removing the sole decisive source. 14.
+Hedwig: evaluated on 11 operations with an LLM judge. 15. Minimal Oversight: implicit, through a decaying success-rate
+estimate; simulation only. 16. READY: one global threshold per agent and workflow, with per-case accept or escalate. 17.
+READY: re-qualification on version changes, no statistical monitoring. 18. Shen: single multiple-choice answers, not
+agent decisions. 19. Shen: one certified confidence threshold per model--task pair. 20. Shen: threshold transfer between
+two tasks only; the certificate assumes no shift. 21. Shen: eleven small LLMs on multiple-choice QA, without tools. 22.
+Role-Stratified CRC: individual argument fields of tool calls. 23. Role-Stratified CRC: prompt injections in tool
+outputs, contrasted with clean runs on recorded traces; agents are not re-run. 24. Role-Stratified CRC: thresholds per
+argument role, gating field values at run time, not autonomy; recalibration, no revocation. 25. Conformal Selective
+Acting: act or abstain on single outputs in one stream. 26. Conformal Selective Acting: all certifications reset at
+fixed epoch boundaries; no data-driven revocation. 27. Conformal Selective Acting: risk is controlled online on the same
+stream; a held-out split only calibrates the score. 28. Conformal Selective Acting: RLVR-trained LLMs on benchmark
+streams, including live online fine-tuning, not agents with tools. 29. This paper: revocation is specified (§4.6) but
+not exercised in the pilot.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

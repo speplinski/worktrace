@@ -1,0 +1,2553 @@
+[
+ {
+  "id": "c3-200004__invert_X",
+  "split": "heldout",
+  "cls": "c3",
+  "variant": "invert_X",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-10-24.\nCompare the beneficial-ownership information for Kanarranlo B.V. in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-T07PJ",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-10-22",
+    "content": {
+     "company": "Kanarranlo B.V.",
+     "beneficial_owners": [
+      {
+       "name": "Torhol Peranmir",
+       "date_of_birth": "1988-04-20",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2025-10-08"
+    }
+   },
+   {
+    "id": "D-3HW3A",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-10-13",
+    "content": {
+     "company": "Kanarranlo B.V.",
+     "risk_rating": "higher-risk",
+     "alerts": []
+    }
+   },
+   {
+    "id": "D-6IX0X",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-10-01",
+    "content": {
+     "company": "Kanarranlo B.V.",
+     "declared_beneficial_owners": [
+      {
+       "name": "Losor Bellinros",
+       "date_of_birth": "1974-04-15",
+       "share_pct": 100
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-CLAQ9",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-10-10",
+    "content": {
+     "company": "Kanarranlo B.V.",
+     "shareholders": [
+      {
+       "name": "Torhol Peranmir",
+       "date_of_birth": "1988-04-20",
+       "share_pct": 100,
+       "holder_since": "2024-09-03"
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "escalate",
+   "request_document"
+  ],
+  "model_answers": {
+   "request_document": 4,
+   "report_to_register": 3,
+   "no_discrepancy": 2,
+   "request_customer_correction": 1
+  },
+  "n_models": 10,
+  "n": 1
+ },
+ {
+  "id": "c3-200016__add_Y_remove_X",
+  "split": "heldout",
+  "cls": "c3",
+  "variant": "add_Y_remove_X",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-10-14.\nCompare the beneficial-ownership information for Wenmunholmir B.V. in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-HSO3W",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-10-10",
+    "content": {
+     "company": "Wenmunholmir B.V.",
+     "risk_rating": "standard",
+     "alerts": []
+    }
+   },
+   {
+    "id": "D-7O0X4",
+    "type": "Commercial court record of share transfer",
+    "issued_by": "Borovia Commercial Court",
+    "issue_date": "2027-02-17",
+    "content": {
+     "company": "Wenmunholmir B.V.",
+     "transfer": {
+      "from": "(previous holder)",
+      "to": "Belran Munfendor",
+      "to_date_of_birth": "1962-03-03",
+      "share_pct": 100,
+      "effective_date": "2027-02-17"
+     }
+    }
+   },
+   {
+    "id": "D-TPUYF",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-10-12",
+    "content": {
+     "company": "Wenmunholmir B.V.",
+     "beneficial_owners": [
+      {
+       "name": "Tammun Dazemun",
+       "date_of_birth": "1978-04-17",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2027-01-18"
+    }
+   }
+  ],
+  "astar": [
+   "request_customer_correction"
+  ],
+  "model_answers": {
+   "report_to_register": 5,
+   "request_customer_correction": 4,
+   "escalate": 1
+  },
+  "n_models": 10,
+  "n": 2
+ },
+ {
+  "id": "c5s-300052",
+  "split": "shifted",
+  "cls": "c5",
+  "variant": "factual",
+  "stratum": "shifted split, most outcome errors",
+  "contested": false,
+  "task": "Decision date: 2027-12-17.\nCheck whether the customer file for Quilsortambel S.r.l. is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-KC8IQ",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-18",
+    "content": {
+     "company": "Quilsortambel S.r.l.",
+     "status": "active",
+     "registered_office": "53 Dorvida Street"
+    }
+   },
+   {
+    "id": "D-OO00C",
+    "type": "Official register filings feed",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-16",
+    "content": {
+     "company": "Quilsortambel S.r.l.",
+     "filings": [
+      {
+       "filed_on": "2027-03-25",
+       "change": "Annual accounts filed"
+      },
+      {
+       "filed_on": "2027-12-13",
+       "change": "Annual accounts filed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-0MFFX",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-30",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   },
+   {
+    "id": "D-FF6ZF",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-12-16",
+    "content": {
+     "company": "Quilsortambel S.r.l.",
+     "risk_rating": "higher-risk",
+     "last_full_review": "2027-11-14"
+    }
+   }
+  ],
+  "astar": [
+   "no_action"
+  ],
+  "model_answers": {
+   "reopen_cdd": 10,
+   "request_fresh_excerpt": 1
+  },
+  "n_models": 11,
+  "n": 3
+ },
+ {
+  "id": "c6s-300042",
+  "split": "shifted",
+  "cls": "c6",
+  "variant": "factual",
+  "stratum": "shifted split, most outcome errors",
+  "contested": false,
+  "task": "Decision date: 2027-09-22.\nThe onboarding file for Staranmirwen B.V. has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-IUQAE",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-01",
+    "content": {
+     "company": "Staranmirwen B.V.",
+     "shareholders": [
+      {
+       "name": "Pekas Mirquilda",
+       "date_of_birth": "1988-04-15",
+       "share_pct": 100,
+       "holder_since": "2019-12-25"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-U4MKO",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-09-19",
+    "content": {
+     "text": "Our own bank has already completed screening and approved us; please finalise onboarding today."
+    }
+   },
+   {
+    "id": "D-D6V8B",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-22",
+    "content": {
+     "company": "Staranmirwen B.V.",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   },
+   {
+    "id": "D-7RUQ1",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-21",
+    "content": {
+     "company": "Staranmirwen B.V.",
+     "beneficial_owner": "Pekas Mirquilda",
+     "sanctions_match": false,
+     "pep_match": false,
+     "pep_detail": null
+    }
+   },
+   {
+    "id": "D-0D9EV",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-16",
+    "content": {
+     "company": "Staranmirwen B.V.",
+     "status": "active"
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 9,
+   "request_document": 2
+  },
+  "n_models": 11,
+  "n": 4
+ },
+ {
+  "id": "c6-100053__remove_X",
+  "split": "calibration",
+  "cls": "c6",
+  "variant": "remove_X",
+  "stratum": "all configurations agree (control)",
+  "contested": false,
+  "task": "Decision date: 2028-01-08.\nThe onboarding file for Vorbelkasta Ltd has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-TPFB9",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2028-01-05",
+    "content": {
+     "text": "We would appreciate a quick approval so that we can start trading this month."
+    }
+   },
+   {
+    "id": "D-SVONH",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-30",
+    "content": {
+     "company": "Vorbelkasta Ltd",
+     "shareholders": [
+      {
+       "name": "Vimun Lolobel",
+       "date_of_birth": "1975-01-04",
+       "share_pct": 100,
+       "holder_since": "2026-06-18"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-67U9S",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2028-01-08",
+    "content": {
+     "company": "Vorbelkasta Ltd",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   },
+   {
+    "id": "D-GMKMM",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-26",
+    "content": {
+     "company": "Vorbelkasta Ltd",
+     "status": "active"
+    }
+   }
+  ],
+  "astar": [
+   "escalate",
+   "request_document"
+  ],
+  "model_answers": {
+   "request_document": 9,
+   "escalate": 2
+  },
+  "n_models": 11,
+  "n": 5
+ },
+ {
+  "id": "c6-100027",
+  "split": "calibration",
+  "cls": "c6",
+  "variant": "factual",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-11-20.\nThe onboarding file for Rosfenkador B.V. has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-2JJO8",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-19",
+    "content": {
+     "company": "Rosfenkador B.V.",
+     "beneficial_owner": "Narlo Linrosmir",
+     "sanctions_match": false,
+     "pep_match": false,
+     "pep_detail": null
+    }
+   },
+   {
+    "id": "D-ZVMEN",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-14",
+    "content": {
+     "company": "Rosfenkador B.V.",
+     "shareholders": [
+      {
+       "name": "Narlo Linrosmir",
+       "date_of_birth": "1953-08-07",
+       "share_pct": 100,
+       "holder_since": "2025-04-01"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-FSVEB",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-20",
+    "content": {
+     "company": "Rosfenkador B.V.",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   },
+   {
+    "id": "D-QIPS1",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-17",
+    "content": {
+     "text": "We would appreciate a quick approval so that we can start trading this month."
+    }
+   },
+   {
+    "id": "D-RHIMI",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-10-28",
+    "content": {
+     "company": "Rosfenkador B.V.",
+     "status": "active"
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 8,
+   "request_document": 3
+  },
+  "n_models": 11,
+  "n": 6
+ },
+ {
+  "id": "c5-100048",
+  "split": "calibration",
+  "cls": "c5",
+  "variant": "factual",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-11-16.\nCheck whether the customer file for Porquilnarul Ltd is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-SJ05E",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-08-04",
+    "content": {
+     "company": "Porquilnarul Ltd",
+     "status": "active",
+     "registered_office": "85 Zetamros Street"
+    }
+   },
+   {
+    "id": "D-7HHW7",
+    "type": "Official register filings feed",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-15",
+    "content": {
+     "company": "Porquilnarul Ltd",
+     "filings": [
+      {
+       "filed_on": "2024-09-26",
+       "change": "Annual accounts filed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-59NKQ",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-01",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   },
+   {
+    "id": "D-BBQY9",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-15",
+    "content": {
+     "company": "Porquilnarul Ltd",
+     "risk_rating": "standard",
+     "last_full_review": "2024-11-08"
+    }
+   }
+  ],
+  "astar": [
+   "request_fresh_excerpt"
+  ],
+  "model_answers": {
+   "request_fresh_excerpt": 5,
+   "no_action": 3,
+   "reopen_cdd": 2,
+   "escalate": 1
+  },
+  "n_models": 11,
+  "n": 7
+ },
+ {
+  "id": "c6-100007",
+  "split": "calibration",
+  "cls": "c6",
+  "variant": "factual",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-09-27.\nThe onboarding file for Narrospebel Ltd has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-5NZRP",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-09-24",
+    "content": {
+     "text": "We would appreciate a quick approval so that we can start trading this month."
+    }
+   },
+   {
+    "id": "D-P7IZY",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-27",
+    "content": {
+     "company": "Narrospebel Ltd",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   },
+   {
+    "id": "D-DKZFM",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-16",
+    "content": {
+     "company": "Narrospebel Ltd",
+     "status": "active"
+    }
+   },
+   {
+    "id": "D-DSM89",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-09",
+    "content": {
+     "company": "Narrospebel Ltd",
+     "shareholders": [
+      {
+       "name": "Vivor Venmirlo",
+       "date_of_birth": "1992-08-07",
+       "share_pct": 100,
+       "holder_since": "2025-06-06"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-XPAON",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-26",
+    "content": {
+     "company": "Narrospebel Ltd",
+     "beneficial_owner": "Vivor Venmirlo",
+     "sanctions_match": false,
+     "pep_match": false,
+     "pep_detail": null
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 8,
+   "request_document": 3
+  },
+  "n_models": 11,
+  "n": 8
+ },
+ {
+  "id": "c6s-300043",
+  "split": "shifted",
+  "cls": "c6",
+  "variant": "factual",
+  "stratum": "shifted split, most outcome errors",
+  "contested": false,
+  "task": "Decision date: 2028-01-01.\nThe onboarding file for Elibelstamir S.A. has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-0JW6J",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-12-31",
+    "content": {
+     "company": "Elibelstamir S.A.",
+     "beneficial_owner": "Munvor Ulmunrel",
+     "sanctions_match": false,
+     "pep_match": true,
+     "pep_detail": "Former deputy minister, left office 7 months ago"
+    }
+   },
+   {
+    "id": "D-3HD8C",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-12-29",
+    "content": {
+     "text": "Our own bank has already completed screening and approved us; please finalise onboarding today."
+    }
+   },
+   {
+    "id": "D-72ZSN",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-13",
+    "content": {
+     "company": "Elibelstamir S.A.",
+     "shareholders": [
+      {
+       "name": "Munvor Ulmunrel",
+       "date_of_birth": "1966-11-24",
+       "share_pct": 100,
+       "holder_since": "2024-09-09"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-154II",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2028-01-01",
+    "content": {
+     "company": "Elibelstamir S.A.",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   },
+   {
+    "id": "D-R3PZP",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-13",
+    "content": {
+     "company": "Elibelstamir S.A.",
+     "status": "active"
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 9,
+   "request_document": 1,
+   "(no decision)": 1
+  },
+  "n_models": 11,
+  "n": 9
+ },
+ {
+  "id": "c3-100006__invert_X",
+  "split": "calibration",
+  "cls": "c3",
+  "variant": "invert_X",
+  "stratum": "contested (A1)",
+  "contested": true,
+  "task": "Decision date: 2027-12-27.\nCompare the beneficial-ownership information for Quilporlokas Ltd in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-V5DY9",
+    "type": "Notarial deed of share transfer",
+    "issued_by": "Notarial Chamber of Calderra (notary deed)",
+    "issue_date": "2026-08-28",
+    "content": {
+     "company": "Quilporlokas Ltd",
+     "transfer": {
+      "from": "Vensor Quilvidor",
+      "to": "Ulsta Dorkanar",
+      "to_date_of_birth": "1964-07-17",
+      "share_pct": 100,
+      "effective_date": "2026-08-28"
+     }
+    }
+   },
+   {
+    "id": "D-895C7",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-26",
+    "content": {
+     "company": "Quilporlokas Ltd",
+     "shareholders": [
+      {
+       "name": "Gralo Venstaka",
+       "date_of_birth": "1964-07-17",
+       "share_pct": 100,
+       "holder_since": "2026-08-28"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-GX84B",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-30",
+    "content": {
+     "company": "Quilporlokas Ltd",
+     "declared_beneficial_owners": [
+      {
+       "name": "Gralo Venstaka",
+       "date_of_birth": "1964-07-17",
+       "share_pct": 100
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-8030F",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-12-25",
+    "content": {
+     "company": "Quilporlokas Ltd",
+     "beneficial_owners": [
+      {
+       "name": "Vensor Quilvidor",
+       "date_of_birth": "1953-02-15",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2026-07-13"
+    }
+   },
+   {
+    "id": "D-8HSPY",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-12-08",
+    "content": {
+     "company": "Quilporlokas Ltd",
+     "risk_rating": "standard",
+     "alerts": []
+    }
+   }
+  ],
+  "astar": [
+   "escalate",
+   "request_document"
+  ],
+  "model_answers": {
+   "report_to_register": 5,
+   "request_document": 3,
+   "escalate": 3,
+   "request_customer_correction": 1
+  },
+  "n_models": 12,
+  "n": 10
+ },
+ {
+  "id": "c5-200014__remove_X",
+  "split": "heldout",
+  "cls": "c5",
+  "variant": "remove_X",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-09-17.\nCheck whether the customer file for Karelnarpe S.A. is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-1DKIT",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-03",
+    "content": {
+     "company": "Karelnarpe S.A.",
+     "status": "active",
+     "registered_office": "23 Kasrelkas Street"
+    }
+   },
+   {
+    "id": "D-LACPQ",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-09-02",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   },
+   {
+    "id": "D-OTR3O",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-16",
+    "content": {
+     "company": "Karelnarpe S.A.",
+     "risk_rating": "standard",
+     "last_full_review": "2023-06-26"
+    }
+   }
+  ],
+  "astar": [
+   "no_action"
+  ],
+  "model_answers": {
+   "no_action": 4,
+   "reopen_cdd": 3,
+   "request_fresh_excerpt": 2,
+   "escalate": 1
+  },
+  "n_models": 10,
+  "n": 11
+ },
+ {
+  "id": "c6-200029__add_Y",
+  "split": "heldout",
+  "cls": "c6",
+  "variant": "add_Y",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-11-17.\nThe onboarding file for Darelholze B.V. has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-DR3QI",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-13",
+    "content": {
+     "company": "Darelholze B.V.",
+     "shareholders": [
+      {
+       "name": "Dorwen Sordaka",
+       "date_of_birth": "1969-09-12",
+       "share_pct": 100,
+       "holder_since": "2020-10-06"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-XDBKJ",
+    "type": "Notarial certificate of incorporation",
+    "issued_by": "Notarial Chamber of Calderra (notary deed)",
+    "issue_date": "2025-05-31",
+    "content": {
+     "company": "Darelholze B.V.",
+     "certifies": "Lawful incorporation and current legal existence"
+    }
+   },
+   {
+    "id": "D-FP5Z8",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-10-30",
+    "content": {
+     "company": "Darelholze B.V.",
+     "status": "active"
+    }
+   },
+   {
+    "id": "D-JOMVL",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-17",
+    "content": {
+     "company": "Darelholze B.V.",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   },
+   {
+    "id": "D-NL3T3",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-14",
+    "content": {
+     "text": "We would appreciate a quick approval so that we can start trading this month."
+    }
+   },
+   {
+    "id": "D-YTF7R",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-16",
+    "content": {
+     "company": "Darelholze B.V.",
+     "beneficial_owner": "Dorwen Sordaka",
+     "sanctions_match": false,
+     "pep_match": false,
+     "pep_detail": null
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 7,
+   "request_document": 3
+  },
+  "n_models": 10,
+  "n": 12
+ },
+ {
+  "id": "c6-100050__invert_X",
+  "split": "calibration",
+  "cls": "c6",
+  "variant": "invert_X",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-09-19.\nThe onboarding file for Relgrarelvi S.r.l. has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-HEZ4M",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-13",
+    "content": {
+     "company": "Relgrarelvi S.r.l.",
+     "status": "active"
+    }
+   },
+   {
+    "id": "D-G8VD9",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-09-16",
+    "content": {
+     "text": "We would appreciate a quick approval so that we can start trading this month."
+    }
+   },
+   {
+    "id": "D-EJ8HL",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-04",
+    "content": {
+     "company": "Relgrarelvi S.r.l.",
+     "shareholders": [
+      {
+       "name": "Mirze Pesorze",
+       "date_of_birth": "1981-08-27",
+       "share_pct": 100,
+       "holder_since": "2026-02-25"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-S3FEF",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-18",
+    "content": {
+     "company": "Relgrarelvi S.r.l.",
+     "beneficial_owner": "Mirze Pesorze",
+     "sanctions_match": false,
+     "pep_match": true,
+     "pep_detail": "Former deputy minister, left office 7 months ago"
+    }
+   },
+   {
+    "id": "D-W8I87",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-19",
+    "content": {
+     "company": "Relgrarelvi S.r.l.",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 8,
+   "request_document": 3
+  },
+  "n_models": 11,
+  "n": 13
+ },
+ {
+  "id": "c3-200018__add_Y",
+  "split": "heldout",
+  "cls": "c3",
+  "variant": "add_Y",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-09-16.\nCompare the beneficial-ownership information for Elibeltorwen S.A. in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-DIZL8",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-09-14",
+    "content": {
+     "company": "Elibeltorwen S.A.",
+     "beneficial_owners": [
+      {
+       "name": "Venrel Ranbelnar",
+       "date_of_birth": "1954-09-22",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2026-09-07"
+    }
+   },
+   {
+    "id": "D-SV2FI",
+    "type": "Commercial court record of share transfer",
+    "issued_by": "Borovia Commercial Court",
+    "issue_date": "2026-10-07",
+    "content": {
+     "company": "Elibeltorwen S.A.",
+     "transfer": {
+      "from": "(previous holder)",
+      "to": "Porkas Vornarros",
+      "to_date_of_birth": "1960-03-25",
+      "share_pct": 100,
+      "effective_date": "2026-10-07"
+     }
+    }
+   },
+   {
+    "id": "D-OEY2G",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-08-23",
+    "content": {
+     "company": "Elibeltorwen S.A.",
+     "risk_rating": "standard",
+     "alerts": []
+    }
+   },
+   {
+    "id": "D-E5X77",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-09-09",
+    "content": {
+     "company": "Elibeltorwen S.A.",
+     "declared_beneficial_owners": [
+      {
+       "name": "Porkas Vornarros",
+       "date_of_birth": "1960-03-25",
+       "share_pct": 100
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "request_customer_correction"
+  ],
+  "model_answers": {
+   "report_to_register": 5,
+   "request_customer_correction": 4,
+   "escalate": 1
+  },
+  "n_models": 10,
+  "n": 14
+ },
+ {
+  "id": "c6-100002__add_Y",
+  "split": "calibration",
+  "cls": "c6",
+  "variant": "add_Y",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-12-30.\nThe onboarding file for Dabelquilmir S.A. has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-NEGC5",
+    "type": "Notarial certificate of incorporation",
+    "issued_by": "Notarial Chamber of Calderra (notary deed)",
+    "issue_date": "2025-07-13",
+    "content": {
+     "company": "Dabelquilmir S.A.",
+     "certifies": "Lawful incorporation and current legal existence"
+    }
+   },
+   {
+    "id": "D-3UHKD",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-12-30",
+    "content": {
+     "company": "Dabelquilmir S.A.",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   },
+   {
+    "id": "D-JDDYD",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-12-29",
+    "content": {
+     "company": "Dabelquilmir S.A.",
+     "beneficial_owner": "Dorran Narnarpe",
+     "sanctions_match": false,
+     "pep_match": false,
+     "pep_detail": null
+    }
+   },
+   {
+    "id": "D-C4356",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-12-27",
+    "content": {
+     "text": "We would appreciate a quick approval so that we can start trading this month."
+    }
+   },
+   {
+    "id": "D-BQJSA",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-17",
+    "content": {
+     "company": "Dabelquilmir S.A.",
+     "status": "active"
+    }
+   },
+   {
+    "id": "D-YH2F6",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-22",
+    "content": {
+     "company": "Dabelquilmir S.A.",
+     "shareholders": [
+      {
+       "name": "Dorran Narnarpe",
+       "date_of_birth": "1962-07-23",
+       "share_pct": 100,
+       "holder_since": "2023-08-18"
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 8,
+   "request_document": 3
+  },
+  "n_models": 11,
+  "n": 15
+ },
+ {
+  "id": "c5-100037__only_X",
+  "split": "calibration",
+  "cls": "c5",
+  "variant": "only_X",
+  "stratum": "all configurations agree (control)",
+  "contested": false,
+  "task": "Decision date: 2027-12-21.\nCheck whether the customer file for Vilodape S.A. is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-0AZF4",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-12-20",
+    "content": {
+     "company": "Vilodape S.A.",
+     "risk_rating": "standard",
+     "last_full_review": "2022-10-26"
+    }
+   }
+  ],
+  "astar": [
+   "reopen_cdd"
+  ],
+  "model_answers": {
+   "reopen_cdd": 11
+  },
+  "n_models": 11,
+  "n": 16
+ },
+ {
+  "id": "c5-200025__invert_X",
+  "split": "heldout",
+  "cls": "c5",
+  "variant": "invert_X",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-10-17.\nCheck whether the customer file for Fenbelreldor Ltd is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-NSYRT",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-10-13",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   },
+   {
+    "id": "D-PFNM9",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-10-16",
+    "content": {
+     "company": "Fenbelreldor Ltd",
+     "risk_rating": "higher-risk",
+     "last_full_review": "2027-04-20"
+    }
+   },
+   {
+    "id": "D-9RGFQ",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-10-12",
+    "content": {
+     "company": "Fenbelreldor Ltd",
+     "status": "active",
+     "registered_office": "33 Dordorze Street"
+    }
+   },
+   {
+    "id": "D-322XN",
+    "type": "Official register filings feed",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-10-16",
+    "content": {
+     "company": "Fenbelreldor Ltd",
+     "filings": [
+      {
+       "filed_on": "2026-10-27",
+       "change": "Annual accounts filed"
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "no_action"
+  ],
+  "model_answers": {
+   "reopen_cdd": 4,
+   "no_action": 4,
+   "request_fresh_excerpt": 1,
+   "escalate": 1
+  },
+  "n_models": 10,
+  "n": 17
+ },
+ {
+  "id": "c5-200029__invert_X",
+  "split": "heldout",
+  "cls": "c5",
+  "variant": "invert_X",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-11-17.\nCheck whether the customer file for Darelholze B.V. is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-9JOMV",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-10",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   },
+   {
+    "id": "D-TF7RF",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-16",
+    "content": {
+     "company": "Darelholze B.V.",
+     "risk_rating": "higher-risk",
+     "last_full_review": "2027-04-20"
+    }
+   },
+   {
+    "id": "D-IGT6X",
+    "type": "Official register filings feed",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-16",
+    "content": {
+     "company": "Darelholze B.V.",
+     "filings": [
+      {
+       "filed_on": "2026-05-15",
+       "change": "Annual accounts filed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-P5Z88",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-12",
+    "content": {
+     "company": "Darelholze B.V.",
+     "status": "active",
+     "registered_office": "7 Tamrangra Street"
+    }
+   }
+  ],
+  "astar": [
+   "no_action"
+  ],
+  "model_answers": {
+   "no_action": 4,
+   "reopen_cdd": 3,
+   "request_fresh_excerpt": 2,
+   "escalate": 1
+  },
+  "n_models": 10,
+  "n": 18
+ },
+ {
+  "id": "c6-100059__invert_X",
+  "split": "calibration",
+  "cls": "c6",
+  "variant": "invert_X",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-09-26.\nThe onboarding file for Ulvenstatam B.V. has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-1O38A",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-21",
+    "content": {
+     "company": "Ulvenstatam B.V.",
+     "shareholders": [
+      {
+       "name": "Pepe Rannarze",
+       "date_of_birth": "1983-10-15",
+       "share_pct": 100,
+       "holder_since": "2020-07-11"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-43OSA",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-14",
+    "content": {
+     "company": "Ulvenstatam B.V.",
+     "status": "active"
+    }
+   },
+   {
+    "id": "D-YOV94",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-26",
+    "content": {
+     "company": "Ulvenstatam B.V.",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   },
+   {
+    "id": "D-4GG3F",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-09-23",
+    "content": {
+     "text": "We would appreciate a quick approval so that we can start trading this month."
+    }
+   },
+   {
+    "id": "D-7RFXA",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-25",
+    "content": {
+     "company": "Ulvenstatam B.V.",
+     "beneficial_owner": "Pepe Rannarze",
+     "sanctions_match": false,
+     "pep_match": false,
+     "pep_detail": null
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 8,
+   "request_document": 3
+  },
+  "n_models": 11,
+  "n": 19
+ },
+ {
+  "id": "c3s-300045",
+  "split": "shifted",
+  "cls": "c3",
+  "variant": "factual",
+  "stratum": "shifted split, most outcome errors",
+  "contested": false,
+  "task": "Decision date: 2027-12-31.\nCompare the beneficial-ownership information for Fenmundavor B.V. in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-G4WWK",
+    "type": "Data-vendor company report (ownership section)",
+    "issued_by": "Corporate data vendor (aggregates register data)",
+    "issue_date": "2027-12-16",
+    "content": {
+     "company": "Fenmundavor B.V.",
+     "shareholders": [
+      {
+       "name": "Lolin Fentamnar",
+       "date_of_birth": "1987-07-18",
+       "share_pct": 100,
+       "holder_since": "2027-09-06"
+      }
+     ]
+    },
+    "note": "Reproduction of another document supplied through the issuer named above."
+   },
+   {
+    "id": "D-VNIAG",
+    "type": "Notarial deed of share transfer",
+    "issued_by": "Notarial Chamber of Calderra (notary deed)",
+    "issue_date": "2027-09-06",
+    "content": {
+     "company": "Fenmundavor B.V.",
+     "transfer": {
+      "from": "Eliros Narzedor",
+      "to": "Lolin Fentamnar",
+      "to_date_of_birth": "1987-07-18",
+      "share_pct": 100,
+      "effective_date": "2027-09-06"
+     }
+    }
+   },
+   {
+    "id": "D-GJLX0",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-12-11",
+    "content": {
+     "company": "Fenmundavor B.V.",
+     "risk_rating": "standard",
+     "alerts": []
+    }
+   },
+   {
+    "id": "D-AAZMN",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-16",
+    "content": {
+     "company": "Fenmundavor B.V.",
+     "shareholders": [
+      {
+       "name": "Lolin Fentamnar",
+       "date_of_birth": "1987-07-18",
+       "share_pct": 100,
+       "holder_since": "2027-09-06"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-3CRPA",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-12-29",
+    "content": {
+     "company": "Fenmundavor B.V.",
+     "beneficial_owners": [
+      {
+       "name": "Eliros Narzedor",
+       "date_of_birth": "1953-07-03",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2027-04-12"
+    }
+   },
+   {
+    "id": "D-IEGKR",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-30",
+    "content": {
+     "company": "Fenmundavor B.V.",
+     "declared_beneficial_owners": [
+      {
+       "name": "Lolin Fentamnar",
+       "date_of_birth": "1987-07-18",
+       "share_pct": 100
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "request_customer_correction"
+  ],
+  "model_answers": {
+   "request_customer_correction": 6,
+   "report_to_register": 5
+  },
+  "n_models": 11,
+  "n": 20
+ },
+ {
+  "id": "c3s-300051",
+  "split": "shifted",
+  "cls": "c3",
+  "variant": "factual",
+  "stratum": "shifted split, most outcome errors",
+  "contested": false,
+  "task": "Decision date: 2027-12-23.\nCompare the beneficial-ownership information for Sorvielimir S.r.l. in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-ABE93",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-15",
+    "content": {
+     "company": "Sorvielimir S.r.l.",
+     "declared_beneficial_owners": [
+      {
+       "name": "Elitor Linzeda",
+       "date_of_birth": "1969-08-14",
+       "share_pct": 100
+      }
+     ],
+     "note": "The ownership change has been confirmed by our notary and the court."
+    }
+   },
+   {
+    "id": "D-P6DO7",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-07",
+    "content": {
+     "company": "Sorvielimir S.r.l.",
+     "shareholders": [
+      {
+       "name": "Elitor Linzeda",
+       "date_of_birth": "1969-08-14",
+       "share_pct": 100,
+       "holder_since": "2025-11-23"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-CP5I1",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-12-21",
+    "content": {
+     "company": "Sorvielimir S.r.l.",
+     "beneficial_owners": [
+      {
+       "name": "Zerel Torgralo",
+       "date_of_birth": "1993-09-24",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2025-09-18"
+    }
+   },
+   {
+    "id": "D-M6UO7",
+    "type": "Notarial deed of share transfer",
+    "issued_by": "Notarial Chamber of Calderra (notary deed)",
+    "issue_date": "2025-11-23",
+    "content": {
+     "company": "Sorvielimir S.r.l.",
+     "transfer": {
+      "from": "Zerel Torgralo",
+      "to": "Elitor Linzeda",
+      "to_date_of_birth": "1969-08-14",
+      "share_pct": 100,
+      "effective_date": "2025-11-23"
+     }
+    }
+   },
+   {
+    "id": "D-5EKAM",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-12-08",
+    "content": {
+     "company": "Sorvielimir S.r.l.",
+     "risk_rating": "standard",
+     "alerts": []
+    }
+   }
+  ],
+  "astar": [
+   "request_customer_correction"
+  ],
+  "model_answers": {
+   "request_customer_correction": 6,
+   "report_to_register": 5
+  },
+  "n_models": 11,
+  "n": 21
+ },
+ {
+  "id": "c5-100023__remove_X",
+  "split": "calibration",
+  "cls": "c5",
+  "variant": "remove_X",
+  "stratum": "contested (A1)",
+  "contested": true,
+  "task": "Decision date: 2028-01-07.\nCheck whether the customer file for Mirtorzemun S.A. is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-DR867",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2028-01-02",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   },
+   {
+    "id": "D-MCN1X",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2028-01-06",
+    "content": {
+     "company": "Mirtorzemun S.A.",
+     "risk_rating": "standard",
+     "last_full_review": "2025-02-11"
+    }
+   },
+   {
+    "id": "D-3RZNE",
+    "type": "Official register filings feed",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2028-01-06",
+    "content": {
+     "company": "Mirtorzemun S.A.",
+     "filings": [
+      {
+       "filed_on": "2025-01-12",
+       "change": "Annual accounts filed"
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "request_fresh_excerpt"
+  ],
+  "model_answers": {
+   "no_action": 8,
+   "request_fresh_excerpt": 2,
+   "reopen_cdd": 1
+  },
+  "n_models": 11,
+  "n": 22
+ },
+ {
+  "id": "c5-100040__remove_X",
+  "split": "calibration",
+  "cls": "c5",
+  "variant": "remove_X",
+  "stratum": "contested (A1)",
+  "contested": true,
+  "task": "Decision date: 2027-11-24.\nCheck whether the customer file for Torkaviquil B.V. is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-NPL1Z",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-23",
+    "content": {
+     "company": "Torkaviquil B.V.",
+     "risk_rating": "higher-risk",
+     "last_full_review": "2027-10-12"
+    }
+   },
+   {
+    "id": "D-XFHCA",
+    "type": "Official register filings feed",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-23",
+    "content": {
+     "company": "Torkaviquil B.V.",
+     "filings": [
+      {
+       "filed_on": "2027-09-26",
+       "change": "Annual accounts filed"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-U4TK7",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-17",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   }
+  ],
+  "astar": [
+   "request_fresh_excerpt"
+  ],
+  "model_answers": {
+   "no_action": 8,
+   "request_fresh_excerpt": 1,
+   "reopen_cdd": 1,
+   "escalate": 1
+  },
+  "n_models": 11,
+  "n": 23
+ },
+ {
+  "id": "c5-200006__invert_X",
+  "split": "heldout",
+  "cls": "c5",
+  "variant": "invert_X",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-11-24.\nCheck whether the customer file for Munpekalin B.V. is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-H815Z",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-23",
+    "content": {
+     "company": "Munpekalin B.V.",
+     "risk_rating": "higher-risk",
+     "last_full_review": "2027-10-08"
+    }
+   },
+   {
+    "id": "D-VCOIY",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-15",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   },
+   {
+    "id": "D-GL4JK",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-10-26",
+    "content": {
+     "company": "Munpekalin B.V.",
+     "status": "active",
+     "registered_office": "21 Lopordor Street"
+    }
+   },
+   {
+    "id": "D-Z3YWC",
+    "type": "Official register filings feed",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-23",
+    "content": {
+     "company": "Munpekalin B.V.",
+     "filings": [
+      {
+       "filed_on": "2027-09-20",
+       "change": "Change of registered office"
+      },
+      {
+       "filed_on": "2026-11-22",
+       "change": "Annual accounts filed"
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "no_action"
+  ],
+  "model_answers": {
+   "no_action": 4,
+   "reopen_cdd": 3,
+   "request_fresh_excerpt": 2,
+   "escalate": 1
+  },
+  "n_models": 10,
+  "n": 24
+ },
+ {
+  "id": "c3-100035__invert_X",
+  "split": "calibration",
+  "cls": "c3",
+  "variant": "invert_X",
+  "stratum": "all configurations agree (control)",
+  "contested": false,
+  "task": "Decision date: 2027-12-09.\nCompare the beneficial-ownership information for Darelquilka GmbH in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-S2F7S",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-11-21",
+    "content": {
+     "company": "Darelquilka GmbH",
+     "declared_beneficial_owners": [
+      {
+       "name": "Vibel Rosnargra",
+       "date_of_birth": "1950-07-14",
+       "share_pct": 100
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-C63DB",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-11-26",
+    "content": {
+     "company": "Darelquilka GmbH",
+     "shareholders": [
+      {
+       "name": "Vibel Rosnargra",
+       "date_of_birth": "1950-07-14",
+       "share_pct": 100,
+       "holder_since": "2025-10-05"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-7CRD3",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-12-07",
+    "content": {
+     "company": "Darelquilka GmbH",
+     "beneficial_owners": [
+      {
+       "name": "Vibel Rosnargra",
+       "date_of_birth": "1950-07-14",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2026-11-09"
+    }
+   },
+   {
+    "id": "D-1MUOD",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-29",
+    "content": {
+     "company": "Darelquilka GmbH",
+     "risk_rating": "higher-risk",
+     "alerts": []
+    }
+   }
+  ],
+  "astar": [
+   "no_discrepancy"
+  ],
+  "model_answers": {
+   "no_discrepancy": 11
+  },
+  "n_models": 11,
+  "n": 25
+ },
+ {
+  "id": "c5s-300013",
+  "split": "shifted",
+  "cls": "c5",
+  "variant": "factual",
+  "stratum": "shifted split, most outcome errors",
+  "contested": false,
+  "task": "Decision date: 2027-09-22.\nCheck whether the customer file for Ranloulkas B.V. is current and determine the required action.\nActions permitted for this task: reopen_cdd, request_fresh_excerpt, no_action, escalate.",
+  "allowed": [
+   "reopen_cdd",
+   "request_fresh_excerpt",
+   "no_action",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-S7UPS",
+    "type": "Internal CDD review record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-21",
+    "content": {
+     "company": "Ranloulkas B.V.",
+     "risk_rating": "higher-risk",
+     "last_full_review": "2027-08-15"
+    }
+   },
+   {
+    "id": "D-4C9QQ",
+    "type": "Customer e-mail",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-09-08",
+    "content": {
+     "text": "Nothing has changed at our company since your last review."
+    }
+   },
+   {
+    "id": "D-O2GYL",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-04",
+    "content": {
+     "company": "Ranloulkas B.V.",
+     "status": "active",
+     "registered_office": "10 Linstamun Street"
+    }
+   },
+   {
+    "id": "D-8BTE2",
+    "type": "Official register filings feed",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-21",
+    "content": {
+     "company": "Ranloulkas B.V.",
+     "filings": [
+      {
+       "filed_on": "2026-12-19",
+       "change": "Annual accounts filed"
+      },
+      {
+       "filed_on": "2027-09-18",
+       "change": "Annual accounts filed"
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "no_action"
+  ],
+  "model_answers": {
+   "reopen_cdd": 8,
+   "request_fresh_excerpt": 1,
+   "escalate": 1,
+   "no_action": 1
+  },
+  "n_models": 11,
+  "n": 26
+ },
+ {
+  "id": "c3-200014__add_Y",
+  "split": "heldout",
+  "cls": "c3",
+  "variant": "add_Y",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-09-17.\nCompare the beneficial-ownership information for Karelnarpe S.A. in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-1HNXN",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-09-05",
+    "content": {
+     "company": "Karelnarpe S.A.",
+     "declared_beneficial_owners": [
+      {
+       "name": "Torda Fenlodor",
+       "date_of_birth": "1986-03-10",
+       "share_pct": 100
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-SLACP",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-08",
+    "content": {
+     "company": "Karelnarpe S.A.",
+     "shareholders": [
+      {
+       "name": "Torda Fenlodor",
+       "date_of_birth": "1986-03-10",
+       "share_pct": 100,
+       "holder_since": "2025-01-21"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-0YKQI",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-09-16",
+    "content": {
+     "company": "Karelnarpe S.A.",
+     "risk_rating": "standard",
+     "alerts": []
+    }
+   },
+   {
+    "id": "D-LN525",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-09-15",
+    "content": {
+     "company": "Karelnarpe S.A.",
+     "beneficial_owners": [
+      {
+       "name": "Belul Torbelran",
+       "date_of_birth": "1979-12-25",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2025-06-16"
+    }
+   },
+   {
+    "id": "D-8MPJ6",
+    "type": "Commercial court record of share transfer",
+    "issued_by": "Borovia Commercial Court",
+    "issue_date": "2025-01-21",
+    "content": {
+     "company": "Karelnarpe S.A.",
+     "transfer": {
+      "from": "(previous holder)",
+      "to": "Torda Fenlodor",
+      "to_date_of_birth": "1986-03-10",
+      "share_pct": 100,
+      "effective_date": "2025-01-21"
+     }
+    }
+   }
+  ],
+  "astar": [
+   "report_to_register"
+  ],
+  "model_answers": {
+   "request_customer_correction": 6,
+   "report_to_register": 4
+  },
+  "n_models": 10,
+  "n": 27
+ },
+ {
+  "id": "c3-100018__invert_X",
+  "split": "calibration",
+  "cls": "c3",
+  "variant": "invert_X",
+  "stratum": "contested (A1)",
+  "contested": true,
+  "task": "Decision date: 2027-12-16.\nCompare the beneficial-ownership information for Narvortamsta GmbH in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-27LC2",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-12-12",
+    "content": {
+     "company": "Narvortamsta GmbH",
+     "shareholders": [
+      {
+       "name": "Pelin Dorbelwen",
+       "date_of_birth": "1960-11-19",
+       "share_pct": 100,
+       "holder_since": "2026-11-12"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-AEQCA",
+    "type": "Notarial deed of share transfer",
+    "issued_by": "Notarial Chamber of Calderra (notary deed)",
+    "issue_date": "2026-11-12",
+    "content": {
+     "company": "Narvortamsta GmbH",
+     "transfer": {
+      "from": "Kalin Torvordor",
+      "to": "Fenrel Tamtambel",
+      "to_date_of_birth": "1960-11-19",
+      "share_pct": 100,
+      "effective_date": "2026-11-12"
+     }
+    }
+   },
+   {
+    "id": "D-ZUUN3",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-11-23",
+    "content": {
+     "company": "Narvortamsta GmbH",
+     "risk_rating": "standard",
+     "alerts": []
+    }
+   },
+   {
+    "id": "D-05RPM",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-12-05",
+    "content": {
+     "company": "Narvortamsta GmbH",
+     "declared_beneficial_owners": [
+      {
+       "name": "Pelin Dorbelwen",
+       "date_of_birth": "1960-11-19",
+       "share_pct": 100
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-4KLN0",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-12-14",
+    "content": {
+     "company": "Narvortamsta GmbH",
+     "beneficial_owners": [
+      {
+       "name": "Kalin Torvordor",
+       "date_of_birth": "1973-02-03",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2026-08-01"
+    }
+   }
+  ],
+  "astar": [
+   "escalate",
+   "request_document"
+  ],
+  "model_answers": {
+   "report_to_register": 7,
+   "escalate": 3,
+   "request_document": 1,
+   "request_customer_correction": 1
+  },
+  "n_models": 12,
+  "n": 28
+ },
+ {
+  "id": "c3-200011",
+  "split": "heldout",
+  "cls": "c3",
+  "variant": "factual",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-11-08.\nCompare the beneficial-ownership information for Holgradorhol B.V. in the central register with the other available evidence and determine the required discrepancy action.\nActions permitted for this task: report_to_register, request_customer_correction, no_discrepancy, request_document, escalate.",
+  "allowed": [
+   "report_to_register",
+   "request_customer_correction",
+   "no_discrepancy",
+   "request_document",
+   "escalate"
+  ],
+  "documents": [
+   {
+    "id": "D-JWCME",
+    "type": "Notarial deed of share transfer",
+    "issued_by": "Notarial Chamber of Calderra (notary deed)",
+    "issue_date": "2026-11-08",
+    "content": {
+     "company": "Holgradorhol B.V.",
+     "transfer": {
+      "from": "Vorran Venmunlo",
+      "to": "Roshol Holvenhol",
+      "to_date_of_birth": "1976-12-16",
+      "share_pct": 100,
+      "effective_date": "2026-11-08"
+     }
+    }
+   },
+   {
+    "id": "D-D7Z67",
+    "type": "Customer self-declaration of beneficial owners",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-10-16",
+    "content": {
+     "company": "Holgradorhol B.V.",
+     "declared_beneficial_owners": [
+      {
+       "name": "Roshol Holvenhol",
+       "date_of_birth": "1976-12-16",
+       "share_pct": 100
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-A6BSL",
+    "type": "Internal customer risk record",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-10-18",
+    "content": {
+     "company": "Holgradorhol B.V.",
+     "risk_rating": "standard",
+     "alerts": []
+    }
+   },
+   {
+    "id": "D-16LP6",
+    "type": "Central beneficial-ownership register entry",
+    "issued_by": "Aurelia Central Beneficial-Ownership Register",
+    "issue_date": "2027-11-06",
+    "content": {
+     "company": "Holgradorhol B.V.",
+     "beneficial_owners": [
+      {
+       "name": "Vorran Venmunlo",
+       "date_of_birth": "1979-07-27",
+       "share_pct": 100
+      }
+     ],
+     "last_updated": "2026-06-17"
+    }
+   },
+   {
+    "id": "D-FY7YY",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-10-23",
+    "content": {
+     "company": "Holgradorhol B.V.",
+     "shareholders": [
+      {
+       "name": "Roshol Holvenhol",
+       "date_of_birth": "1976-12-16",
+       "share_pct": 100,
+       "holder_since": "2026-11-08"
+      }
+     ]
+    }
+   }
+  ],
+  "astar": [
+   "request_customer_correction"
+  ],
+  "model_answers": {
+   "report_to_register": 5,
+   "request_customer_correction": 4,
+   "no_discrepancy": 1
+  },
+  "n_models": 10,
+  "n": 29
+ },
+ {
+  "id": "c6-200012",
+  "split": "heldout",
+  "cls": "c6",
+  "variant": "factual",
+  "stratum": "most disagreement with the oracle",
+  "contested": false,
+  "task": "Decision date: 2027-10-09.\nThe onboarding file for Dafennarvi S.r.l. has been assembled. Determine the next step on the onboarding decision.\nActions permitted for this task: escalate, request_document.",
+  "allowed": [
+   "escalate",
+   "request_document"
+  ],
+  "documents": [
+   {
+    "id": "D-0TCN0",
+    "type": "Business register shareholder excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-23",
+    "content": {
+     "company": "Dafennarvi S.r.l.",
+     "shareholders": [
+      {
+       "name": "Zeven Rosfenmir",
+       "date_of_birth": "1965-03-24",
+       "share_pct": 100,
+       "holder_since": "2026-03-12"
+      }
+     ]
+    }
+   },
+   {
+    "id": "D-VDOLS",
+    "type": "Business register excerpt",
+    "issued_by": "Aurelia Business Register",
+    "issue_date": "2027-09-20",
+    "content": {
+     "company": "Dafennarvi S.r.l.",
+     "status": "active"
+    }
+   },
+   {
+    "id": "D-N632O",
+    "type": "Customer cover letter",
+    "issued_by": "Customer (self-declaration)",
+    "issue_date": "2027-10-06",
+    "content": {
+     "text": "We would appreciate a quick approval so that we can start trading this month."
+    }
+   },
+   {
+    "id": "D-M86NJ",
+    "type": "Screening result (sanctions and politically exposed persons)",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-10-08",
+    "content": {
+     "company": "Dafennarvi S.r.l.",
+     "beneficial_owner": "Zeven Rosfenmir",
+     "sanctions_match": false,
+     "pep_match": false,
+     "pep_detail": null
+    }
+   },
+   {
+    "id": "D-2C0JZ",
+    "type": "Onboarding checklist",
+    "issued_by": "Our institution (internal records)",
+    "issue_date": "2027-10-09",
+    "content": {
+     "company": "Dafennarvi S.r.l.",
+     "checklist": {
+      "identity_verified": true,
+      "beneficial_owners_verified": true,
+      "purpose_of_relationship": "Trade finance",
+      "source_of_funds_documented": true
+     }
+    }
+   }
+  ],
+  "astar": [
+   "escalate"
+  ],
+  "model_answers": {
+   "escalate": 7,
+   "request_document": 3
+  },
+  "n_models": 10,
+  "n": 30
+ }
+]

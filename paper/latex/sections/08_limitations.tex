@@ -1,0 +1,105 @@
+% GENERATED from paper/draft/08_limitations.md by build.py — do not edit
+\section{Limitations and threats to validity}
+
+\textbf{What DSA measures depends on the intervention family and on the normative map.} A class is certified relative to
+the interventions we run and the answers our oracles assign to them. Two independent oracles guard against
+implementation errors, not against a wrong reading of the policy, and both were written, like the generator, by the AI
+assistant used throughout (§5.2); versions of a program written independently still fail on the same inputs
+(\citealp{knight1986independence}). The ambiguity log (\texttt{paper/pilot/policy\_ambiguities.md}) lists twelve places where
+the policy text admits more than one reading; six affect the pilot's results. Two were found by a policy audit during
+the pilot, after interim inspection of the first calibration data (a file without a register excerpt, and an inverted
+deed that contradicts the excerpt; amendment A1). Two were exposed by the LLM judge: whether review intervals (R3) bind
+a register-discrepancy decision, and whether the ``current register excerpt'' of R4 means the business register or the
+beneficial-ownership register. Two more were raised when the author reviewed a sample of the oracles' answers (amendment
+A13): whether the documents show that two sources are independent, which exception R2(b) requires (an objection the
+author withdrew after a later case; §6.1), and whether filing annual accounts counts as a change. The review also judged
+both readings of the excerpt rule defensible. Under the reviewed key the advantage of DSA in the delegation test
+disappears (§6.1). We keep primary analyses as registered and report sensitivity analyses. The general lesson is that
+interventional ground truth is only as good as the policy it encodes, as test labels are only as good as their
+annotation (\citealp{northcutt2021label}), so in deployment the normative map needs the same review as the policy itself.
+
+\textbf{The policy is stricter than the texts it paraphrases, and that is where the readings diverge.} After the review
+we checked the disputed readings against the public texts of §5.1; the check, with quotations, is in the ambiguity log.
+The FATF Recommendations and the EBA guidelines settle none of them. They require ``reliable, independent'' sources and
+leave it to each firm to ``set out in their policies and procedures which information and data they will treat as
+reliable and independent'' (EBA guideline 4.27), where independence means independence from the customer, not between
+sources; and they tie re-review to ``a change in the customer's circumstances'' (4.78) without listing filings. The
+AMLR, applicable from 10 July 2027, is more specific, and against it the policy is stricter in two of the contested
+places. Its discrepancy derogation applies when the owners ``are known to the obliged entity from another reliable
+source'' (Art. 24(2)(b)); the condition that the source be independent of the register's controlling authority, which
+the author's review first found impossible to establish from the documents and then accepted as the ordinary reading, is
+R2(b)'s own. The derogation is also a permission (``may refrain from reporting \ldots{} and may instead request
+additional information'', Art. 24(2); recital 54 adds that it ``should be possible'' to let the customer report minor,
+typographical differences), so reporting stays admissible where it applies, and the oracles' single answer narrows it.
+Article 26 sets the same review intervals as R3 but triggers an earlier review on ``a change in the relevant
+circumstances of a customer'' (recital 69: ``material changes''), so R3's ``any change recorded in an official filing''
+goes beyond the text. ``Valid proof of registration or a recently issued excerpt of the register'' is required only when
+entering a new relationship (Art. 23(4)); no text requires one in the file of an existing customer or sets its age, so
+the 30-day window and the excerpt requirement are the institution's choices. R4 follows Art. 76(5), which requires
+``meaningful human intervention'' in decisions to enter, refuse or maintain a relationship taken with AI systems. Among
+the 60 combinations of the exploratory multiverse (24 distinct keys, because several readings of the missing-excerpt
+rule give the same answers) (a multiverse analysis in the sense of \citealp{steegen2016multiverse}), the one closest to these
+texts (exception (b) available on another reliable source, annual accounts not a change, no excerpt required) gives DSA
+the lower shifted error in 3 of 9 differing comparisons and the higher in 4 (common core;
+\(\beta_{\mathrm{DSA}} = -0.01\), \(p = 0.48\)). The key that follows the policy's own wording, which is what the agents
+read (annual accounts a change, excerpt optional), gives 3 : 2 of 9 (\(-0.01\), \(p = 0.48\)) with the inverted deed
+scored as the oracles do and 4 : 1 of 7 (\(-0.29\), \(p = 0.011\)) with reporting also admitted; under neither the legal
+nor the literal reading is the advantage reliable, and the registered key scored agents that reopened a file after an
+annual-accounts filing as wrong although R3's wording told them to. In the second phase the policy text will be aligned
+with the legal texts before any test is run. This is our reading of the texts for the pilot, not legal advice.
+
+\textbf{DSA could reduce to capability.} If configurations that decide well also always reason well, DSA adds nothing to
+a track record. In the pilot the two measures do differ, but by how much depends on the answer key. Sonnet 5.5, for
+example, reached the correct outcome in the discrepancy class while failing an interventional test in 17\% of
+calibration episodes under the registered and the reviewed key and in 5\% without the contested arms. The known-groups
+test shows the same difference in a constructed case: an agent that replays stored answers has zero calibration errors
+against the oracles, so a track-record rule delegates every class to it, while DSA withholds the two classes in which
+its answers do not follow the evidence (§6.3). This checks the instrument, not whether the difference helps in
+delegation; that is what the delegation test tested, and the pilot does not show it (§6.1). The pre-registered construct
+check found the two measures strongly correlated (§6.3) and still needs more model configurations than the pilot
+provides.
+
+\textbf{Agents may recognise tests.} Some interventions produce unusual files, such as a decisive document missing from
+an otherwise complete record. An agent that detects such variants could behave differently on them than in deployment.
+Frontier models already tell evaluation transcripts from deployment ones better than chance (\citealp{needham2025evaluated}),
+and our design does not rule out such evaluation awareness. Placebo and sham controls detect sensitivity to irrelevant
+changes, but not detection of relevant ones. A deployed certifier would need interventions drawn from the same
+distribution as live episodes.
+
+\textbf{Noise inflates basis loss.} Basis loss counts a failure if any of five intervention arms is wrong, so sampling
+noise adds failures even when the agent's dependence on evidence is correct. Haiku 5.5 changed its answer on 10\% of
+identical re-runs in the freshness and onboarding classes, its three runs disagree on the basis loss in 22\% of
+episodes, and 29\% of the variance of its basis loss lies between runs of the same episode (§6.3). Majority voting over
+its three runs reduced \(\ell_{\text{WT}}\) in the freshness class from 53.3\% to 47.0\% (basis failures from 49.7\% to
+44.0\%), which shows that the noise is real but does not explain the effect. Local models ran once with a fixed seed, so
+their noise is not measured.
+
+\textbf{The baselines are only as strong as we made them.} The judged-process baseline uses Claude Haiku 5.5 for budget
+reasons. A check with a stronger judge from another developer, GPT-6.1 Sol, on 199 stratified decisions found no better
+discrimination (Youden's \(J\) of −0.07 against +0.07 for Haiku; amendment A10), so a weak judge does not explain the
+result, but two judges and one rubric do not exhaust the design space. We revised the judge's rubric once, after a
+20-decision trial, to stop it from applying rules outside the task (amendment A3). We disclose this and note that the
+revision favours the baseline. Approval and correction baselines are simulated from oracle labels with a reviewer-error
+parameter, not collected from human reviewers. All rules but the judged-grounds rule, a heuristic threshold on a mean
+score, share one certification engine, which favours the simpler rules by giving them the same statistical guarantee.
+
+\textbf{The pilot is small.} With three classes per configuration, the delegation test is informative only in the few
+comparisons in which the rules choose different classes: for DSA against track records, 10 of 28 on all data (11 in the
+common core) under the registered key and 8 of 28 (9) under the reviewed key, and under the registered key most of these
+comparisons involve a tie at the boundary of the delegated set (A7). Bonferroni correction across classes is
+conservative. The pilot can show whether the effects exist and how large they are; the confirmatory delegation test
+needs the second phase.
+
+\textbf{The environment is synthetic.} Documents are short, clean and in English; real files are longer, scanned,
+multilingual and inconsistent. Control over issuers is signalled only by issuer names. The evidence shift is designed
+rather than observed, and it is not adversarial: when sources can be corrupted, no procedure that sees the same evidence
+can avoid deferring some cases to a human (\citealp{pandey2026certified}). The certification guarantee holds for the
+calibration generator's distribution; performance under the constructed shift is assessed empirically, and neither says
+anything about production traffic.
+
+\textbf{Certification is not authorisation.} A certified class tells a human what the agent can be trusted to do; it
+does not move legal responsibility. Decisions that the law subjects to meaningful human intervention, such as onboarding
+under AMLR Art. 76(5)(b), and those the policy reserves for humans, stay so however high the measured DSA. We paraphrase
+public rules but make no claim of regulatory compliance.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

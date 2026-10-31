@@ -1,0 +1,233 @@
+% GENERATED from paper/draft/06_results.md by build.py — do not edit
+\section{Results}
+
+Three decision classes are tested (§5.1). We call them the \emph{discrepancy class} (c3 in the tables: triage of a
+disagreement between the beneficial-ownership register and other evidence), the \emph{freshness class} (c5: whether a
+customer file must be reopened, refreshed or left alone) and the \emph{onboarding class} (c6: an assembled onboarding
+file that the agent may only escalate or complete). A \emph{configuration} is a model with its protocol (§5.3). The
+\emph{common core} is the set of 60 calibration, 30 held-out and 60 shifted base episodes per class that every
+configuration shares (amendment A4); the analysis as registered uses all data, and we report both. Results are scored
+under three answer keys: the \emph{registered key} (the oracles' answers as pre-registered), the registered key
+\emph{without the two contested arms} (amendment A1) and the \emph{reviewed key} (the registered key with the author's
+verdicts applied, A13).
+
+\subsection{Delegation on interventions versus track records (the delegation test, H3)}
+
+\textbf{The registered test favours DSA.} For each configuration and coverage level \(k \in \{1, 2\}\), each rule
+delegates the \(k\) classes with the lowest certified upper bound, and we compare the outcome error on the shifted
+episodes of the delegated classes (§5.6). With 14 configurations there are 28 such comparisons; a comparison is
+informative only when the two rules delegate different classes. In the registered analysis on all data, the rules differ
+in 10 comparisons. DSA has the lower shifted error in 9 and the higher in none (one comparison is equal), and the
+mixed-effects model gives \(\beta_{\mathrm{DSA}} = -0.36\) (standard error, SE, 0.11; odds ratio 0.70; one-sided
+\(p < 0.001\)), where \(\beta_{\mathrm{DSA}}\) is the model's coefficient for the DSA rule and a negative value favours
+DSA. The common core, reported with equal prominence, agrees: DSA is lower in 9 of 11 differing comparisons and higher
+in none (sign test \(p = 0.002\)), with \(\beta_{\mathrm{DSA}} = -0.38\) (SE 0.11; \(p < 0.001\)). Because the model
+treats a shifted episode that enters both rules and both values of \(k\) as independent observations, we also resampled
+configurations with replacement (400 resamples): the bootstrap standard errors are 0.12 on all data and 0.14 in the
+common core, the one-sided \(p\)-values 0.002 and 0.003, and no resample gives \(\beta_{\mathrm{DSA}} \ge 0\). By the
+registered criterion, the delegation test passes; §8 reports the result under all 60 logged readings of the policy.
+
+\textbf{The advantage rests on one contested arm.} A policy audit carried out during the pilot, after interim inspection
+of the first calibration data, had flagged two intervention arms whose correct answers are contested (amendment A1, post
+hoc): the removal of the register excerpt in the freshness class, where the policy does not say that a file must contain
+one, and an inverted notarial deed in the discrepancy class. Excluding both leaves 7 differing comparisons, 4 : 3, in
+both data sets (\(\beta_{\mathrm{DSA}} = -0.09\), \(p = 0.19\) in the common core; \(-0.08\), \(p = 0.20\) on all data).
+The first arm carries the result: dropping the removal arm in every class has the same effect (common core, \(p = 0.38\)
+in the leave-one-out check), dropping the inversion arm does not (\(p = 0.004\)), and in the two reviewed cases of the
+inverted deed the author's blind answers equalled the oracles' (A13). Rescoring with the reviewed key, described next,
+gives 3 : 1 in 8 differing comparisons on all data (\(\beta_{\mathrm{DSA}} = -0.07\), \(p = 0.28\)) and 3 : 1 in 9 in
+the common core (\(-0.08\), \(p = 0.28\)).
+
+\begin{table*}
+\caption{The delegation test under the registered key, without the contested arms, and under the reviewed key.
+``Comparisons'': (configuration, \(k\)) comparisons in which DSA has the lower : higher shifted error, out of those in
+which the two rules differ. \(\beta_{\mathrm{DSA}}\) with, in parentheses, the one-sided \(p\) from the mixed-effects
+model and the one-sided \(p\) from a bootstrap over configurations (400 resamples;
+\texttt{paper/pilot/bootstrap\_h3.md}).}
+\small
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\textwidth - 8\tabcolsep) * \real{0.2542}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 8\tabcolsep) * \real{0.1314}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 8\tabcolsep) * \real{0.2415}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 8\tabcolsep) * \real{0.1314}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 8\tabcolsep) * \real{0.2415}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Analysis
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+All data: comparisons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+All data: \(\beta_{\mathrm{DSA}}\) (\(p\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Common core: comparisons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Common core: \(\beta_{\mathrm{DSA}}\) (\(p\))
+\end{minipage} \\
+\midrule\noalign{}
+
+Registered key & 9 : 0 of 10 & −0.36 (\textless{} 0.001; 0.002) & 9 : 0 of 11 & −0.38 (\textless{} 0.001; 0.003) \\
+Contested arms excluded (A1) & 4 : 3 of 7 & −0.08 (0.20; 0.26) & 4 : 3 of 7 & −0.09 (0.19; 0.27) \\
+Reviewed key (A13) & 3 : 1 of 8 & −0.07 (0.28; 0.16) & 3 : 1 of 9 & −0.08 (0.28; 0.17) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\textbf{The author's review of the key.} Late in the pilot the author reviewed 21 of 30 sampled cases, drawn where
+models disagreed with the oracles, so the result is not an error rate of the oracles (A13). He answered them in three
+steps: 11 blind, on paper; 9 blind after the four open readings had been discussed; and one after the second batch's
+answers had been shown to him. His answers equalled the oracles' admissible sets in 14 of the 21 (6 of 11 in the first
+batch; 7 of 9 in the second, where the two differences were a date copied wrongly onto his own board and a case in which
+he listed three actions where the oracles admit one; and the last case), and he reports that elements such as the
+decision date came into view only after several cases, so later answers are not independent of earlier ones. He first
+judged the oracles wrong in one case: exception R2(b) requires a source independent of the register's controlling
+authority, the documents name issuers but never their controlling authorities, and both oracles decide independence from
+a field the agents do not see, so he read the exception as never established. He withdrew this verdict the next day,
+after answering blind a case of the same structure in the oracles' sense, on the ground that a register and a court are
+two independent bodies even though no document says who controls them. The reviewed key therefore keeps the oracles'
+reading of the exception; the legal text that R2(b) paraphrases has no independence condition at all (§8). He judged
+both readings defensible in three cases, which turn on two questions the policy leaves open: whether filing annual
+accounts is a ``change'' that requires reopening a file (R3), and whether a file must contain a register excerpt at all
+(R3, R5). The two oracles were written from one specification and share these readings, so their agreement did not test
+them. Together the two readings change the correct answer for 44 task variants in the common core. The clearest case is
+the freshness class. In the common core the track record certified it for GPT-6 Luna, GPT-6.1 Terra, GPT-6.1 Sol and
+Qwen 3.8 27B, and DSA did not. Under the registered key these configurations then erred on 17--27\% of the shifted
+freshness episodes, which made the track record look unsafe. Under the reviewed key they erred on 0--2\%: almost every
+one of these errors was reopening a file after an annual-accounts filing that the shifted split had added as a decoy.
+
+\textbf{What holds under every key.} Under each key, the LLM judge passes most of the correct-outcome decisions that the
+interventions mark as resting on the wrong basis: 63--70\% on all data and 59--68\% in the common core, pooled over the
+configurations it assessed (the judge test; §6.2). It also flags 17--18\% of the decisions that pass every intervention,
+so the two methods disagree in both directions, and the pilot has no third standard to say which is right. As delegation
+rules, the two judge-based rules had a higher shifted error than DSA in most comparisons in which they differed, under
+every key. In about two thirds of these comparisons, however, DSA delegated the onboarding class and the judge-based
+rule did not, and in that class the judge mostly reads the ``current register excerpt'' of R4 as an excerpt of the
+beneficial-ownership register, unlike the oracles and the agents (interim observation 2 in the registration log). These
+comparisons are descriptive. In the common core, the readiness gate, a two-arm rule defined for the API configurations,
+had the lower shifted error in 2 of 6 differing comparisons under the registered key (the other 4 equal) and split 1 : 1
+under the reviewed key (§6.2).
+
+\textbf{What each rule certified.} By the registered criterion the delegation test passes; §7.1 gives our reading of it.
+Under the registered key the DSA rule certified only the onboarding class, in 7 of 14 configurations, at 60 episodes per
+class; in that class escalation is always an admissible answer. In the common core the track record certified 16
+classes, with a shifted error of 5.7\% in them. Without the contested arms DSA certified 11 classes with a shifted error
+of 5.8\%, about the same as the track record's; under the reviewed key DSA certified 10 classes with one shifted error
+in 600 episodes and the track record 16 with three in 960 (\texttt{paper/pilot/construct\_validity.md}, which also gives
+the all-data figures). Eight of the eleven differing comparisons in the common core involve a tie at the boundary of the
+delegated set, resolved by the expected-error rule of A7. Restricted to the discrepancy and freshness classes, in which
+delegation would mean autonomy over a decision, the comparison at \(k = 1\) gives 6 : 0, 2 : 2 and 1 : 1 differing
+comparisons under the three keys (with two further equal comparisons under the reviewed key). Two further caveats apply.
+The reviewed key rests on one reviewer, who saw exploratory results before giving three of his four verdicts and who
+withdrew one of them after a later case, knowing the direction of the change (A13). The configuration bootstrap of Table
+4 (first proposed at the A12 audit, when an interim run on 11 configurations had given a standard error of 0.149 against
+the model's 0.126) leaves every reading unchanged; the sign test's \(p\)-values are descriptive (§5.7).
+
+\subsection{Reading the trace versus intervening on the evidence (the judge test, H1′, and the declared-grounds test,
+H2)}
+
+\textbf{The judge passes most wrong-basis decisions.} The judge test asks what share of the correct-outcome decisions
+that fail an interventional basis test a procedure audit passes. The judge (Claude Haiku 5.5, rubric v2 after one
+revision, amendment A3) read the factual decision, its explanation and its declared grounds for every agent with tools
+and for the one-pass model; decision models return no trace to read. Pooled over the eleven judged configurations, the
+audit passed 322 of the 474 correct decisions that fail a basis test in the common core (67.9\%) under the registered
+key, 169 of 288 (58.7\%) without the contested arms and 205 of 337 (60.8\%) under the reviewed key; on all data, 70.3\%,
+63.3\% and 64.7\%. It also flagged 17--18\% of the correct decisions that pass every intervention: 28.5\% in the
+onboarding class against 6--12\% in the other two, because there it reads the ``current register excerpt'' of R4 as an
+excerpt of the beneficial-ownership register (§6.1). Per configuration, under the registered key, the judge passed
+74--100\% of the basis failures of the six API agents (all 25 for GPT-6.1 Sol, 18 of 19 for Claude Opus 5.5) and
+37--56\% of those of three local agents with tools (Gemma 4 26B, gpt-oss 120B, Mistral Small 3.2) and the one-pass
+model, whose explanations are shorter and whose failures are more often outright non-reactions (§6.3); the fourth local
+agent, Qwen 3.8 27B, which rarely fails by non-reaction, sits with the API agents at 85\%.
+
+\textbf{A stronger judge does no better.} The main alternative explanation, that Haiku is weaker than several of the
+models it judged, was tested before any verdict of the second judge was produced (amendment A10). GPT-6.1 Sol judged 199
+correct-outcome decisions of the Claude and GPT-6 agents, drawn in strata with and without an interventional basis
+failure, with the same rubric. Its Youden's \(J\) (sensitivity minus false-positive rate) was −0.07 against +0.07 for
+Haiku, difference −0.14 with a 95\% bootstrap interval of {[}−0.24, −0.04{]}; it flagged none of the 40 basis failures
+of the OpenAI agents, and its mean grounds score was 4.88 for decisions with a basis failure against 4.77 without. The
+two judges agreed on 87\% of verdicts (Cohen's \(\kappa = 0.31\)). By the reading fixed in advance (\(J < 0.15\)), the
+``convincing explanations'' account is supported: the explanations of decisions that do not depend on the decisive
+evidence read as well as those that do, to two judges from two developers. Relabelling the same 199 decisions under the
+other two keys changes little: without the contested arms 38 of them count as basis failures instead of 99, and Sol's
+\(J\) is −0.03 against +0.10 for Haiku; under the reviewed key 52 count, and Sol's \(J\) is −0.06 against +0.07; the
+difference is −0.13 in both cases, with bootstrap intervals {[}−0.25, −0.03{]} and {[}−0.24, −0.03{]}
+(\texttt{runs/judge\_check/result\_keys.txt}).
+
+\textbf{Declared grounds carry a signal, but a weak one.} The declared-grounds test compares the interventions with a
+static check of what the agent itself named as decisive: the judge's verdict on whether the documents the agent declared
+as decisive are those that settle the episode under the policy. This check flagged 65\% of the interventional basis
+failures and 35\% of the decisions that pass every intervention (common core, registered key; 56\% and 41\% without
+contested arms; 59\% and 39\% under the reviewed key). Taken as a detector of what the interventions find, it separates
+better than the judge's basis verdict (sensitivity 0.65 against 0.32, false-positive rate 0.35 against 0.17), but it
+flags a third of the decisions whose basis the interventions confirm, mostly for naming too many or too few documents. A
+mechanical version of the check, which compares the declared decisive documents with the document the generator defines
+as decisive, does not separate at all: any difference between the two sets flags 62\% of the basis failures and 84\% of
+the decisions that pass every intervention, and a decisive document left undeclared flags 13\% and 26\%
+(\texttt{paper/pilot/declared\_grounds\_check.md}). Agents name the register entry together with the evidence that
+confirms or contradicts it, and the generator's list names the settling document alone, so what separates is the judge's
+reading of the declaration against the policy, not a match with a fixed list. The test is met in the weak sense that
+interventions and declared grounds disagree in both directions and the interventions find failures that the declared
+grounds do not show.
+
+\textbf{As delegation rules.} The judged-process rule certified five classes in the common core under the registered key
+and the same five under the reviewed key (the discrepancy class for Opus and Sol, the freshness class for Luna, Sol and
+Terra); the judged-grounds rule, with its threshold chosen on calibration (3.25 on a five-point scale), granted every
+class to every API agent and to Gemma 4 26B and Qwen 3.8 27B, including the onboarding class for GPT-6.1 Terra with a
+calibration outcome error of 46.7\%, and withheld every class but one from the other local models: mean grounds scores
+separate verbose from terse configurations, not reliable from unreliable classes (interim observation 3). At matched
+coverage, DSA had a lower shifted error than the judged-process rule in 11 of 13 differing comparisons under the
+registered key (none higher, two equal), 7 of 10 (one higher) without contested arms and 6 of 11 (none higher, five
+equal) under the reviewed key, and than the judged-grounds rule in 13 of 14, 9 of 11 (one higher) and 8 of 12 (none
+higher); as §6.1 notes, about two thirds of these wins are comparisons in which DSA delegates the onboarding class and
+the judge-based rule does not. The readiness gate, defined only for the API configurations, had the lower shifted error
+in 2 of 6 differing comparisons under the registered key, with the other 4 equal, and split 1 : 1 of 6 under the
+reviewed key; the pilot gives no evidence that the full intervention family delegates better than this two-arm rule. Two
+further baselines could not certify at this sample size, which the design implies rather than the data: a certified
+confidence threshold needs about 75 error-free decisions above the threshold at \(n = 60\), and a simulated reviewer who
+errs with probability 0.05 grants even a perfect agent with probability at most 0.19 (A12). The decision models'
+confidence separates correct from incorrect outcomes (AUROC 0.55--0.78) about as well as it separates right from wrong
+basis among correct outcomes (0.56--0.84 under the registered key, 0.56--0.81 under the reviewed key), with Basal
+2.0-max the highest on the basis measure.
+
+\subsection{Construct checks (CV1, CV2) and the known-groups check}
+
+\textbf{In this pilot DSA is largely, not wholly, reducible to outcome accuracy (CV1).} Across the 42 (configuration,
+class) cells of the common core, the share of correct outcomes that fail a basis test rises with the outcome error:
+Pearson \(r = 0.88\) (Spearman \(\rho = 0.79\)) under the registered key, 0.94 (0.94) without the contested arms and
+0.93 (0.91) under the reviewed key; a linear regression on \(\ell_{\text{out}}\) leaves 23\%, 11\% and 14\% of the
+variance unexplained, and 17--22\% across configurations with classes pooled
+(\texttt{paper/pilot/construct\_validity.md}). The pre-registered expectation that DSA is not reducible to outcome
+accuracy is therefore only weakly met: configurations that err more also fail more basis tests when they are right, and
+the independent part is between a tenth and a quarter of the variance. The residual sits where the construct predicts.
+Agents with no outcome error in a class still fail basis tests in 8--17\% of discrepancy episodes (Claude Haiku, Opus
+and Sonnet 5.5, GPT-6.1 Sol) and in 33--40\% of freshness episodes (GPT-6 Luna, GPT-6.1 Terra and Sol, Qwen 3.8 27B;
+Sonnet, with an outcome error of 3\%, in 43\%), and for these agents a large share of the basis failures, for Sonnet,
+Opus, Sol, Luna and Qwen most of them, lie on the contested arms (26 of 35 for Sonnet, 14 of 19 for Opus, 20 of 25 for
+Sol, 24 of 44 for Luna, 22 of 46 for Terra, 14 of 35 for Haiku and 27 of 39 for Qwen 3.8 27B), whereas for the local and
+decision models few do (7 of 70 for gpt-oss 120B, 6 of 53 for Basal) and the failures are mostly non-reactions: Liquid
+d1 kept its factual action in 100\% of the discrepancy-class interventions that made it inadmissible, Basal 2.0-max in
+81\% and Mistral Small 3.2 in 51\%, against 0--7\% for the API agents. Whether the frontier models' residual is
+dependence on evidence or disagreement with the key is what §6.1 leaves open.
+
+\textbf{Where the variance lies (CV2).} Decomposing the unit-level basis loss of the 2,520 core calibration units by
+sums of squares, 15\% lies between configurations, 20\% between classes, 13\% in their interaction and 52\% within cells
+(registered key; 27\%, 10\%, 22\% and 42\% without contested arms; 26\%, 12\%, 20\% and 43\% under the reviewed key).
+Most of the variance is between episodes of one configuration and class, which is where the certification bound operates
+and where a sample of 60 is small. The seed component can be measured only for Claude Haiku 5.5, which ran three times:
+its runs disagree on the basis loss in 22\% of episodes, and 29\% of the variance of its basis loss lies between runs of
+the same episode (54\% without contested arms, 55\% under the reviewed key). For the thirteen configurations that ran
+once, sampling noise and dependence on evidence cannot be separated (§8).
+
+\textbf{Known groups.} The five scripted agents largely behaved as predicted in expectations written down before the run
+(file \texttt{known\_groups.md}). The oracle agent is clean under every measure. The memorising agent, which replays
+stored answers for episodes it has seen, has zero calibration outcome error in all three classes, so the track-record
+rule delegates all of them, while DSA withholds the discrepancy and freshness classes (basis loss 80\% and 100\%) and
+the agent's held-out and shifted errors in those classes are 43--60\%: a perfect track record with no dependence on
+evidence, the case that motivates the paper (§1.2). The always-escalate agent is clean in the onboarding class and fails
+the other two under both rules. The independence-blind agent errs only where independence decides (discrepancy class:
+outcome error 10\%, basis loss 25\%, shifted error 25\%; the other classes clean). The cue-following agent flips under
+placebo and sham arms in 28\% of discrepancy and 16\% of freshness arms and never in the onboarding class. One
+expectation was not met: the copy arm did not reveal the independence-blind agent (copy flip 0\%), because adding a
+dependent copy of the decisive document does not change the oracles' answer in these episodes; the deficit shows only
+through the add-source arms and the shifted split. The check validates the code and the measures on deficits we planted;
+it does not bear on the delegation test, and in the onboarding class both rules certify every planted agent, because
+escalation is always admissible there.

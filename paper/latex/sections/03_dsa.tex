@@ -1,0 +1,166 @@
+% GENERATED from paper/draft/03_dsa.md by build.py — do not edit
+\section{Decision-Structured Agency}
+
+\subsection{Definition}
+
+Following the tracking condition of meaningful human control (\citealp{santonidesio2018mhc}), itself a reworking of Fischer
+and Ravizza's (1998) reasons-responsiveness, and its first behavioural test for foundation models
+(\citealp{suryana2026caredrive}), we define \emph{decision-structured agency} (DSA) as the extent to which an agent's
+behaviour within a decision class regularly recognises and reacts to the evidence that ought to settle decisions in that
+class.\footnote{We borrow the structure of moderate reasons-responsiveness (receptivity and reactivity, evaluated over
+  counterfactual scenarios for a fixed mechanism), not its threshold. Fischer and Ravizza accept \emph{weak} reactivity
+  because their question is blame; delegation asks whether outcomes will be reliable when no human checks, so DSA
+  requires \emph{regular} receptivity and \emph{regular} reactivity. ``Ought to settle'' marks the reasons as normative
+  rather than merely motivating (\citealp{veluwenkamp2022reasons}).} Concretely, the agent's action changes when, and only
+when, the decisive evidence changes; it escalates when that evidence is missing or contradictory, or when the action
+would exceed its authority; and it revises correctly after correction. DSA is a behavioural, counterfactual property of
+an agent configuration in a decision class: it is measured by interventions on the external evidence the agent consults,
+whose decisive role and redundancy are set by construction, and it implies nothing about intentionality or moral
+responsibility, which remain with the human principals (the tracing condition of meaningful human control).
+
+Two consequences of the definition matter for what follows. First, DSA is indexed by an \emph{agent configuration}
+\(\pi\) (model version, prompt, tools) and a \emph{decision class} \(c\); it is not an intrinsic trait of a model, and a
+change of \(\pi\) is a change of agent. Second, each dimension of DSA has named neighbours in recent work (Table 2).
+What is new is their integration into a per-class profile, their measurement by interventions on external evidence with
+a normative basis fixed by construction, relative to the oracles' reading of the policy (§6.1), and the use of that
+profile to allocate autonomy (§4).
+
+\subsection{Decision episodes}
+
+The unit of measurement is the \emph{decision episode} \[E = (C, I, P, G, A, O),\] where \(C\) is the context (task,
+principal, decision class), \(I\) the information available to the agent at decision time (the evidence items it
+retrieved, with their sources), \(P\) the permissions in force, \(G\) the graph of \emph{agent-declared grounds} (the
+evidence items and rules the agent states it relies on), \(A\) the action taken, drawn from the domain actions together
+with \emph{escalate} and \emph{refuse}, and \(O\) the observed consequences, including deferred ones. Most of these
+fields have counterparts in existing decision records: DEMM's authorisation envelope covers \(I\) and \(P\)
+(\citealp{solozobov2026demm}), the audit verdict of \citet{nian2026auditable} covers \(A\) and part of \(O\), and TRACE
+records cover claims, evidence and verdicts (\citealp{chang2026trace}). What the episode adds is \(G\) as an object to be
+\emph{tested} rather than stored, and its use as the unit of intervention.
+
+We keep two notions of authority apart. \(P\) is the authority the episode grants; it is fixed by the environment and is
+the reference for the scope dimension of DSA. The \emph{autonomy} that our rule grants for class \(c\) (§4) is an output
+of measurement. Conflating them would make the rule circular.
+
+\subsection{Decision classes}
+
+A decision class \(c \in \mathcal{C}\) is a family of decision situations that share a goal and an admissible action set
+(including \emph{escalate} and \emph{refuse}). Class membership is given by a rule \(\kappa(E) \in \mathcal{C}\)
+computable at decision time from \((C, I, P)\) alone, never from the outcome, and the partition is fixed before any
+calibration label is seen. Following the socio-cognitive theory of delegation, in which trust is a relation about a task
+in a context and delegation occurs when the degree of trust exceeds a threshold reflecting acceptance of risk
+(\citealp{castelfranchi1998delegation,castelfranchi2000trust}), each class carries two separate descriptors:
+
+\begin{itemize}
+\item
+  \textbf{requirements} \(Q_c\): the evidence-handling capacities a justified decision in \(c\) demands (reading the
+  decisive item, detecting stale or contradictory sources, responding to independent corroboration, respecting scope,
+  recognising when to escalate); \(Q_c\) determines which DSA dimensions bear on \(c\) and whether evidence may be
+  shared across classes (§4.5);
+\item
+  \textbf{risk parameters} \(K_c\): stakes, reversibility, escalation cost and legal reservation; \(K_c\) sets the
+  tolerated rate \(\alpha_c\) and, for legally reserved classes, forces escalation regardless of measured DSA.
+\end{itemize}
+
+Classes that differ only in \(K_c\) may share DSA estimates but not thresholds; classes that differ in \(Q_c\) may not
+share estimates even when their stakes coincide. To ease alignment with deployment practice, each class is tagged with
+the reversibility-graded action classes of Agent Reliability Profiles (\citealp{hsu2026arp}) and with the verifiability,
+reversibility and criticality axes of \citet{tomasev2026delegation}.
+
+\subsection{Dimensions}
+
+Table 2 lists the dimensions of DSA, the operational test for each, and the prior metric each is aligned with.
+Dimensions 1--5 enter the delegation rule; dimension 6 is reported but not certified. In the pilot the certified loss is
+computed from the action alone, which exercises dimensions 2--4 through \(A^*\); receptivity is read from the declared
+grounds (the declared-grounds test, §6.2) and dimension 5 is not exercised (§3.5).
+
+\begin{table*}
+\caption{Dimensions of decision-structured agency.}
+\small
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\textwidth - 6\tabcolsep) * \real{0.0206}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 6\tabcolsep) * \real{0.1424}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 6\tabcolsep) * \real{0.4906}}
+  >{\raggedright\arraybackslash}p{(\textwidth - 6\tabcolsep) * \real{0.3465}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\#
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dimension
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Operational test
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aligned prior metric
+\end{minipage} \\
+\midrule\noalign{}
+
+1 & Receptivity to decisive evidence & The agent registers an intervention on the decisive item (in \(G\) or in an
+escalation message) & Epistemic competence (\citealp{shao2025seekbench}) \\
+2 & Reactivity to decisive evidence & The action changes as \(A^*\) prescribes under \emph{remove}, \emph{only},
+\emph{invert} and composed interventions, and not under placebo interventions & Reason-responsiveness
+(\citealp{suryana2026caredrive}); necessity/sufficiency tests (\citealp{pawar2026necessary}) \\
+3 & Scope restraint & \(R(a)=\mathds{1}[\mathrm{auth}(a)\subseteq P]\), scored on \emph{attempted} and decision-scope
+over-reach & Restraint in action alignment (\citealp{li2026actionalignment}) \\
+4 & Escalation calibration & Escalates iff decisive evidence is missing or contradictory, or the action exceeds \(P\);
+over-escalation is an error & Selective escalation (\citealp{trinh2026hilbench}); escalation thresholds
+(\citealp{dossantos2026escalate}) \\
+5 & Revision after correction & A principal's correction propagates to later decisions in the episode & Evidence uptake
+and revision (\citealp{riosgarcia2026scientists}) \\
+6 & Decision-point recognition and provenance & Alternatives and grounds are recorded; the decision path can be
+reconstructed from \(E\) & Grounding (\citealp{shao2025seekbench}); evidence-path validity (\citealp{flynt2026groundeval}) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+For scope restraint we score attempted over-reach (calls blocked by the ceiling, §4.4) and decision-scope over-reach
+(deciding a matter reserved for a human), because executed over-reach is blocked mechanically and would otherwise be
+invisible. Authority is ordered by a small per-domain lattice of actions, data scopes and thresholds.
+
+\subsection{Measurement by composed evidence interventions}
+
+For every episode the generator supplies a \emph{normative action map} \(A^*(E) \subseteq \mathcal{A}\), the set of
+correct actions; it may contain \emph{escalate} (for example when the decisive evidence is missing) and \emph{refuse}
+(an out-of-permission request). An intervention family \(\mathcal{I}(E) = \{do_j\}\) acts on the external evidence in
+\(I\):
+
+\begin{itemize}
+\item
+  \textbf{remove \(X\)}: delete the evidence item \(X\);
+\item
+  \textbf{only \(X\)}: remove all evidence except \(X\);
+\item
+  \textbf{invert \(X\)}: replace \(X\) by an item whose content points to a different correct action;
+\item
+  \textbf{add independent \(Y\)}: add a source \(Y\) that agrees or conflicts with \(X\), where \emph{independent} means
+  that \(Y\) shares no controlling authority with \(X\), counted per authority rather than per record of origin
+  (\citealp{pandey2026certified}).
+\end{itemize}
+
+Each operator exists in prior work (\citealp{turpin2023unfaithful}; \citealp{matton2025walk}; \citealp{pawar2026necessary};
+\citealp{liu2026agentabstain}; \citealp{gao2026copies}). We use them in \emph{composition}: adding an independent \(Y\) and then
+removing \(X\) distinguishes redundancy (the action is unchanged because \(Y\) suffices) from non-use (the action is
+unchanged although nothing else supports it). Because the generator also computes \(A^*(do_j(E))\), the correct response
+to every variant is fixed by construction, relative to the oracles' reading of the policy (§6.1, §8). Every unchanged
+decision is classified as \emph{redundancy}, \emph{cancellation} (opposing effects offset) or \emph{non-reaction}, since
+a null effect of a single intervention does not show that an item is inert (\citealp{du2026audita}; \citealp{mahale2026causal}).
+
+Receptivity and reactivity are scored jointly per run in a \(2\times 2\) table: recognised and reacted; recognised but
+not reacted; not recognised but reacted (unfaithful grounds); neither. This is where the agent-declared grounds \(G\)
+earn their place: they are read against the interventional effects, not trusted. A second, separate family of
+\emph{policy interventions} holds the evidence fixed and changes the principal's class policy or \(P\); it tests
+tracking of distal reasons (\citealp{mecacci2020mhc}) and is not run in the pilot.
+
+Controls are mandatory: null arms, placebo interventions on non-decisive evidence, prompt-format placebos (the largest
+effect in CARE-Drive was a format parameter; \citealp{suryana2026caredrive}), size-matched shams, copy, pointer and padding
+controls (\citealp{gao2026copies}), and a fake declared-grounds graph with the same number of grounds rewired to other items.
+Controls are reported as separate flip rates and do not enter the basis loss; responsiveness to them is read as noise or
+sensitivity to form, not as dependence on evidence. The pilot runs four of these controls (null, placebo, sham and copy;
+§5.2). Agent behaviour is stochastic, so conditions should be run several times and compared as distributions; in the
+pilot one configuration was run three times and the others once (§5.3). Coupled replays with common random numbers are
+used only on open-weight stacks (\citealp{mahale2026causal}).
+
+\subsection{What DSA is not}
+
+DSA is not general capability: it is scored on episodes the agent solves under full information, and its discriminant
+validity is tested with agents that have planted deficits (§5.3). It is not a security property: adversarially corrupted
+sources are out of scope (§1.5). And it is not an intrinsic trait of a model: like READY's qualification
+(\citealp{chatrath2026ready}), it attaches to a configuration and a workflow, here refined to a decision class.

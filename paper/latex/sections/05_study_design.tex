@@ -1,0 +1,272 @@
+% GENERATED from paper/draft/05_study_design.md by build.py — do not edit
+\section{Study design}
+
+\subsection{Environment: synthetic counterparty verification}
+
+We instantiate decision episodes in a synthetic counterparty-verification workflow of a fictional EU credit institution.
+The institution's policy (rules R1--R5, given to every configuration verbatim) paraphrases public anti-money-laundering
+texts: verification against sources other than the central beneficial-ownership register and the discrepancy-reporting
+duty with its two exceptions (AMLR Arts 22(7) and 24; \citealp{eu2024amlr}), freshness of register excerpts and review
+intervals (AMLR Arts 23(4) and 26), reliability and independence of sources (EBA guidelines 4.13 and 4.26--4.28,
+\citealp{eba2021riskfactors}; FATF Recommendation 10, \citealp{fatf2026recommendations}), the requirement of meaningful human
+intervention in decisions to enter, refuse or maintain a relationship (AMLR Art. 76(5)(b)) and the non-outsourceable
+decisions on risk profile and suspicious-activity reporting (Art. 18(3)(c) and (e)). Open-textured terms are fixed as
+synthetic parameters (for example, an excerpt is current if issued no more than 30 days before the decision), and in
+places the policy is stricter than the texts (§8). In brief: \textbf{R1} ranks sources in tiers (government registers,
+courts and the institution's own records; notarial deeds and regulated professionals; customer-supplied material),
+treats a copy as its original and calls two sources independent only if their issuers do not answer to the same
+controlling authority. \textbf{R2} requires beneficial-ownership information to be verified against a source other than
+the central register, treats a difference as a discrepancy to be reported within 14 days, allows a request for customer
+correction instead when the difference is typographical or the register is merely outdated and the owners are known from
+an independent reliable source, never for higher-risk customers, and sends missing or contradictory evidence to a
+document request or escalation. \textbf{R3} counts a register excerpt as current for 30 days, requires a full review
+every year for higher-risk and every five years for other customers, and reopens the file on any change recorded in an
+official filing after the last review. \textbf{R4} reserves entering, refusing or maintaining a relationship, changing a
+risk rating and suspicious-activity reports for human officers and defines when an onboarding file is complete.
+\textbf{R5} confines the agent to the permitted actions and tells it to escalate or request documents rather than guess.
+The full text is in the repository (\texttt{worktrace/policy.py}). All entities, registers, authorities and documents
+are generated; no real data are used, and we make no claim of regulatory compliance.
+
+The pilot covers three decision classes that differ in what a justified decision requires. We refer to them by name; the
+codes used in the registration and in the tables follow in parentheses.
+
+\begin{itemize}
+\item
+  \textbf{The discrepancy class (c3): register-discrepancy triage.} Compare the central register with other evidence and
+  choose between reporting the discrepancy, asking the customer to correct it, declaring no discrepancy, requesting a
+  document, or escalating. The flagship rule paraphrases AMLR Art. 24(2)(b), under which an institution may refrain from
+  reporting an outdated register entry and instead ask the customer to correct it if the current owners are known ``from
+  another reliable source'', there is no ground for suspicion, and the customer is not higher-risk. The policy adds that
+  the other source must be independent of the register's controlling authority, and the oracles read the exception as
+  prescribing \emph{request correction}. This yields an \emph{add independent source} intervention whose correct
+  response the oracles fix by construction. The author's review first disputed that response, because the documents name
+  issuers but not their controlling authorities, and withdrew the objection after a later case (§6.1); the legal text
+  has no such condition (§8).
+\item
+  \textbf{The freshness class (c5): freshness and re-review.} Decide whether the file must be reopened, a fresh excerpt
+  requested, or nothing done, from review dates, risk-dependent intervals, official filings and excerpt issue dates.
+\item
+  \textbf{The onboarding class (c6): a reserved decision.} The onboarding file is assembled; the only admissible actions
+  are to escalate or, if the file is incomplete, to request the missing document. Finalising or refusing the
+  relationship is outside the agent's permissions. This class measures scope restraint and escalation.
+\end{itemize}
+
+Three further classes (identification evidence, beneficial-owner computation, document requests) are specified but
+deferred to a second phase.
+
+\subsection{Episodes, interventions and ground truth}
+
+Each class has a generator that samples hidden facts and renders documents from them, with deliberately over-sampled
+edge cases (exact-threshold dates, transliteration variants, higher-risk ratings, concealment alerts). The normative
+action map \(A^*(E)\) is never stored: it is recomputed for every episode and variant from the generator's record of the
+episode, which includes facts the agents never see, such as the controlling authority of each issuer (§6.1), by two
+oracles written from one specification by the same AI assistant used throughout, in separate modules (an imperative rule
+engine and a declarative rule table with separately implemented helpers), so that their agreement tests implementation
+consistency rather than independence of reading. Episodes on which the oracles disagree are discarded; in testing on
+more than 40,000 episodes and variants they never disagreed.
+
+For every factual episode we generate the intervention family of §3.5 --- \emph{remove X}, \emph{only X}, \emph{invert
+X}, \emph{add independent Y}, and the composition \emph{add Y then remove X} --- where X is the document that settles
+the decision in that episode. We add four controls: a \emph{null} re-run of the identical episode, a \emph{placebo} that
+changes document identifiers and order only, a \emph{sham} that adds an irrelevant document, and a \emph{copy} that adds
+a dependent reproduction of X from an issuer under the same controlling authority, which must not count as
+corroboration. Operators that do not apply to an episode are skipped.
+
+Three splits use disjoint seed ranges: \emph{calibration}, \emph{held-out} (same distribution) and \emph{shifted}. The
+shifted generator changes the evidence distribution without changing the policy: more outdated registers without
+independent confirmation, dependent vendor reproductions presented as corroboration, customer claims of notarial
+confirmation, boundary dates, routine filings after the last review, and incomplete or stale onboarding files
+accompanied by pressure to finalise. Only the factual arm is run on the shifted split, because its role is to measure
+outcome errors of decisions that a rule has delegated.
+
+\subsection{Configurations and protocols}
+
+We study three protocols, analysed separately because they expose different information to the model (Table 3).
+
+\textbf{Agents with tools.} The agent lists and retrieves documents through tools and submits one decision with its
+action, the documents it relied on (\(G\)) and the documents that settled the decision. Claude models are called through
+the Anthropic API and OpenAI models through the Responses API, both with effort (reasoning effort) set to medium,
+without sampling parameters and without refusal or model fallbacks, so that the measured configuration is never silently
+replaced. The two closed-model series are paired by each model's position in its developer's line, as the developers
+describe it, not by price: Claude Haiku 5.5 with GPT-6 Luna, Claude Sonnet 5.5 with GPT-6.1 Terra, and Claude Opus 5.5
+with GPT-6.1 Sol. Open-weight models run locally through Ollama with a fixed seed; malformed tool calls that the server
+rejects are retried with a shifted seed and logged.
+
+\textbf{One-pass.} The policy, the task and all documents are given in a single prompt and the model returns a JSON
+decision. We use this protocol for models that cannot run an interactive tool loop: in our tests Bielik 11B v3 wrote an
+entire simulated trajectory, including invented document identifiers, instead of calling tools.
+
+\textbf{Decision models.} Basal 2.0-max (\citealp{kinas2026basal}; MLX, 8-bit), Liquid AI d1-3B (\citealp{liquid2026d1}) and GPT-6
+Luna on the OpenAI Decisions API choose one option from a list in a single forward pass and return calibrated
+probabilities. They receive the same documents as the one-pass protocol. They cannot declare grounds, so their
+receptivity is not measured; their reactivity is.
+
+\begin{table*}
+\caption{Configurations in the pilot. \textsuperscript{a} The common core used for comparisons between configurations is
+the first 60 / 30 / 60 base episodes and run 0; the other bases and runs serve reliability analyses only (§5.4). The
+held-out episodes of Opus 5.5, which amendment A4 had omitted for budget reasons, were run last, in the second budget
+cycle (closing note of the registration log). API identifiers: claude-haiku-5-5, claude-sonnet-5-5, claude-opus-5-5
+(Anthropic); gpt-6-luna, gpt-6.1-terra, gpt-6.1-sol on the Responses API and gpt-6-luna on the Decisions API (OpenAI);
+Ollama tags gpt-oss:120b, mistral-small3.2:24b, gemma4:26b, qwen3.8:27b and SpeakLeash/bielik-11b-v3.0-instruct:Q8\_0;
+all with reasoning effort medium where the API offers it.}
+\small
+\begin{tabular}{@{}lllll@{}}
+\toprule\noalign{}
+Protocol & Configuration & Developer & Runs per arm & Base episodes per class (cal / held-out / shifted) \\
+\midrule\noalign{}
+
+Agent with tools, API & Claude Haiku 5.5 & Anthropic & 3 & 100 / 50 / 100 \textsuperscript{a} \\
+& Claude Sonnet 5.5 & Anthropic & 1 & 60 / 30 / 60 \\
+& Claude Opus 5.5 & Anthropic & 1 & 60 / 30 / 60 \\
+& GPT-6 Luna & OpenAI & 1 & 60 / 30 / 60 \\
+& GPT-6.1 Terra & OpenAI & 1 & 60 / 30 / 60 \\
+& GPT-6.1 Sol & OpenAI & 1 & 60 / 30 / 60 \\
+Agent with tools, local & gpt-oss 120B & OpenAI & 1 (seeded) & 60 / 30 / 60 \\
+& Mistral Small 3.2 24B & Mistral AI & 1 (seeded) & 60 / 30 / 60 \\
+& Gemma 4 26B & Google & 1 (seeded) & 60 / 30 / 60 \\
+& Qwen 3.8 27B & Alibaba & 1 (seeded) & 60 / 30 / 60 \\
+One-pass, local & Bielik 11B v3 Instruct & SpeakLeash & 1 (seeded) & 60 / 30 / 60 \\
+Decision model & Basal 2.0-max & R. Kinas & 1 & 60 / 30 / 60 \\
+& Liquid AI d1-3B & Liquid AI & 1 & 60 / 30 / 60 \\
+& GPT-6 Luna, Decisions API & OpenAI & 1 & 60 / 30 / 60 \\
+Planted deficits & five scripted agents & -- & 1 & 60 / 30 / 60 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+API configurations run every arm, including the null re-run. Locally run models and the local decision models omit the
+null arm, which is identical under a fixed seed.
+
+\textbf{Agents with planted deficits.} To check the instrument itself (known-groups validity), we run five scripted
+agents on the same episodes: an oracle; an agent that replays stored answers for episodes it has seen and otherwise
+answers with the class prior (a perfect track record with no dependence on evidence); an agent that always escalates; an
+agent that treats every issuer as independent and copies as separate sources; and an agent that follows an irrelevant
+cue in document identifiers. Expected results were written down before the run (\texttt{paper/pilot/known\_groups.md}).
+These agents are excluded from the delegation test. The model configurations come from eight developers and include two
+three-size series from the closed-model developers. One base model appears in two forms: Basal 2.0-max is a decision
+fine-tune of Bielik 11B v3, which lets us ask whether decision training changes reactivity to evidence and not only
+outcome accuracy and calibration.
+
+\subsection{Measures}
+
+For each configuration and class we report, on calibration and held-out data: the outcome loss \(\ell_{\text{out}}\);
+the basis loss \(\ell_{\text{basis}}\) (any intervention arm with an action outside \(A^*\));
+\(\ell_{\text{WT}}=\max(\ell_{\text{out}},\ell_{\text{basis}})\); the rate of right outcomes on a wrong basis; the
+null-flip rate (sampling noise); the placebo/sham flip rate; the share of unchanged decisions under interventions that
+should have changed them (non-reaction); scope restraint (attempted out-of-permission actions); and protocol incidents.
+Cost, tokens and latency are reported per run.
+
+The unit of analysis is a base episode with its arms, in one run. For configurations with several runs per episode
+(Claude Haiku 5.5) the registered analysis treats each run as a unit; because runs of one episode are not independent,
+we also report the majority action over runs for every arm, which gives one unit per episode, and the common-core
+analysis on run 0 (amendment A4, §5.8). A basis failure means that one of the five intervention arms has an action
+outside \(A^*\); control arms are reported as flip rates per arm. Units missing any arm are dropped. Terms used in §6:
+an \emph{episode} is one case file; its \emph{arms} (or \emph{variants}) are the factual file and its intervention and
+control versions; a \emph{unit} is one base episode with all its arms in one run; a \emph{cell} is one (configuration,
+class) pair; a \emph{comparison} is one (configuration, \(k\)) pair in the delegation test. The \emph{basis loss}
+\(\ell_{\text{basis}}\) is the rate of units with a \emph{basis failure}; a \emph{wrong-basis decision} is a correct
+factual outcome in a unit with a basis failure; ``failing a basis test'' means the same.
+
+\subsection{Delegation rules compared}
+
+All rules except the judged-grounds rule run through the same certification engine: a class is delegated if the
+one-sided Clopper--Pearson upper bound of its loss on calibration episodes is at most \(\alpha=0.10\), with
+\(\delta=0.05\) split by Bonferroni across classes (§4.2); in the pilot the certified loss is the whole-class rate of
+unjustified proposals, not the selective risk of §4.2 (see there). The rules differ only in the loss or signal they
+certify:
+
+\begin{itemize}
+\item
+  \textbf{DSA rule:} \(\ell_{\text{WT}}\).
+\item
+  \textbf{Track record (B-OO):} \(\ell_{\text{out}}\).
+\item
+  \textbf{Confidence (B-conf):} a confidence threshold certified on \(\ell_{\text{out}}\), for decision models that
+  report probabilities.
+\item
+  \textbf{Judged process (B-READY-proc):} the same rule with wrong basis judged by an LLM reading the decision and its
+  stated grounds instead of by interventions --- the comparison of \emph{how} wrong-basis decisions are detected (the
+  judge test, §5.6); the registered primary comparison is with the track record (the delegation test). The judge (Claude
+  Haiku 5.5, fixed rubric) is applied post hoc.
+\item
+  \textbf{Judged grounds (B-trace-judge):} an LLM score of the clarity and soundness of the agent-declared grounds, as
+  proposed for ``behavioural metrics'' in delegation frameworks (\citealp{tomasev2026delegation}).
+\item
+  \textbf{Readiness gate (B-TBA):} repeated-run reliability plus correct abstention when the sole source is removed
+  (\citealp{angelidis2026tba}).
+\end{itemize}
+
+Rules that need human signals (approval history, correction rates) are simulated from oracle labels with a
+reviewer-error parameter and reported as sensitivity analyses. All rules score the agent's own decision before any human
+correction (\citealp{azevedo2026minimal}).
+
+\subsection{Hypotheses}
+
+\begin{itemize}
+\item
+  \textbf{The delegation test (H3, primary).} At matched autonomous coverage, the DSA rule yields a lower outcome-error
+  rate among delegated decisions on the shifted split than the track-record rule. Coverage is matched by delegating, for
+  each configuration, the \(k\) classes with the lowest certified upper bound under each rule; the test pairs the two
+  rules within (configuration, \(k\)) comparisons. At forced coverage \(k\) a rule may delegate classes it has not
+  certified, so the delegation test compares how the two losses rank classes; §6.1 reports the certified grants
+  separately.
+\item
+  \textbf{The judge test (H1′).} Among correct outcomes, a share fail interventional basis tests while passing a
+  procedure audit; we estimate the share of basis failures that the audit misses.
+\item
+  \textbf{The declared-grounds test (H2).} Interventions detect mismatches between agent-declared grounds and actual
+  dependence more often than inspection of the declared grounds alone.
+\item
+  \textbf{Construct checks (CV1, CV2).} DSA is not reducible to outcome accuracy across configurations, and its variance
+  decomposes into configuration, class and seed components.
+\end{itemize}
+
+\subsection{Analysis}
+
+The delegation test uses a sign test over (configuration, \(k\)) comparisons in which the two rules delegate different
+classes, and a mixed-effects logistic regression of shifted outcome errors on rule, with configuration as a random
+effect. The sign test treats the \(k = 1\) and \(k = 2\) comparisons of one configuration as independent, which they are
+not, so its \(p\)-values are descriptive; the mixed model is the registered test. When two classes have the same
+certified bound at the boundary of the delegated set, a rule's shifted error is the average over its equally justified
+selections, the expected error under a random tie-break (amendment A7, made after interim results were known; §5.8). The
+mixed model treats every shifted episode as an independent observation although an episode enters both rules and both
+values of \(k\); a bootstrap over configurations, proposed at the A12 audit, was rerun on the final data (Table 4). The
+construct checks were registered as hypotheses but not operationalised; the statistics reported in §6.3 (correlations
+over (configuration, class) cells, a sums-of-squares decomposition and a seed component from the repeated runs) were
+fixed after the pilot data were in, so they are post hoc operationalisations of registered hypotheses
+(\texttt{paper/pilot/construct\_validity.py}). Runs that end without a decision count as errors. Decisions recovered
+from text rather than a tool call are included and flagged, and excluded in a robustness check. For multi-run
+configurations the majority-vote variant of every measure is reported alongside the per-run variant.
+
+\subsection{Deviations recorded during the pilot}
+
+A smoke test (Haiku 5.5, 462 runs; gpt-oss 20B, 136 runs) preceded the pilot and was used only to debug the harness and
+the policy; its data are excluded. It exposed one generator defect (the onboarding file lacked a document identifying
+the beneficial owners) and ambiguities in rule R2, which was clarified in four respects before generator v1.0.0 was
+frozen. The specification had left a policy-ambiguity audit as an open question. It was carried out after interim
+inspection of the first calibration data and identified two contested normative answers (amendment A1, post hoc):
+removing the register excerpt in the freshness class, where the policy defines when an excerpt is current but not that a
+file must contain one, and an inverted notarial deed in the discrepancy class that contradicts the shareholder excerpt,
+where reporting the discrepancy is defensible. Primary analyses keep these arms; a sensitivity analysis excludes them.
+Late in the pilot, before the Opus held-out run and while the last local runs were arriving, the author reviewed a
+sample of the oracles' answers (amendment A13, post hoc); his verdicts define a reviewed answer key, which is reported
+as a further sensitivity analysis (§6.1); one verdict was withdrawn the next day, after a later case, and the key was
+recomputed. Two amendments concern the analysis and were written after interim results were known, which the log
+discloses: A7 replaced an arbitrary tie-break by the expected-error rule of §5.7, after it was found that every
+informative comparison of the delegation test at the time involved a tie at the boundary of the delegated set, and A11
+fixed the remaining baselines, measures and the mixed model before the Bielik, Gemma, Qwen and Opus held-out data
+existed, with interim data of the other configurations known. The judge's rubric was frozen (A2) when aggregate results
+for the API models, Basal and d1 were already known, before any decision had been read for that purpose, and revised
+once after a 20-decision trial (A3). Two code audits (A8, A12) recomputed every reported number from the raw data with
+separately written code; the corrections they produced are logged, and none changed a count in the delegation test.
+
+Four further amendments changed the set of configurations or their samples; each was written before the data it concerns
+existed. A4 equalised sample sizes: planned sizes had differed for budget reasons, and with 15 base episodes per class
+Opus 5.5 could not be certified even with no errors. Opus and Sonnet were extended with the same seeds, and a
+common-core analysis on the shared 60 / 30 / 60 episodes and run 0 is reported with the same prominence as the
+registered analysis. A5 and A6 added OpenAI configurations, because every closed configuration until then came from the
+developer of the AI system used to prepare this work (see Statements); the most capable pair (Claude Fable 5.1, GPT-6
+Astra) was not run, for cost. A9 dropped gpt-oss 20B, which duplicated the gpt-oss family; the question it would have
+answered, whether basis failures change with size within a family, is covered by the two three-size series.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

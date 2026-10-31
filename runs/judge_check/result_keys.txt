@@ -1,0 +1,23 @@
+=== registered ===
+Decisions judged by both: 199 of 199
+all                          n=199 | Haiku J +0.07 (sens 0.14, FPR 0.07) | Sol J -0.07 (sens 0.07, FPR 0.14)
+Anthropic decisions          n=119 | Haiku J +0.05 (sens 0.15, FPR 0.10) | Sol J -0.08 (sens 0.12, FPR 0.20)
+OpenAI decisions             n= 80 | Haiku J +0.10 (sens 0.12, FPR 0.03) | Sol J -0.05 (sens 0.00, FPR 0.05)
+J(Sol) - J(Haiku) = -0.14, 95% bootstrap CI [-0.24, -0.04]
+Pre-specified reading (A10): convincing-explanations account supported
+=== A1 ===
+Key A1: 199 of 199 sampled decisions still correct outcomes; basis failures 38 (registered labels on the same decisions: 99)
+Decisions judged by both: 199 of 199
+all                          n=199 | Haiku J +0.10 (sens 0.18, FPR 0.09) | Sol J -0.03 (sens 0.08, FPR 0.11)
+Anthropic decisions          n=119 | Haiku J +0.10 (sens 0.21, FPR 0.11) | Sol J -0.00 (sens 0.16, FPR 0.16)
+OpenAI decisions             n= 80 | Haiku J +0.11 (sens 0.16, FPR 0.05) | Sol J -0.03 (sens 0.00, FPR 0.03)
+J(Sol) - J(Haiku) = -0.13, 95% bootstrap CI [-0.25, -0.03]
+Pre-specified reading (A10): convincing-explanations account supported
+=== reviewed ===
+Key reviewed: 199 of 199 sampled decisions still correct outcomes; basis failures 52 (registered labels on the same decisions: 99)
+Decisions judged by both: 199 of 199
+all                          n=199 | Haiku J +0.07 (sens 0.15, FPR 0.09) | Sol J -0.06 (sens 0.06, FPR 0.12)
+Anthropic decisions          n=119 | Haiku J +0.02 (sens 0.14, FPR 0.12) | Sol J -0.07 (sens 0.10, FPR 0.18)
+OpenAI decisions             n= 80 | Haiku J +0.14 (sens 0.17, FPR 0.04) | Sol J -0.04 (sens 0.00, FPR 0.04)
+J(Sol) - J(Haiku) = -0.13, 95% bootstrap CI [-0.24, -0.03]
+Pre-specified reading (A10): convincing-explanations account supported

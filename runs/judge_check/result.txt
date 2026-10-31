@@ -1,0 +1,6 @@
+Decisions judged by both: 199 of 199
+all                          n=199 | Haiku J +0.07 (sens 0.14, FPR 0.07) | Sol J -0.07 (sens 0.07, FPR 0.14)
+Anthropic decisions          n=119 | Haiku J +0.05 (sens 0.15, FPR 0.10) | Sol J -0.08 (sens 0.12, FPR 0.20)
+OpenAI decisions             n= 80 | Haiku J +0.10 (sens 0.12, FPR 0.03) | Sol J -0.05 (sens 0.00, FPR 0.05)
+J(Sol) - J(Haiku) = -0.14, 95% bootstrap CI [-0.24, -0.04]
+Pre-specified reading (A10): convincing-explanations account supported

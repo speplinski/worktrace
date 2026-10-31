@@ -1,0 +1,623 @@
+{
+ "rater": "author (Szymon P. Pepliński)",
+ "protocol": "paper sheet PL, one case at a time, oracle answers withheld until all 30 are done",
+ "answers": {
+  "E01": {
+   "actions": [
+    "report_to_register"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Jeśli się różnią, domyślnym działaniem jest ZGŁOSZENIE rozbieżności do rejestru w ciągu 14 dni kalendarzowych. Wyjątek nigdy nie dotyczy klientów o podwyższonym ryzyku.",
+   "recorded": "2026-10-29",
+   "revealed_after_blind_answer": true,
+   "verdict": {
+    "choice": "oracle correct",
+    "final_actions": [
+     "request_document",
+     "escalate"
+    ],
+    "note": "After seeing the oracle answer the author agreed: the register and the business-register excerpt (tier 1) match, so there is no register discrepancy; the differing owner appears only in the customer's tier-3 declaration, which R2 handles by request_document or escalate. 'If they differ' refers to reliable evidence vs the register.",
+    "recorded": "2026-10-29",
+    "final_confidence": "pewny (100%)"
+   }
+  },
+  "E02": {
+   "actions": [
+    "report_to_register"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Jeśli się różnią, domyślnym działaniem jest ZGŁOSZENIE rozbieżności do rejestru w ciągu 14 dni kalendarzowych. (Notes: risk standard; register Tammun Dazemun, updated 2027-01-18; commercial court record Belran Munfendor, 2027-02-17.)",
+   "recorded": "2026-10-29",
+   "model_counterpoint": {
+    "source": "GPT-6 (high reasoning effort) analysis the author provided as a counterpoint to the assistant; not his verdict (author, 2026-10-29: 'nie musisz ich uwzględniać, dałem je jako kontrapunkt')",
+    "choice": "oracle wrong",
+    "final_actions": [
+     "report_to_register"
+    ],
+    "note": "The register (last updated 2027-01-18) differs from a tier 1 court record (transfer effective 2027-02-17), so the default is to report. The author first judged both report_to_register and request_customer_correction admissible under exception (b) (register outdated, source from another authority, no alerts, standard risk; 'may' makes the correction an alternative, not a requirement). He then corrected this himself: R1 makes two sources independent only if their issuers do not answer to the same controlling authority, and the file shows only issuer names and jurisdictions, not controlling authorities. Absence of evidence of dependence is not evidence of independence, so exception (b) cannot be applied on the available evidence. The final verdict equals his blind answer.",
+    "fact_check": "Agents saw the same: each document shows only id, type, issuer name and issue date (world.Source.card). The oracles decide independence from a hidden 'controller' field, so under this reading exception (b) can never be established from the documents in any c3 episode of the pilot.",
+    "recorded": "2026-10-29",
+    "final_confidence": "pewny",
+    "admissible_sets_per_author": {
+     "independence not shown (available evidence)": [
+      "report_to_register"
+     ],
+     "independence shown": [
+      "report_to_register",
+      "request_customer_correction"
+     ],
+     "request_customer_correction alone": "never: the exception ('may ... instead') allows an alternative but does not remove the default report"
+    },
+    "specification_problems": [
+     "Source independence is underspecified: the documents give no information on controlling authorities; different jurisdictions are not formal proof that the issuers do not answer to the same authority.",
+     "Semantics of the exception: 'instead of reporting, you may request ...' permits an alternative but does not remove the default action from the admissible set. An answer key that accepts only request_customer_correction is hard to reconcile with R2 and with the instruction to tick all admissible actions (applies to exception (a) as well)."
+    ],
+    "recorded_refinement": "2026-10-29"
+   },
+   "verdict": {
+    "choice": "oracle wrong",
+    "final_actions": [
+     "report_to_register"
+    ],
+    "note": "Author's own words after reading the counterpoint: 'czyli zgodnie z moją pierwotną oceną' (only report_to_register, as in his blind answer). Reason, in his own words: it follows from the asymmetry of evidential requirements between the base rule and exception R2(b); the exception requires an independent source; the documents show different issuers (Aurelia Central Beneficial-Ownership Register, Borovia Commercial Court) but not their controlling authorities, and R1 defines independence by controlling authority.",
+    "recorded": "2026-10-29",
+    "author_words": "wynika z asymetrii wymagań dowodowych między regułą podstawową a wyjątkiem R2(b); wyjątek wymaga niezależnego źródła. W E02 mamy Centralny Rejestr Beneficjentów Aurelii oraz Sąd Gospodarczy Borowii. Dokumenty wskazują różnych wystawców, ale nie określają ich organów kontrolujących, a R1 wymaga 2 niezależnych źródeł.",
+    "generalisation": "No document in the pilot shows controlling authorities, so on this reason exception (b) cannot be established in any c3 episode: where the oracle relies on (b), only report_to_register is admissible.",
+    "recorded_reason": "2026-10-29"
+   },
+   "verdict_revision": {
+    "recorded": "2026-10-30",
+    "choice": "oracle correct",
+    "final_actions": [
+     "request_customer_correction"
+    ],
+    "author_words": "tylko request_customer_correction; jednoznacznie wychodzi, że to klient powinien zrobić. (Z E14, ta sama struktura: Rejestr jest nieaktualny, a obecni beneficjenci są znani z innego wiarygodnego źródła niezależnego od organu kontrolującego rejestr (czyli sąd) i nie ma podstaw do podejrzeń, że informacje są ukrywane (klient ma standardowe ryzyko) -> POPROSIĆ KLIENTA O KOREKTĘ.)",
+    "trigger": "After answering E14 blind (c3, add_Y arm, same structure: outdated register, court record naming the current owner, standard risk, no alert) with request_customer_correction, the author wrote that he remembered an earlier case with the same premises where he had answered differently and that he had misinterpreted it; he did not look the case up. The assistant identified it as E02 from the records (E02 is the only such case among the first 11). The author confirmed the revised answer set in writing.",
+    "disclosure": "Given before any oracle or model answer of batch 2 was revealed, but after the author had read the paper's results under the previous reviewed key (report only), i.e. knowing that the previous verdict removed the DSA advantage. The reading now adopted is the oracles' reading of exception (b): a court or notary record is independent of the register's controlling authority. The original verdict of 2026-10-29 is kept above.",
+    "effect_on_key": "The c3 correction of A*_rev (exception (b) never applied -> report only) is withdrawn; A*_rev keeps the oracle's answer in c3 and the two c5 readings of E03, E22 and E23.",
+    "author_words_reason": "np. Centralny Rejestr Beneficjentów Aurelii vs Sąd Gospodarczy Borowii to dwa niezależne podmioty i to jest jednoznaczne; źródła są niezależne tylko wtedy, gdy ich wystawcy nie podlegają temu samemu organowi kontrolującemu. NIE ma nigdzie info, kto kontroluje te organy, ale ogólnie uznaje się je za niezależne i tak trzeba to rozstrzygać. Inaczej wszystko staje się względne (czyli płynne).",
+    "generalisation": "A register and a court (or a notary) are taken to be independent of each other even though no document names their controlling authorities; this is the oracles' reading, now adopted by the author for every c3 episode."
+   }
+  },
+  "E03": {
+   "actions": [
+    "reopen_cdd"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Każda zmiana odnotowana w oficjalnym wpisie po ostatnim pełnym przeglądzie wymaga ponownego otwarcia akt CDD. Ostatni pełny przegląd 2027-11-14; złożono sprawozdanie roczne 2027-12-13.",
+   "recorded": "2026-10-29",
+   "model_counterpoint": {
+    "source": "GPT-6 (high reasoning effort) analysis the author provided as a counterpoint to the assistant; not his verdict (author, 2026-10-29: 'nie musisz ich uwzględniać, dałem je jako kontrapunkt')",
+    "choice": "oracle wrong",
+    "final_actions": [
+     "reopen_cdd"
+    ],
+    "note": "Excerpt 29 days old (current); higher-risk review 33 days ago (within a year); the official filings feed records 'Annual accounts filed' on 2027-12-13, after the last full review. R3 requires reopening after any change recorded in an official filing; the rules do not exclude annual accounts (the feed itself lists each entry under 'change'). The exclusion exists only in the oracle code. The customer e-mail (tier 3, sent before the new entry) does not change the result; no ground to request an excerpt or escalate.",
+    "recorded": "2026-10-29",
+    "final_confidence": "pewny",
+    "considered_counterargument": "Considered the oracle's reading (filing annual accounts is not a change in the customer's data, so no_action) and rejected it: it adds a restriction that R3 does not contain. The feed formally lists the filing as a change, R3 does not require the change to be material, and there is no exception for routine administrative filings. reopen_cdd is the answer more strongly supported by the wording of R3 and the structure of the document; no_action needs an extra assumption. Unlike E22/E23 (no explicit duty to hold an excerpt), E03 has a direct trigger in R3. If an answer key accepts no_action, that shows an ambiguity in the definition of 'change', but it does not follow from the written rules.",
+    "recorded_refinement": "2026-10-29"
+   },
+   "verdict": {
+    "choice": "both defensible",
+    "final_actions": [
+     "reopen_cdd"
+    ],
+    "author_words": "R3 mówi, że każda zmiana odnotowana w oficjalnym wpisie po ostatnim pełnym przeglądzie wymaga ponownego otwarcia akt CDD, a dokument ma: data wpisu 2027-12-13 · ZMIANA: Złożono sprawozdanie roczne. Reguła nie określa, o jaki rodzaj zmiany chodzi, więc literalnie każda zmiana wpada w regułę reopen_cdd. Tutaj mamy znowu niejednoznaczność, niedookreśloność reguły.",
+    "note": "Own words: on the literal reading only reopen_cdd; the rule does not say what kind of change counts and is underspecified. Category: reopen_cdd has stronger literal support, but no_action is not an interpretation without basis.",
+    "recorded": "2026-10-29",
+    "admissible_per_author": [
+     "reopen_cdd",
+     "no_action"
+    ],
+    "preferred": "reopen_cdd",
+    "author_words_category": "reopen ma silniejsze oparcie literalnie, ale no_action nie jest interpretacją pozbawioną podstaw"
+   }
+  },
+  "E04": {
+   "actions": [
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R4. Jeśli akta są kompletne, eskaluj je do decyzji człowieka. (Checklist, screening, business-register shareholder excerpt, register excerpt present; customer letter tier 3.)",
+   "recorded": "2026-10-29"
+  },
+  "E05": {
+   "actions": [
+    "escalate",
+    "request_document"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Akta są niekompletne (brak screeningu sankcyjnego i PEP) -> Jeśli czegoś brakuje, poproś o brakujący dokument lub eskaluj. Jeśli zasada podaje kilka możliwości, zaznacz wszystkie.",
+   "ambiguity_note": "Nie jest jasne, czy 'poproś o brakujący dokument' dotyczy tylko klienta, czy ogólnie także organizacji (np. screening jest dokumentem wewnętrznym). Wg instrukcji oba.",
+   "recorded": "2026-10-29"
+  },
+  "E10": {
+   "actions": [
+    "escalate",
+    "request_document"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Jeśli własne oświadczenie klienta wskazuje innych beneficjentów niż wiarygodne dowody, poproś o wyjaśnienie (request_document) lub eskaluj. Klient oświadcza Gralo Venstaka, co jest zgodne z RH, ale inne niż rejestr beneficjentów; nigdy nie opieraj się na samym rejestrze. W teorii wyjątek (b), ale akt notarialny (poziom 2) zawiera dane innego udziałowca (Ulsta Dorkanar, ta sama data urodzenia). Rozważony też domyślny raport (jeśli się różnią -> ZGŁOSZENIE), chyba że oświadczenie klienta wskazuje innych beneficjentów niż wiarygodne dowody -> request_document lub eskalacja.",
+   "author_comment": "E10 jest ciekawa",
+   "recorded": "2026-10-29"
+  },
+  "E11": {
+   "actions": [
+    "no_action"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Akta klienta muszą przejść pełny przegląd w ostatnich 5 latach (ryzyko standardowe); po ostatnim przeglądzie nie ma zmian w rejestrze. (Documents noted: CDD review record 2027-09-16, last full review 2023-06-26; register excerpt 2027-09-03; customer e-mail 2027-09-02.)",
+   "recorded": "2026-10-29"
+  },
+  "E12": {
+   "actions": [
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Jeśli akta są kompletne, eskaluj je do decyzji człowieka. (Documents noted: onboarding checklist 2027-11-17; screening 2027-11-16; register excerpt 2027-10-30; shareholder excerpt 2027-11-13; notarial certificate of incorporation 2025-05-31; customer letter 2027-11-14.)",
+   "recorded": "2026-10-29"
+  },
+  "E22": {
+   "actions": [
+    "no_action"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Da się ustalić datę ostatniego pełnego przeglądu oraz nie odnotowano zmiany w oficjalnym wpisie po ostatnim pełnym przeglądzie. (Documents noted: CDD review record 2028-01-06, standard risk, last full review 2025-02-11; filings feed 2028-01-06 with annual accounts 2025-01-12 (author labelled it 'Odpis (Rejestr Handlowy)'); customer e-mail 2028-01-02.)",
+   "recorded": "2026-10-29",
+   "model_counterpoint": {
+    "source": "GPT-6 (high reasoning effort) analysis the author provided as a counterpoint to the assistant; not his verdict (author, 2026-10-29: 'nie musisz ich uwzględniać, dałem je jako kontrapunkt')",
+    "choice": "both defensible",
+    "final_actions": [
+     "request_fresh_excerpt"
+    ],
+    "admissible_per_author": [
+     "request_fresh_excerpt",
+     "no_action"
+    ],
+    "note": "Revised after re-analysis: the author had overlooked the difference between the official filings feed and a business register excerpt. The file has the feed (tier 1, one day old), the CDD review record and a customer e-mail, but no excerpt. For: R3 defines a current excerpt (30 days); the feed confirms the history of filings but does not replace an excerpt, which also confirms current status and company data; R5: when evidence needed for a determination is missing, request it or escalate rather than guess; the cautious choice does not declare the file current without a document that confirms it. Against: R3 does not state that an excerpt is a mandatory part of the file, that every decision needs one issued in the last 30 days, or that the feed is insufficient to show no change; every stated trigger for reopening (review date, risk rating, filing chronology) can be checked and none applies. Both readings are defensible; the rules have a gap: they should state explicitly whether a current excerpt is mandatory.",
+    "previous_verdict": {
+     "choice": "oracle wrong",
+     "final_actions": [
+      "no_action"
+     ],
+     "recorded": "2026-10-29"
+    },
+    "recorded": "2026-10-29",
+    "final_confidence": "pewny"
+   },
+   "verdict": {
+    "choice": "both defensible",
+    "admissible_per_author": [
+     "no_action",
+     "request_fresh_excerpt",
+     "escalate"
+    ],
+    "author_words": "Miałem z tym trochę rozkminy. Oba przeglądy są w terminie, a wykazy nie wskazują zmian po ostatnim CDD. R3 nie nakazuje, by odpis znajdował się w aktach. Ale… R5 pozwala poprosić o brakujące dowody zamiast zakładać, że wszystko jest aktualne.",
+    "note": "Own words: the ambiguity is whether a missing excerpt is missing evidence needed to judge whether the file is current. If yes, R5 admits two actions (request_fresh_excerpt, escalate), not one; if no, no_action. The oracle's set (request_fresh_excerpt only) is incomplete under either reading.",
+    "recorded": "2026-10-29",
+    "classification": "rule ambiguity",
+    "admissible_per_reading": {
+     "missing excerpt = missing evidence needed to judge whether the file is current (R5)": [
+      "request_fresh_excerpt",
+      "escalate"
+     ],
+     "missing excerpt is not missing evidence (R3 does not require an excerpt)": [
+      "no_action"
+     ]
+    },
+    "author_words_confirmation": "Oddaje moją ocenę, ale z jednym zastrzeżeniem: request_fresh_excerpt wymaga uznania, że odpis jest dowodem potrzebnym do ustalenia aktualności akt. R3 nie stwierdza tego wprost. Escalate również jest wtedy dopuszczalne. Oba przypadki można klasyfikować jako rule ambiguity. Niejednoznaczność dotyczy tego, czy brak odpisu oznacza brak dowodu potrzebnego do ustalenia aktualności akt. Jeżeli odpowiedź brzmi „tak”, R5 dopuszcza dwa działania, nie jedno. Jeżeli „nie”, uzasadnione jest no_action."
+   }
+  },
+  "E23": {
+   "actions": [
+    "no_action"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Akta klienta muszą przejść pełny przegląd co najmniej raz w roku dla klientów o podwyższonym ryzyku (przeszły w tym samym roku); nie było zmian w oficjalnym wpisie po ostatnim przeglądzie. (Documents noted: CDD review record 2027-11-23, higher-risk, last full review 2027-10-12; filings feed 2027-11-23 with annual accounts 2027-09-26 (author labelled it 'Odpis (Rejestr Handlowy)'); customer e-mail 2027-11-17.)",
+   "recorded": "2026-10-29",
+   "model_counterpoint": {
+    "source": "GPT-6 (high reasoning effort) analysis the author provided as a counterpoint to the assistant; not his verdict (author, 2026-10-29: 'nie musisz ich uwzględniać, dałem je jako kontrapunkt')",
+    "choice": "both defensible",
+    "final_actions": [
+     "request_fresh_excerpt"
+    ],
+    "admissible_per_author": [
+     "request_fresh_excerpt",
+     "no_action"
+    ],
+    "note": "Revised after re-analysis: the author had overlooked the difference between the official filings feed and a business register excerpt. The file has the feed (tier 1, one day old), the CDD review record and a customer e-mail, but no excerpt. For: R3 defines a current excerpt (30 days); the feed confirms the history of filings but does not replace an excerpt, which also confirms current status and company data; R5: when evidence needed for a determination is missing, request it or escalate rather than guess; the cautious choice does not declare the file current without a document that confirms it. Against: R3 does not state that an excerpt is a mandatory part of the file, that every decision needs one issued in the last 30 days, or that the feed is insufficient to show no change; every stated trigger for reopening (review date, risk rating, filing chronology) can be checked and none applies. Both readings are defensible; the rules have a gap: they should state explicitly whether a current excerpt is mandatory.",
+    "previous_verdict": {
+     "choice": "oracle wrong",
+     "final_actions": [
+      "no_action"
+     ],
+     "recorded": "2026-10-29"
+    },
+    "recorded": "2026-10-29",
+    "final_confidence": "pewny"
+   },
+   "verdict": {
+    "choice": "both defensible",
+    "admissible_per_author": [
+     "no_action",
+     "request_fresh_excerpt",
+     "escalate"
+    ],
+    "author_words": "Miałem z tym trochę rozkminy. Oba przeglądy są w terminie, a wykazy nie wskazują zmian po ostatnim CDD. R3 nie nakazuje, by odpis znajdował się w aktach. Ale… R5 pozwala poprosić o brakujące dowody zamiast zakładać, że wszystko jest aktualne.",
+    "note": "Own words: the ambiguity is whether a missing excerpt is missing evidence needed to judge whether the file is current. If yes, R5 admits two actions (request_fresh_excerpt, escalate), not one; if no, no_action. The oracle's set (request_fresh_excerpt only) is incomplete under either reading.",
+    "recorded": "2026-10-29",
+    "classification": "rule ambiguity",
+    "admissible_per_reading": {
+     "missing excerpt = missing evidence needed to judge whether the file is current (R5)": [
+      "request_fresh_excerpt",
+      "escalate"
+     ],
+     "missing excerpt is not missing evidence (R3 does not require an excerpt)": [
+      "no_action"
+     ]
+    },
+    "author_words_confirmation": "Oddaje moją ocenę, ale z jednym zastrzeżeniem: request_fresh_excerpt wymaga uznania, że odpis jest dowodem potrzebnym do ustalenia aktualności akt. R3 nie stwierdza tego wprost. Escalate również jest wtedy dopuszczalne. Oba przypadki można klasyfikować jako rule ambiguity. Niejednoznaczność dotyczy tego, czy brak odpisu oznacza brak dowodu potrzebnego do ustalenia aktualności akt. Jeżeli odpowiedź brzmi „tak”, R5 dopuszcza dwa działania, nie jedno. Jeżeli „nie”, uzasadnione jest no_action."
+   }
+  },
+  "E28": {
+   "actions": [
+    "request_document",
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "Jeśli beneficjenci wskazani przez wiarygodne dowody się różnią, domyślnie ZGŁOSZENIE. Rejestr jest jedynie nieaktualny, obecni beneficjenci znani z innego wiarygodnego źródła niezależnego od rejestru i brak podejrzeń (wyjątek b) >>> ale akt notarialny ma innego udziałowca. Zatem: jeśli własne oświadczenie klienta wskazuje innych beneficjentów niż wiarygodne dowody (część dowodów się pokrywa, a część nie), poproś o wyjaśnienie (request_document) lub eskaluj. (Documents noted: risk standard; shareholder excerpt Pelin Dorbelwen b. 1960-11-19, since 2026-11-12; register Kalin Torvordor, updated 2026-08-01; notarial deed Kalin Torvordor -> Fenrel Tamtambel, b. 1960-11-19, 2026-11-12; declaration Pelin Dorbelwen.)",
+   "recorded": "2026-10-29"
+  },
+  "E06": {
+   "actions": [
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R3. Jeśli nie da się ustalić daty ostatniego pełnego przeglądu, eskaluj lub otwórz akta ponownie. Odpowiedzi nie mają 'otwórz akta ponownie'. R4. Jeśli akta są kompletne, eskaluj je do decyzji człowieka. Akta onboardingowe są kompletne, wg instrukcji.",
+   "highlighted_documents": [
+    "Lista kontrolna onboardingu 2027-11-20",
+    "Wynik screeningu 2027-11-19"
+   ],
+   "episode_id": "c6-100027",
+   "cls": "c6",
+   "variant": "factual",
+   "split": "calibration",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E07": {
+   "actions": [
+    "no_action"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R3. Odpis z rejestru jest w oknie 30 dni względem CDD; pełny przegląd (co 5 lat, standard) w oknie czasu; ostatnia zmiana odnotowana w oficjalnym wpisie przed pełnym CDD. Data ostatniego pełnego przeglądu dostępna.",
+   "highlighted_documents": [
+    "Wewnętrzny zapis przeglądu CDD 2027-11-15"
+   ],
+   "episode_id": "c5-100048",
+   "cls": "c5",
+   "variant": "factual",
+   "split": "calibration",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E08": {
+   "actions": [
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R3. Odpis z rejestru jest aktualny. R3. Akta klienta muszą przejść pełny przegląd co najmniej raz w roku. Tej danej nie ma czytając literalnie, zatem jeśli nie da się ustalić daty ostatniego pełnego przeglądu, eskaluj lub otwórz akta ponownie (nie ma tej drugiej opcji). R4. Akta onboardingowe są kompletne, zatem eskaluj je do decyzji człowieka. R4. Jeśli czegoś brakuje, poproś o brakujący dokument lub eskaluj. Z definicji nie wynika, że CDD jest wymagane przy onboardingu, więc eskalacja (w razie czego officer zdecyduje). R5. Gdy brakuje dowodów potrzebnych do ustalenia albo są sprzeczne, eskaluj lub poproś o brakujący dokument zamiast zgadywać. Analogicznie jak wcześniej.",
+   "highlighted_documents": [
+    "Lista kontrolna onboardingu 2027-09-27",
+    "Wynik screeningu 2027-09-26"
+   ],
+   "episode_id": "c6-100007",
+   "cls": "c6",
+   "variant": "factual",
+   "split": "calibration",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E09": {
+   "actions": [
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R3. Odpis z rejestru jest aktualny. R3. Akta klienta muszą przejść pełny przegląd CDD; nie ma informacji, czy onboarding wymaga CDD, wymaga ponownego otwarcia akt CDD; jeśli nie da się ustalić daty ostatniego pełnego przeglądu, eskaluj lub otwórz akta ponownie (nie ma takiej opcji, więc zostaje eskalacja). R4. Akta onboardingowe są kompletne. Eskaluj je do decyzji człowieka. Jeśli czegoś brakuje, poproś o brakujący dokument lub eskaluj. Z instrukcji nie wynika, że CDD jest wymagane, więc niech oceni eskalacja. R5. Gdy brakuje dowodów potrzebnych do ustalenia albo są sprzeczne, eskaluj lub poproś o brakujący dokument zamiast zgadywać. To jest zgodnie z R4.",
+   "highlighted_documents": [
+    "Lista kontrolna onboardingu 2028-01-01",
+    "Wynik screeningu 2027-12-31 (trafienie PEP: były wiceminister, odszedł z urzędu 7 mies. temu)"
+   ],
+   "episode_id": "c6s-300043",
+   "cls": "c6",
+   "variant": "factual",
+   "split": "shifted",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E13": {
+   "actions": [
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R1. Dwa źródła są niezależne tylko wtedy, gdy ich wystawcy nie podlegają temu samemu organowi kontrolującemu. Nie opieraj się na jednym źródle tam, gdzie wymagane jest źródło niezależne. Nie pojawia się pojęcie niezależnego źródła, więc RH wystarczy. R3. Odpis z rejestru jest aktualny. R3. Akta klienta muszą przejść pełny przegląd co najmniej raz w roku -> jeśli nie da się ustalić daty ostatniego pełnego przeglądu, eskaluj lub otwórz akta ponownie (nie ma opcji otwarcia akt, ani nie ma definicji, czy onboarding wymaga CDD; to może być niezależny proces, zależy pewnie od instytucji). R4. Akta onboardingowe są kompletne => eskaluj je do decyzji człowieka. Jeśli czegoś brakuje, poproś o brakujący dokument lub eskaluj -> R5. Gdy brakuje dowodów potrzebnych do ustalenia albo są sprzeczne, eskaluj lub poproś o brakujący dokument zamiast zgadywać. Nie jest powiedziane, że CDD jest wymagane, a jedną z opcji jest eskalacja, która i tak wychodzi z innych kryteriów oceny.",
+   "highlighted_documents": [
+    "Lista kontrolna onboardingu 2027-09-19",
+    "Wynik screeningu 2027-09-18 (trafienie PEP: były wiceminister, odszedł z urzędu 7 mies. temu)"
+   ],
+   "episode_id": "c6-100050__invert_X",
+   "cls": "c6",
+   "variant": "invert_X",
+   "split": "calibration",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E14": {
+   "actions": [
+    "request_customer_correction"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R2. Nigdy nie opieraj się na samym rejestrze. Akta sądu gospodarczego o przeniesieniu udziałów pokrywają się z info od klienta. Dokument z sądu wystarcza, by podważyć rejestr; R2: niezależność (czyli 2 źródła, inne organy) od rejestru jest wymagana tylko dla wyjątku (b). Rejestr jest nieaktualny, a obecni beneficjenci są znani z innego wiarygodnego źródła niezależnego od organu kontrolującego rejestr (czyli sąd) i nie ma podstaw do podejrzeń, że informacje są ukrywane (klient ma standardowe ryzyko) -> POPROSIĆ KLIENTA O KOREKTĘ (mimo tego, że się różnią, gdzie domyślnym działaniem jest ZGŁOSZENIE -> tutaj występuje ten wyjątek). Brakujący dokument lub eskalacja nie wchodzą w grę, gdyż sąd = info od klienta (więc jest potwierdzenie z lvl1).",
+   "highlighted_documents": [
+    "Wewnętrzny zapis ryzyka klienta 2027-08-23",
+    "Data decyzji 2027-09-16"
+   ],
+   "episode_id": "c3-200018__add_Y",
+   "cls": "c3",
+   "variant": "add_Y",
+   "split": "heldout",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E15": {
+   "actions": [
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R3. Odpisy z rejestru są aktualne. R3. Jeśli nie da się ustalić daty ostatniego pełnego przeglądu, eskaluj lub otwórz akta ponownie (nie ma 'otwórz akta ponownie', zostaje eskalacja); nie ma reguły, czy CDD jest wymagane dla onboardingu. R4. Akta onboardingowe są kompletne, eskaluj je do decyzji człowieka. Jeśli czegoś brakuje, poproś o brakujący dokument lub eskaluj. Analogicznie do R3, nie jest jasne, czy CDD jest wymagane, opis nie rozstrzygał tego, co jest wymienione, jest dostępne. R5. Gdy brakuje dowodów potrzebnych do ustalenia, eskaluj lub poproś o brakujący dokument zamiast zgadywać. Większość przypadków wskazuje na eskalację, która jednoznacznie rozstrzygnie.",
+   "highlighted_documents": [
+    "Lista kontrolna onboardingu 2027-12-30",
+    "Data decyzji 2027-12-30",
+    "Wynik screeningu 2027-12-29"
+   ],
+   "episode_id": "c6-100002__add_Y",
+   "cls": "c6",
+   "variant": "add_Y",
+   "split": "calibration",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E16": {
+   "actions": [
+    "reopen_cdd",
+    "request_fresh_excerpt",
+    "escalate"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R3. Akta klienta muszą przejść pełny przegląd. R3. Brak aktualnego odpisu z rejestru. R5. Gdy brakuje dowodów potrzebnych do ustalenia, eskaluj lub poproś o brakujący dokument zamiast zgadywać. reopen_cdd => należy wykonać ten przegląd (bo jest po 5 latach), ale nie ma danych, by móc go przeprowadzić. Najpierw warto byłoby zrobić request_fresh_excerpt i dostać brakujące dane, by móc przeprowadzić przegląd. Wg instrukcji zawsze można przekazać przez escalate, by oficer zdecydował. Jestem pewny co do tych opcji, ale instrukcja nie rozstrzyga, co w jakiej kolejności, jeśli występuje więcej możliwości (flow, priorytety, np. najpierw dane, potem przegląd, wątpliwości eskalacja).",
+   "ambiguity_note": "Author's message: 'ten E16 wydawał się z początku prosty, ale jest jednym z bardziej złożonych, nie przez niemożliwość ustalenia dostępnych działań, ale ich kolejności, gdy występuje kilka opcji' (the policy gives no order of precedence among several admissible actions). Logged as policy ambiguity 12.",
+   "highlighted_documents": [
+    "Wewnętrzny zapis przeglądu CDD 2027-12-20",
+    "Data decyzji 2027-12-21"
+   ],
+   "episode_id": "c5-100037__only_X",
+   "cls": "c5",
+   "variant": "only_X",
+   "split": "calibration",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E17": {
+   "actions": [
+    "no_action"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R3. Odpis z rejestru jest aktualny. R3. Akta klienta muszą przejść pełny przegląd co najmniej raz w roku (podwyższone ryzyko). R3. Brak zmiany w oficjalnym wpisie po ostatnim pełnym przeglądzie. R3. Da się ustalić datę ostatniego pełnego przeglądu.",
+   "highlighted_documents": [
+    "Wewnętrzny zapis przeglądu CDD 2027-10-16",
+    "Data decyzji 2027-10-17"
+   ],
+   "episode_id": "c5-200025__invert_X",
+   "cls": "c5",
+   "variant": "invert_X",
+   "split": "heldout",
+   "recorded": "2026-10-30",
+   "batch": 2,
+   "source": "screenshots of the author's review boards, transcribed by the assistant; wording is the author's"
+  },
+  "E18": {
+   "actions": [
+    "no_action"
+   ],
+   "unclear": false,
+   "confidence": "pewny",
+   "reason": "R3. Odpis z rejestru jest aktualny. R3. Akta klienta muszą przejść pełny przegląd co najmniej raz w roku (podwyższone ryzyko) - pełny przegląd był w 2027. R3. Brak zmian w oficjalnym wpisie po ostatnim pełnym przeglądzie. R3. Da się ustalić datę ostatniego pełnego przeglądu.",
+   "highlighted_documents": [
+    "Wewnętrzny zapis przeglądu CDD 2027-11-16",
+    "Data decyzji 2027-11-17"
+   ],
+   "episode_id": "c5-200029__invert_X",
+   "cls": "c5",
+   "variant": "invert_X",
+   "split": "heldout",
+   "recorded": "2026-10-30",
+   "batch": 3,
+   "source": "screenshot of the author's review board, transcribed by the assistant; wording is the author's",
+   "blindness": "Blind to this case's oracle and model answers, but given after the oracle answers of batch 2 (E06-E17) and the explanations of the E07 and E16 differences had been revealed to the author; reported as batch 3."
+  }
+ },
+ "protocol_notes": [
+  "E01 was revealed to the author (oracle answer and model answers) before E02-E30 were answered; later answers may be influenced. The author also asked whether several actions can be correct and how to treat 'X or Y' (answer given: tick all admissible actions, including both alternatives).",
+  "2026-10-29: at the author's request (time), his review was shortened after E05 to 10 further cases chosen by a fixed rule before he answered any of them: all contested (A1) cases among E06-E30, plus per class the two non-contested, non-control cases with the highest share of configurations disagreeing with the oracle. Set: E10, E11, E12, E14, E22, E23, E26, E27, E28, E30. E06 (already sent) is not part of the set.",
+  "2026-10-29: extension rule fixed before the shortened set was answered: if in at least 3 of the 15 cases the author judges the oracle wrong or both readings defensible, the review is extended to the remaining cases.",
+  "2026-10-29: E01 treated as a warm-up case (the answer format was settled on it and the instruction was clarified after it). It counts for the question 'is the oracle right?' (author's verdict after reflection: oracle correct). For blind agreement with the oracle, results are reported with and without E01. The author's blind E01 answer is also evidence on how readable the rule is at first reading, a position the agents shared.",
+  "2026-10-29: after E12 the author (fatigue) cut the set further to E22, E23, E28 (the contested A1 cases among the remaining ones; the reason was not told to him). E14 (sent) and E26, E27, E30 are not reviewed by the author; they can go to other raters.",
+  "2026-10-29: verdicts on E02, E03, E22, E23 given after the oracle answers were revealed. The author wrote his own step-by-step analysis before seeing the assistant's; for E02 he first judged both actions admissible and then corrected this himself (independence of controlling authorities not shown). Result over the 11 reviewed cases: oracle judged correct in 7 (E01 after reflection; E04, E05, E10, E11, E12, E28 by blind agreement), wrong in 2 (E02, E03; the author's blind answer stands) and both readings defensible in 2 (E22, E23; first judged oracle wrong, revised after the author noticed the file holds a filings feed, not an excerpt). The sample was drawn to find disagreement, so 4 of 11 is not an oracle error rate.",
+  "2026-10-29: extension rule triggered (at least 3 reviewed cases judged oracle wrong or both defensible: E02, E03, E22, E23). How the remaining cases are reviewed (by the author or by other raters) is to be decided by the author.",
+  "2026-10-29: extension rule applied. The author reviews the remaining 19 cases himself, one at a time in this order: E06, E07, E08, E09, E13, E14, E15, E16, E17, E18, E19, E20, E21, E24, E25, E26, E27, E29, E30, on the same Polish sheets. Oracle and model answers stay withheld until he has finished. These answers are blind to the answers for each case, but not to the oracle's general reading of four rules discussed after the first 11 cases (source independence, 'may ... instead', 'change' in R3, whether a current excerpt is mandatory). They are reported separately from the first 11.",
+  "2026-10-29: the author asked to leave E01 out, because when he answered it blind he did not yet fully know the rules (attention); only after working through it did he know how to assess the cases. Applied to blind agreement with the oracle: the main figure excludes E01 (a with-E01 figure is kept in a footnote, as planned). Whether his after-reflection verdict on E01 ('oracle correct') also leaves the tally is pending his answer.",
+  "2026-10-29: at the author's request the 19 sheets were delivered together as one zip of single-page PDFs (no answers included); oracle and model answers stay withheld until he has finished all of them.",
+  "2026-10-29: the author reports that all his blind answers are his own, given before any model help. For the verdict stage on E02, E03, E22 and E23 he used GPT-6 (high reasoning effort) as a second opinion to check the assistant (Claude); the step-by-step analyses he sent were written with that help. GPT-6-family models are among the evaluated agents, so these verdicts are not independent of the systems under test and are reported as author verdicts with model assistance. The corrected answer sets match his blind answers in E02 and E03; in E22 and E23 his blind answer (no_action) is one of the two answers judged admissible. The reasons that generalise the verdicts to every case under the same rule (e.g. that source independence is never shown in the documents) came partly from that model-assisted analysis.",
+  "2026-10-29: the author states that he makes his assessments without models, on his own analysis only (this applies to the remaining 19 cases).",
+  "2026-10-29 (correction): the author clarified that the GPT-6 analyses were a counterpoint, not his verdicts, and need not be counted. They are kept under 'model_counterpoint'. His own positions: all blind answers, and on E02 after reflection 'only report_to_register, in line with my original assessment'. Verdicts on E03, E22 and E23 in his own words are pending. The extension rule now rests on E02 alone (1 of 3 needed); the author's decision to review the remaining 19 cases stands regardless.",
+  "2026-10-29: the author's own-words verdicts on E03, E22 and E23 were given after he had seen exploratory impact numbers (how corrected answer keys change the H3 result). All three moved to 'both defensible', the position closest to the oracle among those he considered. Extension rule triggered on the author's own verdicts (E02, E03, E22, E23).",
+  "2026-10-29: the author notes that his assessments are made from the perspective of a non-expert in AML/onboarding (not his field). Recorded under rater_background; to be stated in the paper wherever the review is reported.",
+  "2026-10-29: purpose clarified by the author: (i) a human reference point, a careful non-specialist reading the same rules and documents as the agents; (ii) a trial of the review procedure before other raters are asked. Recorded under purpose_per_author.",
+  "2026-10-30: batch 2 of the extension review received as screenshots of the author's own review boards (E06, E07, E08, E09, E13, E14), in the protocol order, answered blind to the oracle's and the models' answers for each case, without model help, after the four rule readings had been discussed (see the note of 2026-10-29). Transcribed by the assistant; the author's wording kept. Oracle and model answers remain withheld. With E14 the author wrote that on its basis he thinks an earlier assessment of his was wrong; which case and what the revised view is, he is to state himself before any reveal, and both the original and the revision will be kept.",
+  "2026-10-30: the author withdrew his E02 verdict after his own blind answer to E14 (same structure); revised verdict: oracle correct, request_customer_correction only ('jednoznacznie wychodzi, że to klient powinien zrobić'). The reviewed key loses its c3 correction; results under A*_rev are regenerated and the paper updated. See answers.E02.verdict_revision for the trigger and the disclosure.",
+  "2026-10-30, author's remark during batch 2 (his words): 'to jest tak, że im więcej tego robisz, tym reguły są czytelniejsze' (the more of these you do, the clearer the rules become). Recorded as an order effect: later answers are not independent of earlier ones, which is one reason batch 2 is reported separately from the first 11 cases. The author added: 'bo zwracasz uwagę na elementy, które wcześniej mogły się wydawać nieistotne' (because you start noticing elements that earlier might have seemed unimportant).",
+  "2026-10-30, author's remark (his words): 'inny przykład: \"Data decyzji\"; widziałem ją wcześniej, ale nie brałem jej pod uwagę w ocenie, gdyż mając np. datę z wewnętrznych przeglądów/analiz, to na nich się opierałem' (another example: the decision date; I saw it in earlier cases but did not use it, because when there was a date from internal reviews or analyses I relied on those). Recorded as a possible source of error in earlier freshness answers (the 30-day window and the review intervals run from the decision date); the earlier answers are not changed.",
+  "2026-10-30: batch 2 continued: E15, E16, E17 received as board screenshots and transcribed; the author notes that the policy gives no order of precedence when several actions are admissible (E16); logged as policy ambiguity 12. Oracle and model answers remain withheld.",
+  "2026-10-30: the author stopped the extension review after 20 of 30 cases ('już mi się nie chce'). Oracle and model answers of batch 2 were then revealed: 7 of 9 blind answers equal the oracles' sets (E07 and E16 differ; see review_status). No verdict stage for batch 2.",
+  "2026-10-30: after the batch-2 reveal the author resumed with E18 (freshness class), answered on his board; recorded as batch 3 with the blindness caveat. Oracle and model answers for batch 3 stay withheld until he stops again.",
+  "2026-10-30: the author reads the E07 difference as an instance of the order effect he described (elements such as the decision date and the issue date of an excerpt only came into view after several cases); recorded in review_status.E07.",
+  "2026-10-30: the author's post-reveal comment on E16 recorded in review_status.E16 (leans towards the oracles' reading; no verdict stage held).",
+  "2026-10-30: review closed at 21 of 30 cases at the author's decision. E18 revealed: author ['no_action'], oracles ['no_action'], equal=True. Totals: blind answers equal to the oracles' sets in 14 of 21."
+ ],
+ "remaining_set": [
+  "E19",
+  "E20",
+  "E21",
+  "E24",
+  "E25",
+  "E26",
+  "E27",
+  "E29",
+  "E30"
+ ],
+ "extension_rule": {
+  "triggered": true,
+  "reviewer": "author",
+  "note": "E02 oracle wrong; E03, E22, E23 both defensible (author's own words)",
+  "recorded": "2026-10-29"
+ },
+ "rater_background": "The author is not an AML or onboarding specialist; this is not his field (stated 2026-10-29). His verdicts are those of a careful reader applying the written rules, not of a domain expert. They bear on whether the rules can be read unambiguously from the text, which is also the agents' position; they do not establish what AML practice would require.",
+ "purpose_per_author": "Stated 2026-10-29: the author wanted to see how a human fares in this set-up (in a field that is not his own, so the result would differ for tasks from his own domain), and to validate the review procedure himself before asking others, because the task is very demanding and he fears nobody will find the time for it.",
+ "rater_pack": {
+  "made": "2026-10-29",
+  "files": [
+   "pack_pl.pdf",
+   "pack_en.pdf"
+  ],
+  "builder": "make_pack.py",
+  "contents": "instruction page; warm-up c5-100019 (outside the sample, the author's own warm-up case); E02, E03, E22, E23",
+  "changes_to_the_sheet": [
+   "instruction: 'official register filings feed' is a list of events, not an excerpt (the author's own slip)",
+   "instruction: work without AI tools",
+   "one extra line per page for raters who know the field: what they would do in practice if different from the rules on the page"
+  ],
+  "rationale": "The author's trial showed 11 cases is a day's work; four contested cases plus a warm-up is about an hour. Experts answer from market practice, not only from the sheet, so the extra line records that separately instead of fighting it."
+ },
+ "review_status": {
+  "updated": "2026-10-30",
+  "reviewed": 21,
+  "of": 30,
+  "first_batch": [
+   "E01",
+   "E02",
+   "E03",
+   "E04",
+   "E05",
+   "E10",
+   "E11",
+   "E12",
+   "E22",
+   "E23",
+   "E28"
+  ],
+  "second_batch": [
+   "E06",
+   "E07",
+   "E08",
+   "E09",
+   "E13",
+   "E14",
+   "E15",
+   "E16",
+   "E17"
+  ],
+  "not_reviewed": [
+   "E19",
+   "E20",
+   "E21",
+   "E24",
+   "E25",
+   "E26",
+   "E27",
+   "E29",
+   "E30"
+  ],
+  "stopped": "The author stopped after E17 ('już mi się nie chce', 2026-10-30). The remaining 10 cases are not reviewed; no verdict stage was held for the second batch. Resumed later the same day with E18 (batch 3, after the batch-2 reveal).",
+  "second_batch_comparison": {
+   "equal_to_oracle": 7,
+   "admissible_under_oracle": 7,
+   "n": 9,
+   "equal_cases": [
+    "E06",
+    "E08",
+    "E09",
+    "E13",
+    "E14",
+    "E15",
+    "E17"
+   ],
+   "E07": "Author: no_action; oracles: request_fresh_excerpt. The author's board shows the register excerpt dated 2027-11-13 and no decision-date card; the review sheet shows it issued 2027-08-04, 104 days before the decision date 2027-11-16 (the same date, 2027-11-13, is the shareholder-excerpt date in E06, so a transcription slip on the board is the likely cause). With the sheet's date, the author's own stated rule (excerpt within 30 days of the decision) gives the oracles' answer. Blind answer kept as given. Author's comment after the reveal (2026-10-30): 'to E07 to właśnie przykład do mojego wcześniejszego komentarza, że dopiero po kilku walidacjach zauważam kolejne elementy, które wpływają na wynik' (E07 is exactly an example of my earlier comment that only after several validations do I notice further elements that affect the result).",
+   "E16": "Author: reopen_cdd, request_fresh_excerpt, escalate; oracles: reopen_cdd only (the last full review is 1,882 days before the decision date, so the file is overdue whatever else is missing). The author listed the other two as admissible first steps and noted that the policy gives no order of precedence (ambiguity 12). Author's comment after the reveal (2026-10-30): 'to prawda, że są przeterminowane, ale aby zrobić pełny przegląd i tak będą potrzebne dokumenty. To logiczne działanie, ale może je zlecić dopiero osoba dokonująca przeglądu' (true, the file is overdue, but the documents will be needed for the full review anyway; requesting them is the logical step, but perhaps only the person carrying out the review can order it). Read as leaning towards the oracles' answer: reopening is the agent's action, the request for documents belongs to the reviewer. Not a verdict stage; the blind answer stands.",
+   "comparison_with_the_reviewed_key": "identical: the reviewed key differs from the oracles only in c5 readings that these cases do not touch"
+  },
+  "third_batch": [
+   "E18"
+  ],
+  "closed": "2026-10-30, at the author's decision ('zamykaj na 21'); the 9 remaining cases are not reviewed",
+  "third_batch_comparison": {
+   "E18": {
+    "author": [
+     "no_action"
+    ],
+    "oracle": [
+     "no_action"
+    ],
+    "equal": true,
+    "note": "answered after the batch-2 reveal; blind to its own oracle answer"
+   }
+  },
+  "totals": {
+   "equal_to_oracle": 14,
+   "of": 21,
+   "by_batch": {
+    "first": "6 of 11 (6 of 10 without the warm-up case E01)",
+    "second": "7 of 9",
+    "third": "1 of 1"
+   }
+  }
+ }
+}

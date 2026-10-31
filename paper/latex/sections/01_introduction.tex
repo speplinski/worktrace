@@ -1,0 +1,95 @@
+% GENERATED from paper/draft/01_introduction.md by build.py — do not edit
+\section{Introduction}
+
+\subsection{The delegation question}
+
+Organisations that deploy AI agents must decide which decisions an agent may take without human review. Supervisors now
+ask them to make this decision explicitly and to revisit it. The Financial Stability Board's 2026 sound practices
+suggest that firms ``may also progressively increase an agent's ability to interact with the external environment as
+they gain confidence it can do so safely'', with ``triggers for transitioning between different forms of human oversight
+based on performance metrics or user requests'' (\citealp{fsb2026sound}). The UK Financial Conduct Authority (FCA) calls for
+``continuous, conditional assurance'' and for frameworks covering ``delegated authority'' (\citealp{rusu2026fca}). Neither
+says what evidence should ground the confidence on which autonomy is extended.
+
+\subsection{Why track records are not enough}
+
+The default answer is a track record: success rates, human approvals, correction rates, model confidence, or a judge's
+reading of the agent's trace. A track record answers whether the agent's actions turned out correct. A delegator also
+needs to know whether they were correct \emph{for the right reasons and within scope}, because only then can past
+success be expected to transfer to the next case. This is the premise of the paper. The pilot tested one consequence of
+it, that a rule built on evidence tests, that is, on interventions on the evidence the agent consults, delegates more
+safely than a track record, and §6.1 reports that it could not confirm this. Outcome success masks the basis of a
+decision, much as human correction masks an agent's raw competence (\citealp{azevedo2026minimal}).
+
+The gap is not hypothetical. In CXBench, 80.1\% of runs that passed the outcome check failed process checks in regulated
+customer-experience workflows (\citealp{yu2026cxbench}). Procedure-aware evaluation finds that between 27\% and 78\% of
+reported τ-bench successes, depending on model and domain, are ``corrupt successes'' (\citealp{cao2026pae}). In paired tasks,
+an agent's skill at acting correctly and its skill at correctly abstaining are nearly independent (phi coefficient φ ≈
+−0.10; \citealp{liu2026agentabstain}). Self-reports do not close the gap: verbalised confidence barely separates correct from
+incorrect answers (area under the ROC curve, AUROC, 0.47--0.66; \citealp{shen2026provable}), and stated reasoning can be
+unfaithful to what drives a model's answer (\citealp{turpin2023unfaithful}).
+
+There is also a formal reason. Relational properties of an agent's behaviour, such as what its action depends on, are
+2-safety hyperproperties that no monitor of a single trace can decide; deciding them requires comparing executions
+(\citealp{pandey2026local}). Calibrating on final outcomes cannot control the share of correct outcomes reached on an
+unsupported basis (\citealp{opoku2026toolchain}). The philosophy of meaningful human control reached the same conclusion from
+another direction: a system must ``demonstrably and verifiably be responsive to the human moral reasons relevant in the
+circumstances'', and this holds ``no matter how efficient {[}it{]} may be in performing specific tasks''
+(\citealp{santonidesio2018mhc}).
+
+\subsection{A motivating example}
+
+We met this gap in our own work. Auditable Design, an open-source pipeline that turns user reviews into design briefs,
+promises that ``every finding has a typed chain back to informing user reviews''. In its data, the typed chain ends at
+the level of a review cluster (27 reviews for the showcased cluster). The link from an individual finding to specific
+reviews exists only as quote indices inside the free-text reasoning. The record is rich and readable, and it is not
+wrong. But from the record alone a reviewer cannot tell which reviews each finding depends on. Observable is not the
+same as accountable.
+
+\subsection{Question, finding and contributions}
+
+We ask which evidence should decide that an agent may take a class of decisions without review: its track record, an LLM
+judge's reading of its trace, or its reaction to changes in the evidence. For the last we define
+\emph{decision-structured agency} (DSA): the extent to which an agent configuration, within a class of decisions,
+regularly recognises and reacts to the evidence that ought to settle those decisions. It also covers escalating when
+that evidence is missing or contradictory or when an action would exceed the agent's authority. The notion descends from
+reasons-responsiveness (\citealp{fischer1998responsibility}) and from the tracking condition of meaningful human control
+(\citealp{santonidesio2018mhc}).
+
+Our pre-registered pilot does not show that delegating on DSA beats a track record. The registered test favoured DSA,
+but the advantage rested on cases where our own policy admits more than one reading, and it disappeared when those cases
+were excluded or the answer key was reviewed. Under every answer key, an LLM judge passed most of the decisions that the
+evidence tests marked as resting on the wrong basis. The main lesson concerns method: in an evaluation of this kind the
+answer key is part of the instrument. It feeds both the test and the criterion against which the test is judged, and two
+separately written oracles (programs that compute the correct action from the generator's hidden facts) that agree with
+each other can still share the same contestable reading. \citet{cao2026loopholes} shows that policy ambiguity can
+masquerade as agent error in benchmark scores; we show that it can also decide which delegation rule appears to work.
+
+We make three contributions.
+
+\textbf{C1 --- A construct and its measurement.} We define DSA per pair (agent configuration, decision class) and
+measure it by composed interventions on the external evidence the agent consults, with control arms, scoring responses
+against the agent-declared grounds (§3). Which response each intervention requires is fixed by oracles that encode one
+reading of the policy; the pilot shows how much rests on that reading.
+
+\textbf{C2 --- A delegation rule.} We give a rule that grants, narrows and revokes autonomy per decision class beneath a
+fixed, human-set ceiling, with certificates bound to the agent's configuration (§4). The statistical machinery is
+standard; the novelty is the loss it controls. The pilot exercises only the granting step; narrowing, revocation and
+transfer between classes are specified but not yet tested.
+
+\textbf{C3 --- A pre-registered pilot with a full audit trail.} On a synthetic counterparty-verification workflow with
+14 model configurations, we compare delegation on DSA with delegation on a track record, the registered primary
+comparison, and with rules built on an LLM judge, at matched autonomy and under evidence shift (§5, §6). We publish the
+registration, every amendment, the log of policy ambiguities, the author's review of the oracles' answers and the code,
+so that each step from data to conclusion can be checked.
+
+\subsection{Scope}
+
+We study ordinary, non-adversarial shifts in evidence. When sources can be corrupted adversarially, no procedure that
+sees the same evidence can avoid handing off ambiguous cases to a human (\citealp{pandey2026certified}); for that setting we
+propose combining our rule with a source-quorum gate. Our guarantees hold for generated episodes and relative to a
+pre-registered family of interventions. What the rule provides is reliability allocation beneath a fixed ceiling, not a
+security guarantee. The case study encodes publicly available anti-money-laundering rules in a fully synthetic
+environment. It uses no real entities and no institutional data, and makes no claim of regulatory compliance.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

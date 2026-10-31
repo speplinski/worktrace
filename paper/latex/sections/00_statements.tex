@@ -1,0 +1,53 @@
+% GENERATED from paper/draft/00_front_matter.md — do not edit
+\textbf{Statement on independence and data:} The author is employed at a
+financial institution. This work was carried out outside that
+employment, through the author's own practice, Generatywnie; it does not
+represent the views of the employer and uses no data, processes, systems
+or other resources of the employer. All environments are synthetic; the
+counterparty-verification policy paraphrases only public legal texts.
+
+\textbf{Code and data availability:} Generator code, intervention
+catalogue, baseline implementations, analysis scripts, run logs, the
+author's review files and the reading notes are released under open
+licences (Apache-2.0 for code, CC BY 4.0 for texts and data). Every
+episode, including the held-out and shifted splits, is regenerated
+deterministically from its seed, and all seeds are published with the
+code; a private seed range is reserved for the second phase. The
+repository is https://github.com/speplinski/worktrace (release v1.0);
+the results files the paper cites are in its \texttt{paper/pilot/}
+directory, and every file path in this paper is relative to its root;
+\texttt{results\_interim.md} reports all data and
+\texttt{results\_core.md} the common core.
+
+\textbf{Use of AI assistance:} This paper was prepared with substantial
+help from an AI system, Claude (Anthropic), used through the Claude Code
+agent environment. Its role was as follows. (1) \emph{Literature.} It
+searched arXiv and the web, read papers and wrote structured reading
+notes, which are published in the repository; every reference was then
+checked against arXiv or Crossref metadata where available and otherwise
+against the publisher's or issuer's page, and the bibliography records
+how each entry was checked. (2) \emph{Study design.} It proposed and
+critiqued design options. The author made every design decision and
+approved the pre-registration and each amendment; the decision log is
+published. (3) \emph{Code.} The generator, the oracles, the agent
+harnesses, the LLM judge and the analysis scripts were written by the AI
+system at the author's direction and reviewed and run by the author. (4)
+\emph{Writing.} The text was drafted by the AI system from the author's
+theses, decisions and results; the author revised and approved it and
+takes responsibility for every claim. The experiments were run by the
+author on his own computer and API account. \emph{Potential conflict of
+interest.} The AI system used for this work is developed by Anthropic,
+whose models are among the configurations evaluated, and an Anthropic
+model serves as the LLM judge for the two judge-based baselines and for
+the judge and declared-grounds tests, with a second judge from another
+developer run as a check (amendment A10). To limit the resulting risk,
+the study was pre-registered before data collection; ground truth comes
+from two deterministic oracles, not from any model; configurations from
+seven other developers are included; the judge's rubric, its one
+revision and the trial verdicts are published; and all code, prompts,
+model outputs and analyses are released. \emph{Funding.} None; no grant
+was involved. Claude API costs were paid from the monthly API credit
+included in the author's personal, paid Claude subscription (USD 100 per
+cycle) and otherwise by the author; OpenAI API costs and local
+computation were paid by the author. Anthropic had no role in the
+design, analysis or writing of this paper.

@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+paper/latex/*.aux
+paper/latex/*.log
+paper/latex/*.fls
+paper/latex/*.fdb_latexmk
+paper/latex/*.bbl
+paper/latex/*.blg

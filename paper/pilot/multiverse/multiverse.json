@@ -1,0 +1,5642 @@
+[
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "request",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     9,
+     0,
+     2
+    ],
+    "judged process": [
+     11,
+     0,
+     2
+    ],
+    "judged grounds": [
+     13,
+     0,
+     1
+    ],
+    "B-TBA": [
+     0,
+     2,
+     4
+    ]
+   },
+   "beta": -0.3763257432198924,
+   "se": 0.10967453250367251,
+   "p": 0.00030035279299895295,
+   "converged": true,
+   "sign_p": 0.001953125,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.679324894514768,
+   "theta_n": 474,
+   "flag": 0.17367168913560665
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     9,
+     0,
+     1
+    ],
+    "judged process": [
+     11,
+     0,
+     1
+    ],
+    "judged grounds": [
+     13,
+     0,
+     0
+    ],
+    "B-TBA": [
+     0,
+     2,
+     3
+    ]
+   },
+   "beta": -0.3548599369056316,
+   "se": 0.10643636781030381,
+   "p": 0.00042801757870469093,
+   "converged": true,
+   "sign_p": 0.001953125,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.7027914614121511,
+   "theta_n": 609,
+   "flag": 0.1746119733924612
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "request",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     9,
+     0,
+     0
+    ],
+    "judged process": [
+     11,
+     0,
+     1
+    ],
+    "judged grounds": [
+     13,
+     0,
+     0
+    ],
+    "B-TBA": [
+     0,
+     1,
+     2
+    ]
+   },
+   "beta": -0.44465571708183854,
+   "se": 0.11114760276389528,
+   "p": 3.1592700712278144e-05,
+   "converged": true,
+   "sign_p": 0.001953125,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.6651376146788991,
+   "theta_n": 436,
+   "flag": 0.17321016166281755
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     9,
+     0,
+     0
+    ],
+    "judged process": [
+     11,
+     0,
+     1
+    ],
+    "judged grounds": [
+     13,
+     0,
+     0
+    ],
+    "B-TBA": [
+     0,
+     1,
+     2
+    ]
+   },
+   "beta": -0.41875109238747155,
+   "se": 0.10776633387118713,
+   "p": 5.101100349640593e-05,
+   "converged": true,
+   "sign_p": 0.001953125,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.6924428822495606,
+   "theta_n": 569,
+   "flag": 0.17407809110629066
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "optional",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     4,
+     2
+    ],
+    "judged process": [
+     7,
+     1,
+     3
+    ],
+    "judged grounds": [
+     9,
+     1,
+     2
+    ],
+    "B-TBA": [
+     1,
+     3,
+     2
+    ]
+   },
+   "beta": -0.005103537985627854,
+   "se": 0.10103007612962386,
+   "p": 0.4798559836447856,
+   "converged": true,
+   "sign_p": 0.7734375,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.606508875739645,
+   "theta_n": 338,
+   "flag": 0.17036506800286327
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     4,
+     1
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     0,
+     3,
+     1
+    ]
+   },
+   "beta": -0.004852229871732365,
+   "se": 0.09851090068673936,
+   "p": 0.4803577351633923,
+   "converged": true,
+   "sign_p": 0.7734375,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.6453900709219859,
+   "theta_n": 423,
+   "flag": 0.17386934673366833
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "optional",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     0
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     1,
+     2,
+     0
+    ]
+   },
+   "beta": -0.08880803916824809,
+   "se": 0.10225801589285609,
+   "p": 0.192568490489338,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     11,
+     38,
+     660
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.5766666666666667,
+   "theta_n": 300,
+   "flag": 0.1700348432055749
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     0
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     0,
+     2,
+     0
+    ]
+   },
+   "beta": -0.08435398099107208,
+   "se": 0.09965770976259414,
+   "p": 0.1986544798176884,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     11,
+     38,
+     660
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.6240208877284595,
+   "theta_n": 383,
+   "flag": 0.17339901477832512
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     9,
+     0,
+     2
+    ],
+    "judged process": [
+     11,
+     0,
+     2
+    ],
+    "judged grounds": [
+     13,
+     0,
+     1
+    ],
+    "B-TBA": [
+     0,
+     2,
+     4
+    ]
+   },
+   "beta": -0.3763257432198924,
+   "se": 0.10967453250367251,
+   "p": 0.00030035279299895295,
+   "converged": true,
+   "sign_p": 0.001953125,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.6807610993657506,
+   "theta_n": 473,
+   "flag": 0.17432646592709986
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     9,
+     0,
+     1
+    ],
+    "judged process": [
+     11,
+     0,
+     1
+    ],
+    "judged grounds": [
+     13,
+     0,
+     0
+    ],
+    "B-TBA": [
+     0,
+     2,
+     3
+    ]
+   },
+   "beta": -0.3548599369056316,
+   "se": 0.10643636781030381,
+   "p": 0.00042801757870469093,
+   "converged": true,
+   "sign_p": 0.001953125,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.7039473684210527,
+   "theta_n": 608,
+   "flag": 0.17506925207756233
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     9,
+     0,
+     0
+    ],
+    "judged process": [
+     11,
+     0,
+     1
+    ],
+    "judged grounds": [
+     13,
+     0,
+     0
+    ],
+    "B-TBA": [
+     0,
+     1,
+     2
+    ]
+   },
+   "beta": -0.44465571708183854,
+   "se": 0.11114760276389528,
+   "p": 3.1592700712278144e-05,
+   "converged": true,
+   "sign_p": 0.001953125,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 435,
+   "flag": 0.17384615384615384
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     9,
+     0,
+     0
+    ],
+    "judged process": [
+     11,
+     0,
+     1
+    ],
+    "judged grounds": [
+     13,
+     0,
+     0
+    ],
+    "B-TBA": [
+     0,
+     1,
+     2
+    ]
+   },
+   "beta": -0.41875109238747155,
+   "se": 0.10776633387118713,
+   "p": 5.101100349640593e-05,
+   "converged": true,
+   "sign_p": 0.001953125,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.6936619718309859,
+   "theta_n": 568,
+   "flag": 0.17452574525745257
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     4,
+     2
+    ],
+    "judged process": [
+     7,
+     1,
+     3
+    ],
+    "judged grounds": [
+     9,
+     1,
+     2
+    ],
+    "B-TBA": [
+     1,
+     3,
+     2
+    ]
+   },
+   "beta": -0.005103537985627854,
+   "se": 0.10103007612962386,
+   "p": 0.4798559836447856,
+   "converged": true,
+   "sign_p": 0.7734375,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.6083086053412463,
+   "theta_n": 337,
+   "flag": 0.1709585121602289
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     4,
+     1
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     0,
+     3,
+     1
+    ]
+   },
+   "beta": -0.004852229871732365,
+   "se": 0.09851090068673936,
+   "p": 0.4803577351633923,
+   "converged": true,
+   "sign_p": 0.7734375,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.6469194312796208,
+   "theta_n": 422,
+   "flag": 0.17428427925665493
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     0
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     1,
+     2,
+     0
+    ]
+   },
+   "beta": -0.08880803916824809,
+   "se": 0.10225801589285609,
+   "p": 0.192568490489338,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     11,
+     38,
+     660
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.5785953177257525,
+   "theta_n": 299,
+   "flag": 0.17061281337047354
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     0
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     0,
+     2,
+     0
+    ]
+   },
+   "beta": -0.08435398099107208,
+   "se": 0.09965770976259414,
+   "p": 0.1986544798176884,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     11,
+     38,
+     660
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.6256544502617801,
+   "theta_n": 382,
+   "flag": 0.1738060068931561
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     4,
+     2
+    ],
+    "judged process": [
+     7,
+     1,
+     3
+    ],
+    "judged grounds": [
+     9,
+     1,
+     2
+    ],
+    "B-TBA": [
+     1,
+     3,
+     2
+    ]
+   },
+   "beta": -0.005103537985627854,
+   "se": 0.10103007612962386,
+   "p": 0.4798559836447856,
+   "converged": true,
+   "sign_p": 0.7734375,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.606508875739645,
+   "theta_n": 338,
+   "flag": 0.17036506800286327
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     4,
+     1
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     0,
+     3,
+     1
+    ]
+   },
+   "beta": -0.004852229871732365,
+   "se": 0.09851090068673936,
+   "p": 0.4803577351633923,
+   "converged": true,
+   "sign_p": 0.7734375,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.6453900709219859,
+   "theta_n": 423,
+   "flag": 0.17386934673366833
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     0
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     1,
+     2,
+     0
+    ]
+   },
+   "beta": -0.08880803916824809,
+   "se": 0.10225801589285609,
+   "p": 0.192568490489338,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     11,
+     38,
+     660
+    ],
+    "TR": [
+     16,
+     55,
+     960
+    ]
+   },
+   "theta": 0.5766666666666667,
+   "theta_n": 300,
+   "flag": 0.1700348432055749
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     0
+    ],
+    "judged process": [
+     7,
+     1,
+     2
+    ],
+    "judged grounds": [
+     9,
+     1,
+     1
+    ],
+    "B-TBA": [
+     0,
+     2,
+     0
+    ]
+   },
+   "beta": -0.08435398099107208,
+   "se": 0.09965770976259414,
+   "p": 0.1986544798176884,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     11,
+     38,
+     660
+    ],
+    "TR": [
+     17,
+     63,
+     1500
+    ]
+   },
+   "theta": 0.6240208877284595,
+   "theta_n": 383,
+   "flag": 0.17339901477832512
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "request",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     5,
+     2,
+     4
+    ],
+    "judged process": [
+     7,
+     2,
+     4
+    ],
+    "judged grounds": [
+     9,
+     2,
+     3
+    ],
+    "B-TBA": [
+     2,
+     0,
+     4
+    ]
+   },
+   "beta": -0.15749778747656137,
+   "se": 0.12262637536146476,
+   "p": 0.09950604878006486,
+   "converged": true,
+   "sign_p": 0.2265625,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.679324894514768,
+   "theta_n": 474,
+   "flag": 0.17367168913560665
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     5,
+     2,
+     3
+    ],
+    "judged process": [
+     7,
+     2,
+     3
+    ],
+    "judged grounds": [
+     9,
+     2,
+     2
+    ],
+    "B-TBA": [
+     2,
+     0,
+     3
+    ]
+   },
+   "beta": -0.1460398724413934,
+   "se": 0.11806694946207495,
+   "p": 0.10805760386064028,
+   "converged": true,
+   "sign_p": 0.2265625,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.7027914614121511,
+   "theta_n": 609,
+   "flag": 0.1746119733924612
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "request",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     5,
+     2,
+     2
+    ],
+    "judged process": [
+     7,
+     2,
+     3
+    ],
+    "judged grounds": [
+     9,
+     2,
+     2
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.21879839219164451,
+   "se": 0.12314276838478193,
+   "p": 0.03780169779721655,
+   "converged": true,
+   "sign_p": 0.2265625,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.6651376146788991,
+   "theta_n": 436,
+   "flag": 0.17321016166281755
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     5,
+     2,
+     2
+    ],
+    "judged process": [
+     7,
+     2,
+     3
+    ],
+    "judged grounds": [
+     9,
+     2,
+     2
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.20290262264677428,
+   "se": 0.11855545716891905,
+   "p": 0.04349834804844249,
+   "converged": true,
+   "sign_p": 0.2265625,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.6924428822495606,
+   "theta_n": 569,
+   "flag": 0.17407809110629066
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "optional",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     2,
+     4
+    ],
+    "judged process": [
+     6,
+     1,
+     4
+    ],
+    "judged grounds": [
+     8,
+     1,
+     3
+    ],
+    "B-TBA": [
+     1,
+     1,
+     4
+    ]
+   },
+   "beta": -0.0071661249301296255,
+   "se": 0.11971746732708902,
+   "p": 0.4761341101418633,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.606508875739645,
+   "theta_n": 338,
+   "flag": 0.17036506800286327
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     2,
+     3
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     0,
+     1,
+     3
+    ]
+   },
+   "beta": -0.006664859305893859,
+   "se": 0.11545463263631892,
+   "p": 0.47698300977427815,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.6453900709219859,
+   "theta_n": 423,
+   "flag": 0.17386934673366833
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "optional",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     2
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.2877341705955707,
+   "se": 0.125239974546146,
+   "p": 0.010796194147125427,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     11,
+     8,
+     660
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.5766666666666667,
+   "theta_n": 300,
+   "flag": 0.1700348432055749
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     2
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     0,
+     0,
+     2
+    ]
+   },
+   "beta": -0.26623427879429146,
+   "se": 0.12041718954199261,
+   "p": 0.013520255593091389,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     11,
+     8,
+     660
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.6240208877284595,
+   "theta_n": 383,
+   "flag": 0.17339901477832512
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     5,
+     2,
+     4
+    ],
+    "judged process": [
+     7,
+     2,
+     4
+    ],
+    "judged grounds": [
+     9,
+     2,
+     3
+    ],
+    "B-TBA": [
+     2,
+     0,
+     4
+    ]
+   },
+   "beta": -0.15749778747656137,
+   "se": 0.12262637536146476,
+   "p": 0.09950604878006486,
+   "converged": true,
+   "sign_p": 0.2265625,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.6807610993657506,
+   "theta_n": 473,
+   "flag": 0.17432646592709986
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     5,
+     2,
+     3
+    ],
+    "judged process": [
+     7,
+     2,
+     3
+    ],
+    "judged grounds": [
+     9,
+     2,
+     2
+    ],
+    "B-TBA": [
+     2,
+     0,
+     3
+    ]
+   },
+   "beta": -0.1460398724413934,
+   "se": 0.11806694946207495,
+   "p": 0.10805760386064028,
+   "converged": true,
+   "sign_p": 0.2265625,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.7039473684210527,
+   "theta_n": 608,
+   "flag": 0.17506925207756233
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     5,
+     2,
+     2
+    ],
+    "judged process": [
+     7,
+     2,
+     3
+    ],
+    "judged grounds": [
+     9,
+     2,
+     2
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.21879839219164451,
+   "se": 0.12314276838478193,
+   "p": 0.03780169779721655,
+   "converged": true,
+   "sign_p": 0.2265625,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 435,
+   "flag": 0.17384615384615384
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     5,
+     2,
+     2
+    ],
+    "judged process": [
+     7,
+     2,
+     3
+    ],
+    "judged grounds": [
+     9,
+     2,
+     2
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.20290262264677428,
+   "se": 0.11855545716891905,
+   "p": 0.04349834804844249,
+   "converged": true,
+   "sign_p": 0.2265625,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.6936619718309859,
+   "theta_n": 568,
+   "flag": 0.17452574525745257
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     2,
+     4
+    ],
+    "judged process": [
+     6,
+     1,
+     4
+    ],
+    "judged grounds": [
+     8,
+     1,
+     3
+    ],
+    "B-TBA": [
+     1,
+     1,
+     4
+    ]
+   },
+   "beta": -0.0071661249301296255,
+   "se": 0.11971746732708902,
+   "p": 0.4761341101418633,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.6083086053412463,
+   "theta_n": 337,
+   "flag": 0.1709585121602289
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     2,
+     3
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     0,
+     1,
+     3
+    ]
+   },
+   "beta": -0.006664859305893859,
+   "se": 0.11545463263631892,
+   "p": 0.47698300977427815,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.6469194312796208,
+   "theta_n": 422,
+   "flag": 0.17428427925665493
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     2
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.2877341705955707,
+   "se": 0.125239974546146,
+   "p": 0.010796194147125427,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     11,
+     8,
+     660
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.5785953177257525,
+   "theta_n": 299,
+   "flag": 0.17061281337047354
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     2
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     0,
+     0,
+     2
+    ]
+   },
+   "beta": -0.26623427879429146,
+   "se": 0.12041718954199261,
+   "p": 0.013520255593091389,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     11,
+     8,
+     660
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.6256544502617801,
+   "theta_n": 382,
+   "flag": 0.1738060068931561
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     2,
+     4
+    ],
+    "judged process": [
+     6,
+     1,
+     4
+    ],
+    "judged grounds": [
+     8,
+     1,
+     3
+    ],
+    "B-TBA": [
+     1,
+     1,
+     4
+    ]
+   },
+   "beta": -0.0071661249301296255,
+   "se": 0.11971746732708902,
+   "p": 0.4761341101418633,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.606508875739645,
+   "theta_n": 338,
+   "flag": 0.17036506800286327
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     2,
+     3
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     0,
+     1,
+     3
+    ]
+   },
+   "beta": -0.006664859305893859,
+   "se": 0.11545463263631892,
+   "p": 0.47698300977427815,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.6453900709219859,
+   "theta_n": 423,
+   "flag": 0.17386934673366833
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     2
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.2877341705955707,
+   "se": 0.125239974546146,
+   "p": 0.010796194147125427,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     11,
+     8,
+     660
+    ],
+    "TR": [
+     16,
+     10,
+     960
+    ]
+   },
+   "theta": 0.5766666666666667,
+   "theta_n": 300,
+   "flag": 0.1700348432055749
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     2
+    ],
+    "judged process": [
+     6,
+     1,
+     3
+    ],
+    "judged grounds": [
+     8,
+     1,
+     2
+    ],
+    "B-TBA": [
+     0,
+     0,
+     2
+    ]
+   },
+   "beta": -0.26623427879429146,
+   "se": 0.12041718954199261,
+   "p": 0.013520255593091389,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     11,
+     8,
+     660
+    ],
+    "TR": [
+     17,
+     18,
+     1500
+    ]
+   },
+   "theta": 0.6240208877284595,
+   "theta_n": 383,
+   "flag": 0.17339901477832512
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "request",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     4
+    ],
+    "judged process": [
+     6,
+     3,
+     4
+    ],
+    "judged grounds": [
+     8,
+     3,
+     3
+    ],
+    "B-TBA": [
+     3,
+     0,
+     3
+    ]
+   },
+   "beta": -0.03364429208581167,
+   "se": 0.1297077300852381,
+   "p": 0.3976689448349773,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.679324894514768,
+   "theta_n": 474,
+   "flag": 0.17367168913560665
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     3
+    ],
+    "judged process": [
+     6,
+     3,
+     3
+    ],
+    "judged grounds": [
+     8,
+     3,
+     2
+    ],
+    "B-TBA": [
+     3,
+     0,
+     2
+    ]
+   },
+   "beta": -0.03091919441764887,
+   "se": 0.1243430716874921,
+   "p": 0.4018117524834502,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.7027914614121511,
+   "theta_n": 609,
+   "flag": 0.1746119733924612
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "request",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     2
+    ],
+    "judged process": [
+     6,
+     3,
+     3
+    ],
+    "judged grounds": [
+     8,
+     3,
+     2
+    ],
+    "B-TBA": [
+     2,
+     0,
+     1
+    ]
+   },
+   "beta": -0.05861527744469268,
+   "se": 0.12943440748085044,
+   "p": 0.3253258580649514,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.6651376146788991,
+   "theta_n": 436,
+   "flag": 0.17321016166281755
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     2
+    ],
+    "judged process": [
+     6,
+     3,
+     3
+    ],
+    "judged grounds": [
+     8,
+     3,
+     2
+    ],
+    "B-TBA": [
+     2,
+     0,
+     1
+    ]
+   },
+   "beta": -0.053921690956728247,
+   "se": 0.12414156183032357,
+   "p": 0.3320148002894585,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.6924428822495606,
+   "theta_n": 569,
+   "flag": 0.17407809110629066
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "optional",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     5
+    ],
+    "judged process": [
+     6,
+     0,
+     5
+    ],
+    "judged grounds": [
+     8,
+     0,
+     4
+    ],
+    "B-TBA": [
+     1,
+     1,
+     4
+    ]
+   },
+   "beta": -0.07882212710931173,
+   "se": 0.1323886925665806,
+   "p": 0.2757933641999869,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.606508875739645,
+   "theta_n": 338,
+   "flag": 0.17036506800286327
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     4
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     0,
+     1,
+     3
+    ]
+   },
+   "beta": -0.07212854317663249,
+   "se": 0.12663840632030574,
+   "p": 0.28448708476011764,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.6453900709219859,
+   "theta_n": 423,
+   "flag": 0.17386934673366833
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "optional",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     3
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.20763400120245395,
+   "se": 0.13466261447795375,
+   "p": 0.06155100917549582,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     11,
+     1,
+     660
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.5766666666666667,
+   "theta_n": 300,
+   "flag": 0.1700348432055749
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     3
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     0,
+     0,
+     2
+    ]
+   },
+   "beta": -0.18963393360572475,
+   "se": 0.12866037633453428,
+   "p": 0.07025278864005986,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     11,
+     1,
+     660
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.6240208877284595,
+   "theta_n": 383,
+   "flag": 0.17339901477832512
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     4
+    ],
+    "judged process": [
+     6,
+     3,
+     4
+    ],
+    "judged grounds": [
+     8,
+     3,
+     3
+    ],
+    "B-TBA": [
+     3,
+     0,
+     3
+    ]
+   },
+   "beta": -0.03364429208581167,
+   "se": 0.1297077300852381,
+   "p": 0.3976689448349773,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.6807610993657506,
+   "theta_n": 473,
+   "flag": 0.17432646592709986
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     3
+    ],
+    "judged process": [
+     6,
+     3,
+     3
+    ],
+    "judged grounds": [
+     8,
+     3,
+     2
+    ],
+    "B-TBA": [
+     3,
+     0,
+     2
+    ]
+   },
+   "beta": -0.03091919441764887,
+   "se": 0.1243430716874921,
+   "p": 0.4018117524834502,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.7039473684210527,
+   "theta_n": 608,
+   "flag": 0.17506925207756233
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     2
+    ],
+    "judged process": [
+     6,
+     3,
+     3
+    ],
+    "judged grounds": [
+     8,
+     3,
+     2
+    ],
+    "B-TBA": [
+     2,
+     0,
+     1
+    ]
+   },
+   "beta": -0.05861527744469268,
+   "se": 0.12943440748085044,
+   "p": 0.3253258580649514,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 435,
+   "flag": 0.17384615384615384
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     2
+    ],
+    "judged process": [
+     6,
+     3,
+     3
+    ],
+    "judged grounds": [
+     8,
+     3,
+     2
+    ],
+    "B-TBA": [
+     2,
+     0,
+     1
+    ]
+   },
+   "beta": -0.053921690956728247,
+   "se": 0.12414156183032357,
+   "p": 0.3320148002894585,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     8,
+     0,
+     480
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.6936619718309859,
+   "theta_n": 568,
+   "flag": 0.17452574525745257
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     5
+    ],
+    "judged process": [
+     6,
+     0,
+     5
+    ],
+    "judged grounds": [
+     8,
+     0,
+     4
+    ],
+    "B-TBA": [
+     1,
+     1,
+     4
+    ]
+   },
+   "beta": -0.07882212710931173,
+   "se": 0.1323886925665806,
+   "p": 0.2757933641999869,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.6083086053412463,
+   "theta_n": 337,
+   "flag": 0.1709585121602289
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     4
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     0,
+     1,
+     3
+    ]
+   },
+   "beta": -0.07212854317663249,
+   "se": 0.12663840632030574,
+   "p": 0.28448708476011764,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.6469194312796208,
+   "theta_n": 422,
+   "flag": 0.17428427925665493
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     3
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.20763400120245395,
+   "se": 0.13466261447795375,
+   "p": 0.06155100917549582,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     11,
+     1,
+     660
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.5785953177257525,
+   "theta_n": 299,
+   "flag": 0.17061281337047354
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     3
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     0,
+     0,
+     2
+    ]
+   },
+   "beta": -0.18963393360572475,
+   "se": 0.12866037633453428,
+   "p": 0.07025278864005986,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     11,
+     1,
+     660
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.6256544502617801,
+   "theta_n": 382,
+   "flag": 0.1738060068931561
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     5
+    ],
+    "judged process": [
+     6,
+     0,
+     5
+    ],
+    "judged grounds": [
+     8,
+     0,
+     4
+    ],
+    "B-TBA": [
+     1,
+     1,
+     4
+    ]
+   },
+   "beta": -0.07882212710931173,
+   "se": 0.1323886925665806,
+   "p": 0.2757933641999869,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.606508875739645,
+   "theta_n": 338,
+   "flag": 0.17036506800286327
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     4
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     0,
+     1,
+     3
+    ]
+   },
+   "beta": -0.07212854317663249,
+   "se": 0.12663840632030574,
+   "p": 0.28448708476011764,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.6453900709219859,
+   "theta_n": 423,
+   "flag": 0.17386934673366833
+  }
+ },
+ {
+  "independence": "shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     3
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     1,
+     0,
+     2
+    ]
+   },
+   "beta": -0.20763400120245395,
+   "se": 0.13466261447795375,
+   "p": 0.06155100917549582,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     11,
+     1,
+     660
+    ],
+    "TR": [
+     16,
+     3,
+     960
+    ]
+   },
+   "theta": 0.5766666666666667,
+   "theta_n": 300,
+   "flag": 0.1700348432055749
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     3
+    ],
+    "judged process": [
+     6,
+     0,
+     4
+    ],
+    "judged grounds": [
+     8,
+     0,
+     3
+    ],
+    "B-TBA": [
+     0,
+     0,
+     2
+    ]
+   },
+   "beta": -0.18963393360572475,
+   "se": 0.12866037633453428,
+   "p": 0.07025278864005986,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     11,
+     1,
+     660
+    ],
+    "TR": [
+     17,
+     11,
+     1500
+    ]
+   },
+   "theta": 0.6240208877284595,
+   "theta_n": 383,
+   "flag": 0.17339901477832512
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "request",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     3,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     4,
+     5,
+     1
+    ]
+   },
+   "beta": -0.06204946063008657,
+   "se": 0.09966069488018546,
+   "p": 0.26677135764080917,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.7142857142857143,
+   "theta_n": 539,
+   "flag": 0.18629173989455183
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     3,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     4,
+     5,
+     1
+    ]
+   },
+   "beta": -0.07212483107964168,
+   "se": 0.09214369459496367,
+   "p": 0.21688902562350065,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7430167597765364,
+   "theta_n": 716,
+   "flag": 0.1895910780669145
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "request",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     5,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     1,
+     0
+    ],
+    "judged grounds": [
+     11,
+     0,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": -0.18459087540974334,
+   "se": 0.10217841812700217,
+   "p": 0.03541588895887155,
+   "converged": true,
+   "sign_p": 0.109375,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.7188118811881188,
+   "theta_n": 505,
+   "flag": 0.19112627986348124
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     5,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     1,
+     0
+    ],
+    "judged grounds": [
+     11,
+     0,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": -0.17658395712159927,
+   "se": 0.09413840368593132,
+   "p": 0.030342001834801704,
+   "converged": true,
+   "sign_p": 0.109375,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7474302496328928,
+   "theta_n": 681,
+   "flag": 0.19284414796846575
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "optional",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     1
+    ],
+    "judged process": [
+     9,
+     2,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": 0.06622511998366924,
+   "se": 0.09729008646788811,
+   "p": 0.7519685451132305,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.6650124069478908,
+   "theta_n": 403,
+   "flag": 0.1813186813186813
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     2,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": 0.11614317954778175,
+   "se": 0.08880508265073798,
+   "p": 0.9045368580046159,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7113207547169811,
+   "theta_n": 530,
+   "flag": 0.18722222222222223
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "optional",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     2,
+     0
+    ],
+    "judged grounds": [
+     11,
+     1,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     0
+    ]
+   },
+   "beta": -0.014530418926453927,
+   "se": 0.09842349655542407,
+   "p": 0.4413167549644133,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 369,
+   "flag": 0.18577981651376146
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     0
+    ],
+    "judged process": [
+     9,
+     2,
+     0
+    ],
+    "judged grounds": [
+     11,
+     1,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     0
+    ]
+   },
+   "beta": 0.05016718696655037,
+   "se": 0.08960539235062116,
+   "p": 0.7122152430278661,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7151515151515152,
+   "theta_n": 495,
+   "flag": 0.1901907356948229
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     3,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     4,
+     5,
+     1
+    ]
+   },
+   "beta": -0.06204946063008657,
+   "se": 0.09966069488018546,
+   "p": 0.26677135764080917,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.7156133828996283,
+   "theta_n": 538,
+   "flag": 0.18700614574187885
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     3,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     4,
+     5,
+     1
+    ]
+   },
+   "beta": -0.07212483107964168,
+   "se": 0.09214369459496367,
+   "p": 0.21688902562350065,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7440559440559441,
+   "theta_n": 715,
+   "flag": 0.19009287925696594
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     5,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     2,
+     0
+    ],
+    "judged grounds": [
+     11,
+     1,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": -0.15955535870480858,
+   "se": 0.10160762095396546,
+   "p": 0.058171624068327356,
+   "converged": true,
+   "sign_p": 0.109375,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.7202380952380952,
+   "theta_n": 504,
+   "flag": 0.1918158567774936
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     5,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     2,
+     0
+    ],
+    "judged grounds": [
+     11,
+     1,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": -0.15536196707754113,
+   "se": 0.09369064209923941,
+   "p": 0.04863408987781289,
+   "converged": true,
+   "sign_p": 0.109375,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7485294117647059,
+   "theta_n": 680,
+   "flag": 0.19333333333333333
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     1
+    ],
+    "judged process": [
+     9,
+     2,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": 0.06622511998366924,
+   "se": 0.09729008646788811,
+   "p": 0.7519685451132305,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 402,
+   "flag": 0.18196078431372548
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     2,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": 0.11614317954778175,
+   "se": 0.08880508265073798,
+   "p": 0.9045368580046159,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7126654064272212,
+   "theta_n": 529,
+   "flag": 0.18767351471404775
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     2,
+     0
+    ],
+    "judged grounds": [
+     11,
+     1,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     0
+    ]
+   },
+   "beta": -0.014530418926453927,
+   "se": 0.09842349655542407,
+   "p": 0.4413167549644133,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.6684782608695652,
+   "theta_n": 368,
+   "flag": 0.186401833460657
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     0
+    ],
+    "judged process": [
+     9,
+     2,
+     0
+    ],
+    "judged grounds": [
+     11,
+     1,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     0
+    ]
+   },
+   "beta": 0.05016718696655037,
+   "se": 0.08960539235062116,
+   "p": 0.7122152430278661,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7165991902834008,
+   "theta_n": 494,
+   "flag": 0.1906318082788671
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     1
+    ],
+    "judged process": [
+     9,
+     2,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": 0.06622511998366924,
+   "se": 0.09729008646788811,
+   "p": 0.7519685451132305,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.6650124069478908,
+   "theta_n": 403,
+   "flag": 0.1813186813186813
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     2,
+     1
+    ],
+    "judged grounds": [
+     11,
+     1,
+     1
+    ],
+    "B-TBA": [
+     3,
+     4,
+     1
+    ]
+   },
+   "beta": 0.11614317954778175,
+   "se": 0.08880508265073798,
+   "p": 0.9045368580046159,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7113207547169811,
+   "theta_n": 530,
+   "flag": 0.18722222222222223
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "not a change",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     2,
+     0
+    ],
+    "judged grounds": [
+     11,
+     1,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     0
+    ]
+   },
+   "beta": -0.014530418926453927,
+   "se": 0.09842349655542407,
+   "p": 0.4413167549644133,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     12,
+     54,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 369,
+   "flag": 0.18577981651376146
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     0
+    ],
+    "judged process": [
+     9,
+     2,
+     0
+    ],
+    "judged grounds": [
+     11,
+     1,
+     0
+    ],
+    "B-TBA": [
+     3,
+     4,
+     0
+    ]
+   },
+   "beta": 0.05016718696655037,
+   "se": 0.08960539235062116,
+   "p": 0.7122152430278661,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     38,
+     600
+    ],
+    "TR": [
+     13,
+     60,
+     1020
+    ]
+   },
+   "theta": 0.7151515151515152,
+   "theta_n": 495,
+   "flag": 0.1901907356948229
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "request",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     2,
+     2
+    ],
+    "judged process": [
+     10,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     5,
+     3,
+     2
+    ]
+   },
+   "beta": 0.05470567588703111,
+   "se": 0.12080213335271033,
+   "p": 0.6746729026192018,
+   "converged": true,
+   "sign_p": 0.34375,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.7142857142857143,
+   "theta_n": 539,
+   "flag": 0.18629173989455183
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     2,
+     2
+    ],
+    "judged process": [
+     10,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     5,
+     3,
+     2
+    ]
+   },
+   "beta": 0.017463071446355633,
+   "se": 0.10790041803462813,
+   "p": 0.5642857806712352,
+   "converged": true,
+   "sign_p": 0.34375,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7430167597765364,
+   "theta_n": 716,
+   "flag": 0.1895910780669145
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "request",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     1
+    ],
+    "judged process": [
+     9,
+     0,
+     1
+    ],
+    "judged grounds": [
+     10,
+     0,
+     1
+    ],
+    "B-TBA": [
+     5,
+     1,
+     2
+    ]
+   },
+   "beta": -0.09581768145554917,
+   "se": 0.12388457662248459,
+   "p": 0.2196300704621144,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.7188118811881188,
+   "theta_n": 505,
+   "flag": 0.19112627986348124
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     1
+    ],
+    "judged process": [
+     9,
+     0,
+     1
+    ],
+    "judged grounds": [
+     10,
+     0,
+     1
+    ],
+    "B-TBA": [
+     5,
+     1,
+     2
+    ]
+   },
+   "beta": -0.10303422935220197,
+   "se": 0.11017022976864775,
+   "p": 0.17483553273369545,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7474302496328928,
+   "theta_n": 681,
+   "flag": 0.19284414796846575
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "optional",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     1
+    ],
+    "judged process": [
+     9,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     5,
+     2,
+     1
+    ]
+   },
+   "beta": 0.19252858146562063,
+   "se": 0.11857183629733258,
+   "p": 0.9477832176268688,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.6650124069478908,
+   "theta_n": 403,
+   "flag": 0.1813186813186813
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     4,
+     3,
+     1
+    ]
+   },
+   "beta": 0.1866123205049797,
+   "se": 0.10498364619151504,
+   "p": 0.9622600395214808,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7113207547169811,
+   "theta_n": 530,
+   "flag": 0.18722222222222223
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "optional",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     1,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     5,
+     2,
+     0
+    ]
+   },
+   "beta": 0.0255609662133909,
+   "se": 0.12086090729357003,
+   "p": 0.5837478326674284,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 369,
+   "flag": 0.18577981651376146
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     0
+    ],
+    "judged process": [
+     9,
+     1,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     4,
+     3,
+     0
+    ]
+   },
+   "beta": 0.05676133760703341,
+   "se": 0.1065677448320923,
+   "p": 0.7028556532313224,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7151515151515152,
+   "theta_n": 495,
+   "flag": 0.1901907356948229
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     2,
+     2
+    ],
+    "judged process": [
+     10,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     5,
+     3,
+     2
+    ]
+   },
+   "beta": 0.05470567588703111,
+   "se": 0.12080213335271033,
+   "p": 0.6746729026192018,
+   "converged": true,
+   "sign_p": 0.34375,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.7156133828996283,
+   "theta_n": 538,
+   "flag": 0.18700614574187885
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     2,
+     2
+    ],
+    "judged process": [
+     10,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     5,
+     3,
+     2
+    ]
+   },
+   "beta": 0.017463071446355633,
+   "se": 0.10790041803462813,
+   "p": 0.5642857806712352,
+   "converged": true,
+   "sign_p": 0.34375,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7440559440559441,
+   "theta_n": 715,
+   "flag": 0.19009287925696594
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     1
+    ],
+    "judged process": [
+     10,
+     0,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     5,
+     1,
+     2
+    ]
+   },
+   "beta": -0.10791794444358027,
+   "se": 0.12424953165397283,
+   "p": 0.1925444242534775,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.7202380952380952,
+   "theta_n": 504,
+   "flag": 0.1918158567774936
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     1
+    ],
+    "judged process": [
+     10,
+     0,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     5,
+     1,
+     2
+    ]
+   },
+   "beta": -0.11262435206543721,
+   "se": 0.11042903343838911,
+   "p": 0.15389271062255255,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7485294117647059,
+   "theta_n": 680,
+   "flag": 0.19333333333333333
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     1
+    ],
+    "judged process": [
+     9,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     5,
+     2,
+     1
+    ]
+   },
+   "beta": 0.19252858146562063,
+   "se": 0.11857183629733258,
+   "p": 0.9477832176268688,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 402,
+   "flag": 0.18196078431372548
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     4,
+     3,
+     1
+    ]
+   },
+   "beta": 0.1866123205049797,
+   "se": 0.10498364619151504,
+   "p": 0.9622600395214808,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7126654064272212,
+   "theta_n": 529,
+   "flag": 0.18767351471404775
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     1,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     5,
+     2,
+     0
+    ]
+   },
+   "beta": 0.0255609662133909,
+   "se": 0.12086090729357003,
+   "p": 0.5837478326674284,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.6684782608695652,
+   "theta_n": 368,
+   "flag": 0.186401833460657
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     0
+    ],
+    "judged process": [
+     9,
+     1,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     4,
+     3,
+     0
+    ]
+   },
+   "beta": 0.05676133760703341,
+   "se": 0.1065677448320923,
+   "p": 0.7028556532313224,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7165991902834008,
+   "theta_n": 494,
+   "flag": 0.1906318082788671
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     1
+    ],
+    "judged process": [
+     9,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     5,
+     2,
+     1
+    ]
+   },
+   "beta": 0.19252858146562063,
+   "se": 0.11857183629733258,
+   "p": 0.9477832176268688,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.6650124069478908,
+   "theta_n": 403,
+   "flag": 0.1813186813186813
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     4,
+     3,
+     1
+    ]
+   },
+   "beta": 0.1866123205049797,
+   "se": 0.10498364619151504,
+   "p": 0.9622600395214808,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7113207547169811,
+   "theta_n": 530,
+   "flag": 0.18722222222222223
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "change",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     1,
+     0
+    ],
+    "judged process": [
+     9,
+     1,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     5,
+     2,
+     0
+    ]
+   },
+   "beta": 0.0255609662133909,
+   "se": 0.12086090729357003,
+   "p": 0.5837478326674284,
+   "converged": true,
+   "sign_p": 0.5,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     12,
+     9,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 369,
+   "flag": 0.18577981651376146
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     2,
+     0
+    ],
+    "judged process": [
+     9,
+     1,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     4,
+     3,
+     0
+    ]
+   },
+   "beta": 0.05676133760703341,
+   "se": 0.1065677448320923,
+   "p": 0.7028556532313224,
+   "converged": true,
+   "sign_p": 0.6875,
+   "grants": {
+    "DSA": [
+     10,
+     8,
+     600
+    ],
+    "TR": [
+     13,
+     15,
+     1020
+    ]
+   },
+   "theta": 0.7151515151515152,
+   "theta_n": 495,
+   "flag": 0.1901907356948229
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "request",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     3,
+     2
+    ],
+    "judged process": [
+     10,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     10,
+     0,
+     0
+    ]
+   },
+   "beta": 0.060430784115574496,
+   "se": 0.1363876758705651,
+   "p": 0.6711464164186647,
+   "converged": true,
+   "sign_p": 0.65625,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.7142857142857143,
+   "theta_n": 539,
+   "flag": 0.18629173989455183
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     3,
+     2
+    ],
+    "judged process": [
+     10,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     10,
+     0,
+     0
+    ]
+   },
+   "beta": 0.06452564091535415,
+   "se": 0.11977536920441967,
+   "p": 0.7049606960801702,
+   "converged": true,
+   "sign_p": 0.65625,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7430167597765364,
+   "theta_n": 716,
+   "flag": 0.1895910780669145
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "request",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     8,
+     1,
+     1
+    ],
+    "judged grounds": [
+     10,
+     0,
+     1
+    ],
+    "B-TBA": [
+     8,
+     0,
+     0
+    ]
+   },
+   "beta": 0.050587754645130774,
+   "se": 0.13564998915629917,
+   "p": 0.6453991911566547,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.7188118811881188,
+   "theta_n": 505,
+   "flag": 0.19112627986348124
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     8,
+     1,
+     1
+    ],
+    "judged grounds": [
+     10,
+     0,
+     1
+    ],
+    "B-TBA": [
+     8,
+     0,
+     0
+    ]
+   },
+   "beta": 0.05692069788658902,
+   "se": 0.1193138311650595,
+   "p": 0.6833428127783833,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7474302496328928,
+   "theta_n": 681,
+   "flag": 0.19284414796846575
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "optional",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     1
+    ],
+    "judged process": [
+     10,
+     0,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     7,
+     0,
+     1
+    ]
+   },
+   "beta": 0.11518531939448694,
+   "se": 0.13585300108613396,
+   "p": 0.8017440657120483,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.6650124069478908,
+   "theta_n": 403,
+   "flag": 0.1813186813186813
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     1
+    ],
+    "judged process": [
+     10,
+     0,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     7,
+     0,
+     1
+    ]
+   },
+   "beta": 0.06522429891695031,
+   "se": 0.12042222255315074,
+   "p": 0.7059633196744117,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7113207547169811,
+   "theta_n": 530,
+   "flag": 0.18722222222222223
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "optional",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     0,
+     0
+    ],
+    "judged process": [
+     10,
+     0,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     7,
+     0,
+     0
+    ]
+   },
+   "beta": -0.033512449756631604,
+   "se": 0.1383921555659585,
+   "p": 0.4043297586644633,
+   "converged": true,
+   "sign_p": 0.125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 369,
+   "flag": 0.18577981651376146
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     0
+    ],
+    "judged process": [
+     10,
+     0,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     7,
+     0,
+     0
+    ]
+   },
+   "beta": -0.052379121141681514,
+   "se": 0.12235376915526375,
+   "p": 0.3342907275434315,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7151515151515152,
+   "theta_n": 495,
+   "flag": 0.1901907356948229
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     3,
+     2
+    ],
+    "judged process": [
+     10,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     10,
+     0,
+     0
+    ]
+   },
+   "beta": 0.060430784115574496,
+   "se": 0.1363876758705651,
+   "p": 0.6711464164186647,
+   "converged": true,
+   "sign_p": 0.65625,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.7156133828996283,
+   "theta_n": 538,
+   "flag": 0.18700614574187885
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     3,
+     3,
+     2
+    ],
+    "judged process": [
+     10,
+     1,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     10,
+     0,
+     0
+    ]
+   },
+   "beta": 0.06452564091535415,
+   "se": 0.11977536920441967,
+   "p": 0.7049606960801702,
+   "converged": true,
+   "sign_p": 0.65625,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7440559440559441,
+   "theta_n": 715,
+   "flag": 0.19009287925696594
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "evidence",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     1,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     8,
+     0,
+     0
+    ]
+   },
+   "beta": 0.03247625421417658,
+   "se": 0.136235415826658,
+   "p": 0.5942081082817118,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.7202380952380952,
+   "theta_n": 504,
+   "flag": 0.1918158567774936
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     2,
+     3,
+     1
+    ],
+    "judged process": [
+     9,
+     1,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     8,
+     0,
+     0
+    ]
+   },
+   "beta": 0.042980168109080785,
+   "se": 0.11970769840713384,
+   "p": 0.640218404661382,
+   "converged": true,
+   "sign_p": 0.8125,
+   "grants": {
+    "DSA": [
+     7,
+     0,
+     420
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7485294117647059,
+   "theta_n": 680,
+   "flag": 0.19333333333333333
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     1
+    ],
+    "judged process": [
+     10,
+     0,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     7,
+     0,
+     1
+    ]
+   },
+   "beta": 0.11518531939448694,
+   "se": 0.13585300108613396,
+   "p": 0.8017440657120483,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 402,
+   "flag": 0.18196078431372548
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     1
+    ],
+    "judged process": [
+     10,
+     0,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     7,
+     0,
+     1
+    ]
+   },
+   "beta": 0.06522429891695031,
+   "se": 0.12042222255315074,
+   "p": 0.7059633196744117,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7126654064272212,
+   "theta_n": 529,
+   "flag": 0.18767351471404775
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "both (optional+evidence)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     0,
+     0
+    ],
+    "judged process": [
+     10,
+     0,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     7,
+     0,
+     0
+    ]
+   },
+   "beta": -0.033512449756631604,
+   "se": 0.1383921555659585,
+   "p": 0.4043297586644633,
+   "converged": true,
+   "sign_p": 0.125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.6684782608695652,
+   "theta_n": 368,
+   "flag": 0.186401833460657
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     0
+    ],
+    "judged process": [
+     10,
+     0,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     7,
+     0,
+     0
+    ]
+   },
+   "beta": -0.052379121141681514,
+   "se": 0.12235376915526375,
+   "p": 0.3342907275434315,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7165991902834008,
+   "theta_n": 494,
+   "flag": 0.1906318082788671
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "oracle",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     1,
+     1
+    ],
+    "judged process": [
+     10,
+     0,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     7,
+     0,
+     1
+    ]
+   },
+   "beta": 0.11518531939448694,
+   "se": 0.13585300108613396,
+   "p": 0.8017440657120483,
+   "converged": true,
+   "sign_p": 0.3125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.6650124069478908,
+   "theta_n": 403,
+   "flag": 0.1813186813186813
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     1,
+     1
+    ],
+    "judged process": [
+     10,
+     0,
+     2
+    ],
+    "judged grounds": [
+     11,
+     0,
+     2
+    ],
+    "B-TBA": [
+     7,
+     0,
+     1
+    ]
+   },
+   "beta": 0.06522429891695031,
+   "se": 0.12042222255315074,
+   "p": 0.7059633196744117,
+   "converged": true,
+   "sign_p": 0.1875,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7113207547169811,
+   "theta_n": 530,
+   "flag": 0.18722222222222223
+  }
+ },
+ {
+  "independence": "not shown",
+  "annual_accounts": "both",
+  "missing_excerpt": "both (optional+request)",
+  "deed_inversion": "also report",
+  "core": {
+   "cells": {
+    "track record": [
+     3,
+     0,
+     0
+    ],
+    "judged process": [
+     10,
+     0,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     7,
+     0,
+     0
+    ]
+   },
+   "beta": -0.033512449756631604,
+   "se": 0.1383921555659585,
+   "p": 0.4043297586644633,
+   "converged": true,
+   "sign_p": 0.125,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     12,
+     2,
+     720
+    ]
+   },
+   "theta": 0.6666666666666666,
+   "theta_n": 369,
+   "flag": 0.18577981651376146
+  },
+  "all": {
+   "cells": {
+    "track record": [
+     4,
+     0,
+     0
+    ],
+    "judged process": [
+     10,
+     0,
+     1
+    ],
+    "judged grounds": [
+     11,
+     0,
+     1
+    ],
+    "B-TBA": [
+     7,
+     0,
+     0
+    ]
+   },
+   "beta": -0.052379121141681514,
+   "se": 0.12235376915526375,
+   "p": 0.3342907275434315,
+   "converged": true,
+   "sign_p": 0.0625,
+   "grants": {
+    "DSA": [
+     10,
+     1,
+     600
+    ],
+    "TR": [
+     13,
+     8,
+     1020
+    ]
+   },
+   "theta": 0.7151515151515152,
+   "theta_n": 495,
+   "flag": 0.1901907356948229
+  }
+ }
+]

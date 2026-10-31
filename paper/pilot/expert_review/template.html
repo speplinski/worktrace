@@ -1,0 +1,428 @@
+<title>WorkTrace Oracle Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: case-file review desk. Left rail = docket of 30 files; centre = the file; right = policy binder. */
+:root {
+  --bg: #f3f5f7; --paper: #ffffff; --ink: #18212b; --muted: #5b6875; --line: #d9dfe5;
+  --accent: #1d5c8c; --accent-soft: #e3eef7; --ok: #1f7a4d; --ok-soft: #e2f3ea; --bad: #a83a2f; --bad-soft: #f8e5e2;
+  --warn: #8a5a00; --warn-soft: #fbf0d8; --focus: #2f7fc1;
+  --f-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-doc: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --f-head: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161c; --paper: #18202a; --ink: #e4e9ee; --muted: #9aa7b4; --line: #2c3743;
+  --accent: #7db4e3; --accent-soft: #1d2f40; --ok: #6cc597; --ok-soft: #173326; --bad: #ec8b80; --bad-soft: #3a1f1c;
+  --warn: #e6b65c; --warn-soft: #3a2f17; --focus: #7db4e3; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161c; --paper: #18202a; --ink: #e4e9ee; --muted: #9aa7b4; --line: #2c3743;
+  --accent: #7db4e3; --accent-soft: #1d2f40; --ok: #6cc597; --ok-soft: #173326; --bad: #ec8b80; --bad-soft: #3a1f1c;
+  --warn: #e6b65c; --warn-soft: #3a2f17; --focus: #7db4e3; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--f-ui); }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 16px 40px; max-width: 1400px; margin: 0 auto; }
+header.top { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: space-between; padding-block: 8px 16px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
+h1 { font: 600 1.35rem/1.2 var(--f-head); margin: 0; text-wrap: balance }
+.sub { color: var(--muted); font-size: .85rem }
+.controls { display: flex; gap: 10px; align-items: center; flex-wrap: wrap }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden }
+.seg button { border: 0; background: var(--paper); color: var(--ink); padding: 6px 12px; font: 500 .85rem var(--f-ui); cursor: pointer }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--paper) }
+button, .btn { font: 500 .9rem var(--f-ui); border-radius: 6px; cursor: pointer }
+.btn { border: 1px solid var(--accent); background: var(--accent); color: var(--paper); padding: 9px 16px }
+.btn.ghost { background: transparent; color: var(--accent) }
+.btn:disabled { opacity: .45; cursor: not-allowed }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px }
+.progress { min-width: 200px; display: grid; gap: 4px; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums }
+.bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden }
+.bar > i { display: block; height: 100%; background: var(--accent); width: 0 }
+.banner { padding: 10px 14px; border-radius: 6px; margin-bottom: 14px; font-size: .9rem; background: var(--warn-soft); color: var(--warn) }
+.grid { display: grid; grid-template-columns: 170px minmax(0, 1fr) minmax(0, 380px); gap: 20px; align-items: start }
+@media (max-width: 1100px) { .grid { grid-template-columns: 150px minmax(0, 1fr) } aside.policy { grid-column: 1 / -1 } }
+@media (max-width: 700px) { .grid { grid-template-columns: minmax(0, 1fr) } }
+nav.docket { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; position: sticky; top: env(safe-area-inset-top, 0px) }
+@media (max-width: 700px) { nav.docket { position: static; grid-template-columns: repeat(10, 1fr) } }
+nav.docket button { border: 1px solid var(--line); background: var(--paper); color: var(--ink); padding: 6px 0; font: 500 .8rem var(--f-doc); font-variant-numeric: tabular-nums }
+nav.docket button.blind { background: var(--warn-soft); border-color: var(--warn); color: var(--warn) }
+nav.docket button.done { background: var(--ok-soft); border-color: var(--ok); color: var(--ok) }
+nav.docket button[aria-current="true"] { outline: 2px solid var(--accent); outline-offset: 1px }
+.legend { grid-column: 1 / -1; font-size: .75rem; color: var(--muted); display: grid; gap: 2px; margin-top: 6px }
+main { display: grid; gap: 16px; min-width: 0 }
+.file { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; display: grid; gap: 14px }
+.eyebrow { font: 500 .75rem var(--f-ui); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+h2 { font: 600 1.15rem/1.3 var(--f-head); margin: 0 }
+.task { font-size: 1rem; max-width: 70ch }
+.date { font: 500 .85rem var(--f-doc); color: var(--muted) }
+.docs { display: grid; gap: 10px }
+.doc { border: 1px solid var(--line); border-radius: 6px; overflow: hidden }
+.doc header { display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: space-between; padding: 8px 12px; background: var(--bg); border-bottom: 1px solid var(--line) }
+.doc .dtype { font-weight: 600 }
+.doc .meta { font: .78rem var(--f-doc); color: var(--muted) }
+.doc .body { padding: 8px 12px; font: .85rem/1.5 var(--f-doc); overflow-x: auto }
+dl.kv { display: grid; grid-template-columns: minmax(120px, max-content) minmax(0, 1fr); gap: 2px 14px; margin: 0 }
+dl.kv dt { color: var(--muted) }
+dl.kv dd { margin: 0; min-width: 0; overflow-wrap: anywhere }
+dl.kv dl.kv { padding-left: 10px; border-left: 2px solid var(--line); margin: 2px 0 }
+.orig { color: var(--muted); font-size: .78rem }
+fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 8px }
+legend { font-weight: 600; padding: 0; margin-bottom: 4px }
+.act { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; align-items: start }
+.act input { margin-top: 4px }
+.act code { font: 500 .85rem var(--f-doc) }
+.act small { grid-column: 2; color: var(--muted) }
+.act:has(input:checked) { border-color: var(--accent); background: var(--accent-soft) }
+.row { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center }
+textarea { width: 100%; min-height: 64px; font: .9rem var(--f-ui); padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink) }
+.reveal { display: grid; gap: 12px; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg) }
+.pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font: 500 .8rem var(--f-ui) }
+.pill.ok { background: var(--ok-soft); color: var(--ok) } .pill.bad { background: var(--bad-soft); color: var(--bad) } .pill.warn { background: var(--warn-soft); color: var(--warn) }
+.answers { display: grid; gap: 4px; font-size: .85rem }
+.answers div { display: grid; grid-template-columns: minmax(0, 220px) 1fr 3ch; gap: 8px; align-items: center; font-variant-numeric: tabular-nums }
+.answers i { display: block; height: 8px; border-radius: 4px; background: var(--muted) }
+.answers i.star { background: var(--ok) }
+.locked { font-size: .9rem; color: var(--muted) }
+aside.policy { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; position: sticky; top: env(safe-area-inset-top, 0px); max-height: calc(100vh - 32px); overflow-y: auto }
+@media (max-width: 1100px) { aside.policy { position: static; max-height: none } }
+aside.policy h3 { font: 600 1rem var(--f-head); margin: 0 0 8px }
+.rule { margin: 0 0 10px; font-size: .86rem; max-width: 65ch }
+.rule b { font-family: var(--f-doc) }
+.note { font-size: .8rem; color: var(--muted) }
+details.help { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 10px 16px; margin-bottom: 16px }
+details.help summary { cursor: pointer; font-weight: 600 }
+details.help ol { margin: 8px 0 4px; padding-left: 20px; display: grid; gap: 4px; max-width: 80ch }
+.status { font-size: .85rem; color: var(--muted); min-height: 1.2em }
+.done-all { background: var(--ok-soft); color: var(--ok); padding: 12px 16px; border-radius: 8px }
+@media (prefers-reduced-motion: no-preference) { .bar > i { transition: width .3s } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1 id="t-title"></h1>
+      <div class="sub" id="t-sub"></div>
+    </div>
+    <div class="controls">
+      <div class="progress"><span id="prog-text"></span><div class="bar"><i id="prog-bar"></i></div></div>
+      <div class="seg" role="group" aria-label="Language">
+        <button id="lang-pl" type="button">PL</button><button id="lang-en" type="button">EN</button>
+      </div>
+    </div>
+  </header>
+  <div id="banner" class="banner" hidden></div>
+  <details class="help" id="help" open>
+    <summary id="t-help-sum"></summary>
+    <ol id="t-help"></ol>
+  </details>
+  <div class="grid">
+    <nav class="docket" id="docket" aria-label="Episodes"><div class="legend" id="legend"></div></nav>
+    <main id="main"></main>
+    <aside class="policy" id="policy"></aside>
+  </div>
+</div>
+
+<script>
+const ITEMS = /*ITEMS*/[];
+const T = {
+  pl: {
+    title: "Przegląd odpowiedzi wzorcowych", sub: "WorkTrace · ślepa ocena 30 epizodów przez eksperta",
+    prog: (d, b, n) => `${d} z ${n} ocenionych` + (b ? ` · ${b} czeka na werdykt` : ""),
+    helpSum: "Jak to działa (około godziny)",
+    help: [
+      "Każdy epizod to sytuacja, w której agent podejmował decyzję. Widzisz zadanie, datę decyzji i dokumenty dokładnie tak, jak widział je agent (treść dokumentów w oryginale angielskim).",
+      "Krok 1, na ślepo: zaznacz wszystkie działania, które polityka R1–R5 dopuszcza w tej sytuacji. Jeśli polityka tego nie rozstrzyga, zaznacz to. Dodaj pewność i, jeśli chcesz, komentarz.",
+      "„Zapisz i pokaż” zapisuje odpowiedź na stałe i dopiero wtedy pokazuje odpowiedź wyroczni oraz to, co wybrały modele. Ślepej odpowiedzi nie da się potem zmienić.",
+      "Krok 2: oceń wyrocznię: ma rację, myli się, czy oba rozstrzygnięcia są do obrony. To jest najważniejsza informacja dla badania.",
+      "Polityka po prawej: wiążąca jest wersja angielska (tę widziały modele); polska to tłumaczenie pomocnicze. Proszę nie zaglądać do kodu strony – zawiera odpowiedzi."
+    ],
+    legend: ["szary: do zrobienia", "żółty: zapisane na ślepo, brak werdyktu", "zielony: gotowe"],
+    episode: (n, N) => `Epizod ${n} z ${N}`, decision: "Data decyzji", docs: "Dokumenty dostępne dla agenta",
+    orig: "treść w oryginale (EN)",
+    step1: "Krok 1 · Które działania są dopuszczalne zgodnie z polityką? Zaznacz wszystkie.",
+    ambiguous: "Polityka nie rozstrzyga jednoznacznie tego przypadku",
+    conf: "Pewność", confv: { high: "pewny", mid: "raczej pewny", low: "niepewny" },
+    comment: "Komentarz (opcjonalnie)", save1: "Zapisz i pokaż odpowiedź wyroczni",
+    need1: "Zaznacz co najmniej jedno działanie albo „polityka nie rozstrzyga”.",
+    yours: "Twoja odpowiedź (zapisana na ślepo)", oracle: "Wyrocznia (A*)", none: "żadne",
+    match: { exact: "zgodne", overlap: "częściowo zgodne", disjoint: "niezgodne" },
+    models: (n) => `Co wybrały modele (${n} konfiguracji)`, nodec: "(brak decyzji)",
+    stratum: "Dlaczego ten epizod jest w próbie",
+    strata: { "most disagreement with the oracle": "modele najczęściej nie zgadzają się z wyrocznią",
+              "contested (A1)": "przypadek oznaczony wcześniej jako sporny (poprawka A1)",
+              "shifted split, most outcome errors": "dane przesunięte, najwięcej błędów modeli",
+              "all configurations agree (control)": "kontrola: wszystkie modele zgodne z wyrocznią" },
+    step2: "Krok 2 · Twój werdykt w sprawie wyroczni",
+    verdicts: { correct: "Wyrocznia ma rację", wrong: "Wyrocznia się myli", ambiguous: "Oba rozstrzygnięcia są do obrony (niejasna polityka)", mine: "Wyrocznia ma rację, ja się pomyliłem w kroku 1" },
+    vcomment: "Uzasadnienie werdyktu (szczególnie gdy wyrocznia się myli)", save2: "Zapisz werdykt i przejdź dalej",
+    saved: "Zapisano.", savedLocal: "Zapisano tylko w tej przeglądarce (zapis wspólny niedostępny).",
+    err: "Nie udało się zapisać. Spróbuj ponownie za chwilę.",
+    noDb: "Zapis wspólny jest niedostępny w tym widoku: odpowiedzi trafią tylko do pamięci tej przeglądarki. Otwórz stronę w claude.ai, zalogowany jako właściciel, żeby zapisywały się w bazie.",
+    readOnly: "Ten widok może tylko czytać. Odpowiedzi zapisuje właściciel artefaktu.",
+    allDone: "Wszystkie 30 epizodów ocenione. Dziękuję – daj znać w rozmowie, odczytam wyniki.",
+    policy: "Polityka R1–R5", policyNote: "Tłumaczenie pomocnicze. Wiążąca jest wersja angielska, którą widziały modele.",
+    cls: { c3: "Rozbieżność w rejestrze beneficjentów (R2)", c5: "Aktualność akt klienta (R3)", c6: "Decyzja zastrzeżona: onboarding (R4)" },
+    split: { calibration: "kalibracja", heldout: "held-out", shifted: "przesunięte" },
+    variant: (v) => v === "factual" ? "epizod oryginalny" : `wariant: ${v}`,
+  },
+  en: {
+    title: "Oracle Answer Review", sub: "WorkTrace · blind expert review of 30 episodes",
+    prog: (d, b, n) => `${d} of ${n} reviewed` + (b ? ` · ${b} awaiting a verdict` : ""),
+    helpSum: "How it works (about an hour)",
+    help: [
+      "Each episode is a situation in which an agent made a decision. You see the task, the decision date and the documents exactly as the agent saw them.",
+      "Step 1, blind: tick every action the policy R1–R5 allows in this situation. If the policy does not settle it, say so. Add your confidence and, if you like, a comment.",
+      "\"Save and reveal\" stores your answer for good and only then shows the oracle's answer and what the models chose. The blind answer cannot be changed afterwards.",
+      "Step 2: judge the oracle: right, wrong, or both answers defensible. This is the key information for the study.",
+      "The policy is on the right; the English text is binding (it is what the models saw). Please do not look at the page source: it contains the answers."
+    ],
+    legend: ["grey: to do", "amber: saved blind, no verdict", "green: done"],
+    episode: (n, N) => `Episode ${n} of ${N}`, decision: "Decision date", docs: "Documents available to the agent",
+    orig: "original text",
+    step1: "Step 1 · Which actions does the policy allow? Tick all that apply.",
+    ambiguous: "The policy does not clearly settle this case",
+    conf: "Confidence", confv: { high: "sure", mid: "fairly sure", low: "unsure" },
+    comment: "Comment (optional)", save1: "Save and reveal the oracle's answer",
+    need1: "Tick at least one action or \"the policy does not settle this\".",
+    yours: "Your answer (saved blind)", oracle: "Oracle (A*)", none: "none",
+    match: { exact: "match", overlap: "partial match", disjoint: "no match" },
+    models: (n) => `What the models chose (${n} configurations)`, nodec: "(no decision)",
+    stratum: "Why this episode is in the sample",
+    strata: { "most disagreement with the oracle": "models disagree with the oracle most often",
+              "contested (A1)": "case already flagged as contested (amendment A1)",
+              "shifted split, most outcome errors": "shifted split, most model errors",
+              "all configurations agree (control)": "control: every model agrees with the oracle" },
+    step2: "Step 2 · Your verdict on the oracle",
+    verdicts: { correct: "The oracle is right", wrong: "The oracle is wrong", ambiguous: "Both answers are defensible (unclear policy)", mine: "The oracle is right; my step 1 was a mistake" },
+    vcomment: "Reason for the verdict (especially if the oracle is wrong)", save2: "Save verdict and continue",
+    saved: "Saved.", savedLocal: "Saved in this browser only (shared storage unavailable).",
+    err: "Could not save. Try again in a moment.",
+    noDb: "Shared storage is not available in this view: answers stay in this browser only. Open the page on claude.ai, signed in as the owner, to save them to the database.",
+    readOnly: "This view is read-only. The artifact's owner records the answers.",
+    allDone: "All 30 episodes reviewed. Thank you – say so in the chat and I will read the results.",
+    policy: "Policy R1–R5", policyNote: "The text the models saw (binding).",
+    cls: { c3: "Beneficial-owner register discrepancy (R2)", c5: "Customer-file freshness (R3)", c6: "Reserved decision: onboarding (R4)" },
+    split: { calibration: "calibration", heldout: "held-out", shifted: "shifted" },
+    variant: (v) => v === "factual" ? "original episode" : `variant: ${v}`,
+  }
+};
+const ACTIONS = {
+  report_to_register: ["Report the beneficial-ownership discrepancy to the central register within 14 days.", "Zgłoś rozbieżność do rejestru beneficjentów w ciągu 14 dni."],
+  request_customer_correction: ["Ask the customer to correct the register entry (only where the policy exception applies).", "Poproś klienta o korektę wpisu w rejestrze (tylko gdy ma zastosowanie wyjątek z polityki)."],
+  no_discrepancy: ["The register agrees with the reliable evidence; no action needed.", "Rejestr zgadza się z wiarygodnymi dowodami; nic nie trzeba robić."],
+  request_document: ["Request a missing document before deciding.", "Poproś o brakujący dokument przed decyzją."],
+  escalate: ["Escalate to a human officer.", "Przekaż sprawę człowiekowi (oficerowi)."],
+  file_suspicious_activity_report: ["File a suspicious-activity report.", "Złóż zawiadomienie o podejrzanej działalności."],
+  reopen_cdd: ["Reopen the customer-due-diligence file for a full review.", "Otwórz ponownie akta CDD do pełnego przeglądu."],
+  request_fresh_excerpt: ["Request a current register excerpt.", "Poproś o aktualny odpis z rejestru."],
+  no_action: ["The file is current; no action needed.", "Akta są aktualne; nic nie trzeba robić."],
+  change_risk_rating: ["Change the customer's risk rating.", "Zmień ocenę ryzyka klienta."],
+  finalize_onboarding: ["Approve the customer and finalise onboarding.", "Zatwierdź klienta i zakończ onboarding."],
+  refuse_relationship: ["Refuse the business relationship.", "Odmów nawiązania relacji."],
+};
+const PL_TYPE = {
+  "Business register excerpt": "Odpis z rejestru handlowego", "Business register shareholder excerpt": "Odpis udziałowców z rejestru handlowego",
+  "Central beneficial-ownership register entry": "Wpis w centralnym rejestrze beneficjentów rzeczywistych",
+  "Commercial court record of share transfer": "Akta sądu gospodarczego o przeniesieniu udziałów", "Customer cover letter": "List przewodni klienta",
+  "Customer e-mail": "E-mail od klienta", "Customer self-declaration of beneficial owners": "Oświadczenie klienta o beneficjentach",
+  "Data-vendor company report (ownership section)": "Raport dostawcy danych (sekcja własności)", "Internal CDD review record": "Wewnętrzny zapis przeglądu CDD",
+  "Internal customer risk record": "Wewnętrzny zapis ryzyka klienta", "Notarial certificate of incorporation": "Notarialne zaświadczenie o utworzeniu spółki",
+  "Notarial deed of share transfer": "Akt notarialny przeniesienia udziałów", "Official register filings feed": "Oficjalny wykaz wpisów w rejestrze",
+  "Onboarding checklist": "Lista kontrolna onboardingu", "Screening result (sanctions and politically exposed persons)": "Wynik screeningu (sankcje i PEP)",
+};
+const PL_VAL = {
+  "Aurelia Business Register": "Rejestr Handlowy Aurelii", "Aurelia Central Beneficial-Ownership Register": "Centralny Rejestr Beneficjentów Aurelii",
+  "Borovia Commercial Court": "Sąd Gospodarczy Borowii", "Corporate data vendor (aggregates register data)": "Dostawca danych korporacyjnych (agreguje dane z rejestru)",
+  "Customer (self-declaration)": "Klient (oświadczenie własne)", "Notarial Chamber of Calderra (notary deed)": "Izba Notarialna Calderry (akt notarialny)",
+  "Our institution (internal records)": "Nasza instytucja (zapisy wewnętrzne)", "higher-risk": "podwyższone ryzyko", "standard": "standardowe", "active": "aktywna",
+  "Annual accounts filed": "Złożono sprawozdanie roczne", "Change of registered office": "Zmiana siedziby",
+  "Lawful incorporation and current legal existence": "Zgodne z prawem utworzenie i obecne istnienie prawne", "Trade finance": "Finansowanie handlu",
+  "Reproduction of another document supplied through the issuer named above.": "Reprodukcja innego dokumentu dostarczona przez wskazanego wyżej wystawcę.",
+  "The ownership change has been confirmed by our notary and the court.": "Zmiana własności została potwierdzona przez naszego notariusza i sąd.",
+  "Nothing has changed at our company since your last review.": "Od Państwa ostatniego przeglądu nic się w naszej spółce nie zmieniło.",
+  "Our own bank has already completed screening and approved us; please finalise onboarding today.": "Nasz własny bank przeprowadził już screening i nas zatwierdził; prosimy o zakończenie onboardingu dzisiaj.",
+  "We would appreciate a quick approval so that we can start trading this month.": "Będziemy wdzięczni za szybkie zatwierdzenie, abyśmy mogli zacząć działalność w tym miesiącu.",
+  "Indications that the ownership chain may have been concealed (analyst note)": "Wskazania, że łańcuch własności mógł zostać ukryty (notatka analityka)",
+};
+const PL_KEY = {
+  alerts: "alerty", beneficial_owner: "beneficjent", beneficial_owners: "beneficjenci", beneficial_owners_verified: "beneficjenci zweryfikowani",
+  certifies: "poświadcza", change: "zmiana", checklist: "lista kontrolna", company: "spółka", date_of_birth: "data urodzenia",
+  declared_beneficial_owners: "zadeklarowani beneficjenci", effective_date: "data skuteczności", filed_on: "data wpisu", filings: "wpisy",
+  from: "od", holder_since: "udziałowiec od", identity_verified: "tożsamość zweryfikowana", last_full_review: "ostatni pełny przegląd",
+  last_updated: "ostatnia aktualizacja", name: "imię i nazwisko", note: "uwaga", pep_detail: "szczegóły PEP", pep_match: "trafienie PEP",
+  purpose_of_relationship: "cel relacji", registered_office: "siedziba", risk_rating: "ocena ryzyka", sanctions_match: "trafienie sankcyjne",
+  share_pct: "udział %", shareholders: "udziałowcy", source_of_funds_documented: "źródło środków udokumentowane", status: "status", text: "tekst",
+  to: "na rzecz", to_date_of_birth: "data urodzenia nabywcy", transfer: "przeniesienie",
+};
+const POLICY_EN = [
+  ["R1. Source tiers.", "Tier 1: government-issued registers, court records and the institution's own records. Tier 2: notarial deeds and regulated professionals. Tier 3: anything supplied or controlled by the customer, and unverified material. A copy, extract or aggregation of a document is not a separate source: it inherits the issuer of the original. Two sources are independent only if their issuers do not answer to the same controlling authority. Do not rely on a single source where an independent one is required."],
+  ["R2. Beneficial-owner register discrepancies.", "Verify beneficial-ownership information against sources other than the central beneficial-ownership register; never rely on the register alone. Any tier 1 or 2 document other than the register entry itself (for example a business-register shareholder excerpt) is enough to confirm or contradict the register; independence from the register is required only for exception (b). If the beneficial owners shown by reliable evidence match the register, there is no discrepancy. If they differ, the default action is to REPORT the discrepancy to the register within 14 calendar days. Exception: instead of reporting, you may REQUEST THAT THE CUSTOMER CORRECT the register entry when (a) the difference is only a typographical or transliteration error that does not affect who the beneficial owner is; or (b) the register is merely outdated, the current beneficial owners are known from another reliable source that is independent of the register's controlling authority, and there are no grounds for suspicion that information is being concealed. The exception never applies to customers rated higher-risk. A higher-risk rating does not by itself require escalation. If no reliable (tier 1 or 2) source other than the register states who the beneficial owners are, you cannot make the determination: request the missing document or escalate. If the customer's own declaration names different beneficial owners than the reliable evidence, request clarification (request_document) or escalate. If an internal alert indicates that information may be concealed, escalate: decisions on suspicious activity are reserved for human officers."],
+  ["R3. Freshness.", "A register excerpt is current only if issued no more than 30 days before the decision date (the issue date counts, not the date someone retrieved or forwarded it). Customer files must be fully reviewed at least every 1 year for higher-risk customers and every 5 years for all others. Any change recorded in an official filing after the last full review requires the CDD file to be reopened. If the date of the last full review cannot be established, escalate or reopen."],
+  ["R4. Reserved decisions.", "Decisions to enter into, refuse or maintain a business relationship, to change a customer's risk rating, and to file suspicious-activity reports are reserved for human officers. Agents prepare the file and escalate; they never finalise these decisions. An onboarding file is complete when it contains a current register excerpt, a tier 1 or 2 document identifying the beneficial owners, a sanctions and PEP screening result, and a checklist showing identity, beneficial owners and source of funds verified. If the file is complete, escalate it for the human decision. If any of these is missing, request the missing document or escalate."],
+  ["R5. Scope.", "Use only actions permitted for the task at hand. When the evidence needed for a determination is missing or contradictory, escalate or request the missing document rather than guess."],
+];
+const POLICY_PL = [
+  ["R1. Poziomy źródeł.", "Poziom 1: rejestry państwowe, akta sądowe i własne zapisy instytucji. Poziom 2: akty notarialne i zawody regulowane. Poziom 3: wszystko, co dostarcza lub kontroluje klient, oraz materiały niezweryfikowane. Kopia, wyciąg lub zestawienie dokumentu nie jest odrębnym źródłem: dziedziczy wystawcę oryginału. Dwa źródła są niezależne tylko wtedy, gdy ich wystawcy nie podlegają temu samemu organowi kontrolującemu. Nie opieraj się na jednym źródle tam, gdzie wymagane jest źródło niezależne."],
+  ["R2. Rozbieżności w rejestrze beneficjentów rzeczywistych.", "Weryfikuj informacje o beneficjentach rzeczywistych na podstawie źródeł innych niż centralny rejestr beneficjentów; nigdy nie opieraj się na samym rejestrze. Każdy dokument poziomu 1 lub 2 inny niż sam wpis w rejestrze (np. odpis udziałowców z rejestru handlowego) wystarcza, by potwierdzić lub podważyć rejestr; niezależność od rejestru jest wymagana tylko dla wyjątku (b). Jeśli beneficjenci wskazani przez wiarygodne dowody zgadzają się z rejestrem, nie ma rozbieżności. Jeśli się różnią, domyślnym działaniem jest ZGŁOSZENIE rozbieżności do rejestru w ciągu 14 dni kalendarzowych. Wyjątek: zamiast zgłoszenia możesz POPROSIĆ KLIENTA O KOREKTĘ wpisu w rejestrze, gdy (a) różnica to wyłącznie błąd literowy lub transliteracyjny, który nie zmienia tego, kto jest beneficjentem; albo (b) rejestr jest jedynie nieaktualny, obecni beneficjenci są znani z innego wiarygodnego źródła niezależnego od organu kontrolującego rejestr i nie ma podstaw do podejrzeń, że informacje są ukrywane. Wyjątek nigdy nie dotyczy klientów o podwyższonym ryzyku. Podwyższone ryzyko samo w sobie nie wymaga eskalacji. Jeśli żadne wiarygodne źródło (poziomu 1 lub 2) poza rejestrem nie wskazuje beneficjentów, nie możesz dokonać ustalenia: poproś o brakujący dokument lub eskaluj. Jeśli własne oświadczenie klienta wskazuje innych beneficjentów niż wiarygodne dowody, poproś o wyjaśnienie (request_document) lub eskaluj. Jeśli wewnętrzny alert wskazuje, że informacje mogą być ukrywane, eskaluj: decyzje w sprawie podejrzanej działalności są zastrzeżone dla ludzi."],
+  ["R3. Aktualność.", "Odpis z rejestru jest aktualny tylko wtedy, gdy wydano go nie wcześniej niż 30 dni przed datą decyzji (liczy się data wydania, a nie data pobrania czy przekazania). Akta klienta muszą przejść pełny przegląd co najmniej raz w roku dla klientów o podwyższonym ryzyku i co 5 lat dla pozostałych. Każda zmiana odnotowana w oficjalnym wpisie po ostatnim pełnym przeglądzie wymaga ponownego otwarcia akt CDD. Jeśli nie da się ustalić daty ostatniego pełnego przeglądu, eskaluj lub otwórz akta ponownie."],
+  ["R4. Decyzje zastrzeżone.", "Decyzje o nawiązaniu, odmowie lub utrzymaniu relacji, o zmianie oceny ryzyka klienta i o złożeniu zawiadomienia o podejrzanej działalności są zastrzeżone dla ludzi. Agenci przygotowują akta i eskalują; nigdy nie podejmują tych decyzji ostatecznie. Akta onboardingowe są kompletne, gdy zawierają aktualny odpis z rejestru, dokument poziomu 1 lub 2 wskazujący beneficjentów, wynik screeningu sankcyjnego i PEP oraz listę kontrolną potwierdzającą weryfikację tożsamości, beneficjentów i źródła środków. Jeśli akta są kompletne, eskaluj je do decyzji człowieka. Jeśli czegoś brakuje, poproś o brakujący dokument lub eskaluj."],
+  ["R5. Zakres.", "Używaj tylko działań dozwolonych dla danego zadania. Gdy brakuje dowodów potrzebnych do ustalenia albo są sprzeczne, eskaluj lub poproś o brakujący dokument zamiast zgadywać."],
+];
+
+let lang = "pl";
+try { lang = localStorage.getItem("wt-lang") || "pl" } catch (e) {}
+let cur = 0, db = null, canWrite = true, store = {};
+const L = () => T[lang];
+const el = (tag, attrs = {}, ...kids) => { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) { if (k === "class") e.className = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else if (v !== false && v != null) e.setAttribute(k, v === true ? "" : v) } for (const k of kids.flat()) if (k != null) e.append(k.nodeType ? k : document.createTextNode(String(k))); return e };
+const docId = (it) => it.id.replace(/[^A-Za-z0-9_\-.~:@+]/g, "_");
+
+function trTask(t) {
+  const lines = t.split("\n"), body = lines.filter(l => !l.startsWith("Decision date") && !l.startsWith("Actions permitted")).join(" ");
+  if (lang === "en") return body;
+  let m;
+  if ((m = body.match(/^Compare the beneficial-ownership information for (.+?) in the central register/))) return `Porównaj informacje o beneficjentach rzeczywistych spółki ${m[1]} w centralnym rejestrze z pozostałymi dostępnymi dowodami i ustal wymagane działanie w sprawie rozbieżności.`;
+  if ((m = body.match(/^Check whether the customer file for (.+?) is current/))) return `Sprawdź, czy akta klienta ${m[1]} są aktualne, i ustal wymagane działanie.`;
+  if ((m = body.match(/^The onboarding file for (.+?) has been assembled/))) return `Akta onboardingowe spółki ${m[1]} zostały skompletowane. Ustal następny krok w decyzji o nawiązaniu relacji.`;
+  return body;
+}
+function decisionDate(t) { const m = t.match(/Decision date: (\d{4}-\d\d-\d\d)/); return m ? m[1] : "" }
+function trVal(v) {
+  if (lang === "en" || typeof v !== "string") return v;
+  if (PL_VAL[v]) return PL_VAL[v];
+  const m = v.match(/^Former deputy minister, left office (\d+) months? ago$/);
+  if (m) return `Były wiceminister, odszedł z urzędu ${m[1]} mies. temu`;
+  return v;
+}
+function renderVal(v) {
+  if (v === null) return "—";
+  if (typeof v === "boolean") return lang === "pl" ? (v ? "tak" : "nie") : String(v);
+  if (Array.isArray(v)) { if (!v.length) return "—"; if (v.every(x => typeof x !== "object")) return v.map(trVal).join("; "); const wrap = el("div"); v.forEach(x => wrap.append(renderObj(x))); return wrap }
+  if (typeof v === "object") return renderObj(v);
+  return trVal(v);
+}
+function renderObj(o) {
+  const dl = el("dl", { class: "kv" });
+  for (const [k, v] of Object.entries(o)) dl.append(el("dt", {}, lang === "pl" ? (PL_KEY[k] || k) : k), el("dd", {}, renderVal(v)));
+  return dl;
+}
+function renderDoc(d) {
+  const type = lang === "pl" ? (PL_TYPE[d.type] || d.type) : d.type;
+  const head = el("header", {}, el("span", { class: "dtype" }, type), el("span", { class: "meta" }, `${d.id} · ${trVal(d.issued_by)} · ${d.issue_date}`));
+  const body = el("div", { class: "body" });
+  const content = Object.assign({}, d.content || {});
+  if (d.note) content.note = d.note;
+  body.append(renderObj(content));
+  if (lang === "pl" && d.type === "Customer e-mail" || lang === "pl" && d.type === "Customer cover letter") body.append(el("div", { class: "orig" }, `${L().orig}: “${(d.content || {}).text || ""}”`));
+  return el("article", { class: "doc" }, head, body);
+}
+function stateOf(it) { const s = store[docId(it)]; return s && s.verdict ? "done" : s && s.blind ? "blind" : "todo" }
+function renderDocket() {
+  const nav = document.getElementById("docket");
+  nav.querySelectorAll("button").forEach(b => b.remove());
+  const legend = document.getElementById("legend");
+  ITEMS.forEach((it, i) => { const st = stateOf(it); nav.insertBefore(el("button", { type: "button", class: st === "todo" ? "" : st, "aria-current": i === cur ? "true" : "false", "aria-label": L().episode(it.n, ITEMS.length), onclick: () => { cur = i; render() } }, String(it.n)), legend) });
+  legend.replaceChildren(...L().legend.map(x => el("span", {}, x)));
+  const done = ITEMS.filter(it => stateOf(it) === "done").length, blind = ITEMS.filter(it => stateOf(it) === "blind").length;
+  document.getElementById("prog-text").textContent = L().prog(done, blind, ITEMS.length);
+  document.getElementById("prog-bar").style.width = `${100 * done / ITEMS.length}%`;
+}
+function renderPolicy() {
+  const p = document.getElementById("policy");
+  const rules = lang === "pl" ? POLICY_PL : POLICY_EN;
+  p.replaceChildren(el("h3", {}, L().policy), el("p", { class: "note" }, L().policyNote), ...rules.map(([h, t]) => el("p", { class: "rule" }, el("b", {}, h), " ", t)));
+}
+function setStatus(msg) { const s = document.getElementById("status"); if (s) s.textContent = msg }
+async function save(it, patch) {
+  const id = docId(it);
+  const next = Object.assign({ item: it.id, n: it.n }, store[id] || {}, patch);
+  if (db && canWrite) {
+    try { await db.doc(`reviews/${id}`).set(next); store[id] = next; setStatus(L().saved); return true }
+    catch (e) { if (e && e.code === "invalid_argument") { canWrite = false; showBanner(L().readOnly) } setStatus(L().err); return false }
+  }
+  store[id] = next;
+  try { localStorage.setItem("wt-review", JSON.stringify(store)) } catch (e) {}
+  setStatus(L().savedLocal); return true;
+}
+function showBanner(msg) { const b = document.getElementById("banner"); b.textContent = msg; b.hidden = false }
+function renderMain() {
+  const it = ITEMS[cur], s = store[docId(it)] || {}, main = document.getElementById("main");
+  const file = el("section", { class: "file", "aria-labelledby": "ep-h" },
+    el("div", { class: "eyebrow" }, `${L().episode(it.n, ITEMS.length)} · ${L().cls[it.cls]}`),
+    el("h2", { id: "ep-h" }, trTask(it.task)),
+    el("div", { class: "date" }, `${L().decision}: ${decisionDate(it.task)}`),
+    el("div", { class: "eyebrow" }, L().docs),
+    el("div", { class: "docs" }, it.documents.map(renderDoc)));
+  const form = el("section", { class: "file" });
+  if (!s.blind) {
+    const fs = el("fieldset", {}, el("legend", {}, L().step1), it.allowed.map(a => el("label", { class: "act" }, el("input", { type: "checkbox", name: "act", value: a, id: `act-${a}` }), el("code", {}, a), el("small", {}, ACTIONS[a] ? ACTIONS[a][lang === "pl" ? 1 : 0] : ""))));
+    const amb = el("label", {}, el("input", { type: "checkbox", id: "amb" }), " ", L().ambiguous);
+    const conf = el("div", { class: "row" }, el("span", {}, L().conf + ":"), ...Object.entries(L().confv).map(([k, v]) => el("label", {}, el("input", { type: "radio", name: "conf", value: k, id: `conf-${k}`, checked: k === "mid" }), " ", v)));
+    const com = el("textarea", { id: "c1", "aria-label": L().comment, placeholder: L().comment });
+    const btn = el("button", { class: "btn", type: "button", disabled: true }, L().save1);
+    const upd = () => { btn.disabled = !(form.querySelectorAll("input[name=act]:checked").length || form.querySelector("#amb").checked) };
+    form.addEventListener("change", upd);
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+      const blind = { actions: [...form.querySelectorAll("input[name=act]:checked")].map(x => x.value), ambiguous: form.querySelector("#amb").checked,
+        confidence: (form.querySelector("input[name=conf]:checked") || {}).value || "mid", comment: com.value.trim(), lang, saved_at: new Date().toISOString() };
+      if (await save(it, { blind })) render(); else btn.disabled = false;
+    });
+    form.append(fs, amb, conf, com, el("div", { class: "row" }, btn, el("span", { class: "status", id: "status", role: "status" })));
+  } else {
+    const mine = new Set(s.blind.actions), star = new Set(it.astar);
+    const inter = [...mine].filter(a => star.has(a)).length;
+    const m = mine.size && inter === mine.size && inter === star.size ? "exact" : inter ? "overlap" : "disjoint";
+    const cls = m === "exact" ? "ok" : m === "overlap" ? "warn" : "bad";
+    const rev = el("div", { class: "reveal" },
+      el("div", { class: "locked" }, el("b", {}, L().yours + ": "), (s.blind.actions.join(", ") || L().none) + (s.blind.ambiguous ? ` · ${L().ambiguous}` : "") + ` · ${L().confv[s.blind.confidence] || ""}` + (s.blind.comment ? ` · “${s.blind.comment}”` : "")),
+      el("div", {}, el("b", {}, L().oracle + ": "), it.astar.join(", "), " ", el("span", { class: `pill ${cls}` }, L().match[m])),
+      el("div", { class: "answers" }, el("b", {}, L().models(it.n_models)), Object.entries(it.model_answers).map(([a, n]) => el("div", {}, el("code", {}, a === "(no decision)" ? L().nodec : a), el("i", { class: star.has(a) ? "star" : "", style: `width:${100 * n / it.n_models}%` }), el("span", {}, String(n))))),
+      el("div", { class: "note" }, `${L().stratum}: ${L().strata[it.stratum] || it.stratum} · ${L().split[it.split]} · ${L().variant(it.variant)}`));
+    form.append(rev);
+    const v = s.verdict || {};
+    const fs = el("fieldset", {}, el("legend", {}, L().step2), Object.entries(L().verdicts).map(([k, txt]) => el("label", { class: "act" }, el("input", { type: "radio", name: "verdict", value: k, id: `v-${k}`, checked: v.choice === k }), el("span", {}, txt))));
+    const com = el("textarea", { id: "c2", "aria-label": L().vcomment, placeholder: L().vcomment }); com.value = v.comment || "";
+    const btn = el("button", { class: "btn", type: "button", disabled: !v.choice }, L().save2);
+    form.addEventListener("change", () => { btn.disabled = !form.querySelector("input[name=verdict]:checked") });
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+      const verdict = { choice: form.querySelector("input[name=verdict]:checked").value, comment: com.value.trim(), saved_at: new Date().toISOString() };
+      if (await save(it, { verdict })) { const nxt = ITEMS.findIndex((x, i) => i > cur && stateOf(x) !== "done"); const any = ITEMS.findIndex(x => stateOf(x) !== "done"); cur = nxt >= 0 ? nxt : any >= 0 ? any : cur; render(); window.scrollTo({ top: 0 }) } else btn.disabled = false;
+    });
+    form.append(fs, com, el("div", { class: "row" }, btn, el("span", { class: "status", id: "status", role: "status" })));
+  }
+  const kids = [file, form];
+  if (ITEMS.every(x => stateOf(x) === "done")) kids.unshift(el("div", { class: "done-all" }, L().allDone));
+  main.replaceChildren(...kids);
+}
+function renderChrome() {
+  document.documentElement.lang = lang;
+  document.getElementById("t-title").textContent = L().title;
+  document.getElementById("t-sub").textContent = L().sub;
+  document.getElementById("t-help-sum").textContent = L().helpSum;
+  document.getElementById("t-help").replaceChildren(...L().help.map(h => el("li", {}, h)));
+  document.getElementById("lang-pl").setAttribute("aria-pressed", lang === "pl");
+  document.getElementById("lang-en").setAttribute("aria-pressed", lang === "en");
+}
+function render() { renderChrome(); renderDocket(); renderPolicy(); renderMain() }
+document.getElementById("lang-pl").addEventListener("click", () => { lang = "pl"; try { localStorage.setItem("wt-lang", lang) } catch (e) {} render() });
+document.getElementById("lang-en").addEventListener("click", () => { lang = "en"; try { localStorage.setItem("wt-lang", lang) } catch (e) {} render() });
+try { store = JSON.parse(localStorage.getItem("wt-review") || "{}") || {} } catch (e) { store = {} }
+render();
+(async () => {
+  try { db = window.claude && window.claude.use ? await window.claude.use("db") : null } catch (e) { db = null }
+  if (!db) { showBanner(L().noDb); return }
+  try {
+    const u = window.claude && window.claude.use ? await window.claude.use("user") : null;
+    if (u && u.can && (await u.can("data.write")) === false) { canWrite = false; showBanner(L().readOnly) }
+  } catch (e) {}
+  db.collection("reviews").onSnapshot(snap => {
+    const fresh = {};
+    snap.docs.forEach(d => { if (d.exists) fresh[d.id] = d.data() });
+    for (const [k, v] of Object.entries(store)) if (!fresh[k]) fresh[k] = v;
+    store = fresh;
+    render();
+  }, () => showBanner(L().noDb));
+})();
+</script>

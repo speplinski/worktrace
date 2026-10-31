@@ -1,0 +1,25 @@
+[project]
+name = "worktrace"
+version = "0.1.0"
+description = "WorkTrace pilot: decision-structured agency (DSA) episodes, evidence interventions, agents and scoring"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.70",
+    "httpx>=0.27",
+    "numpy>=1.26",
+    "scipy>=1.11",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["worktrace"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

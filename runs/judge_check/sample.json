@@ -1,0 +1,1793 @@
+[
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100050",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100024",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100046",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100002",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100006",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100048",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100032",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100040",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100024",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100020",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100031",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100003",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100016",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100021",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100034",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100005",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100054",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100018",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100040",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100037",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100059",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100019",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100009",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100047",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100057",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100035",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100053",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100015",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100035",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100022",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100005",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100051",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100023",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100002",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100032",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100000",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100026",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100043",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-opus-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100055",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100056",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100006",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100020",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100024",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100050",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100023",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100018",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100037",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100055",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100001",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100022",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100005",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100028",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100040",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100020",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100039",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100026",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100023",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100038",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100034",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100028",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100041",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100045",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100011",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100019",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100013",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100048",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100003",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100044",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100000",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100017",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100051",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100050",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100011",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100007",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100038",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100042",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100056",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100041",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-sonnet-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100058",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100027",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100067",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100085",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100018",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100048",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100061",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100079",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100061",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100071",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100059",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100033",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100086",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100034",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100039",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100040",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100076",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100080",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100095",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100088",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100037",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100078",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100072",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100090",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100082",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100091",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100094",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100089",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100002",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100022",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100033",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100063",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100087",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100060",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100099",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c5-100063",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100009",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c6-100007",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100047",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100081",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "claude:claude-haiku-5-5:medium",
+  "split": "calibration",
+  "episode_id": "c3-100018",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100057",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100020",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100030",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100058",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100018",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100048",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100001",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100032",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100057",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100050",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100045",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100009",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100044",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100018",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100006",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100052",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100054",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100050",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100028",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100023",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100036",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100053",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100008",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100036",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100036",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100047",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100026",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100009",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100003",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100041",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100015",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100019",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100032",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100043",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100049",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100003",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c3-100038",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100043",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c5-100002",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6-luna:medium",
+  "split": "calibration",
+  "episode_id": "c6-100026",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100034",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100029",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100050",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100040",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100048",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c6-100012",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c6-100035",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100012",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100048",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100038",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100028",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100039",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100035",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c6-100045",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100023",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100026",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c6-100055",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": false
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100009",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100046",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c6-100057",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": true,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100043",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100033",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c6-100005",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100025",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100031",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100007",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100009",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100047",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100053",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100043",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c6-100015",
+  "run": 0,
+  "cls": "c6",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100032",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100030",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100027",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100010",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100057",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100020",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100030",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c3-100022",
+  "run": 0,
+  "cls": "c3",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ },
+ {
+  "agent": "openai:gpt-6.1-terra:medium",
+  "split": "calibration",
+  "episode_id": "c5-100012",
+  "run": 0,
+  "cls": "c5",
+  "basis_failure": false,
+  "haiku_basis_sound": true
+ }
+]
