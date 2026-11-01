@@ -1,5 +1,7 @@
 # WorkTrace: evidence tests, track records and LLM judges for delegating decisions to AI agents
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23868235.svg)](https://doi.org/10.5281/zenodo.23868235)
+
 Code, data and paper sources for the pre-registered pilot described in
 *Which Decisions Can an AI Agent Take Without Review? A Pre-registered Pilot Comparing Evidence Tests,
 Track Records and LLM Judges* (Szymon P. Pepliński, Generatywnie, 2026; arXiv preprint).
@@ -49,4 +51,4 @@ Code: Apache License 2.0 (`LICENSE`). Texts, data, run logs, results and the pap
 
 ## Citation
 
-See `CITATION.cff`. Release v1.0 is the version the paper describes; the arXiv identifier will be added here once assigned.
+See `CITATION.cff`. Release v1.0 is the version the paper describes, archived at Zenodo: DOI [10.5281/zenodo.23868235](https://doi.org/10.5281/zenodo.23868235) (all versions: 10.5281/zenodo.23868234). The arXiv identifier will be added here once assigned.

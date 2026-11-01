@@ -9,6 +9,7 @@ authors:
     affiliation: "Generatywnie"
 date-released: 2026-11-01
 version: "1.0"
+doi: 10.5281/zenodo.23868235
 license: Apache-2.0
 repository-code: "https://github.com/speplinski/worktrace"
 url: "https://github.com/speplinski/worktrace"
