@@ -65,9 +65,9 @@ engine and a declarative rule table with separately implemented helpers), so tha
 consistency rather than independence of reading. Episodes on which the oracles disagree are discarded; in testing on
 more than 40,000 episodes and variants they never disagreed.
 
-For every factual episode we generate the intervention family of §3.5 --- \emph{remove X}, \emph{only X}, \emph{invert
-X}, \emph{add independent Y}, and the composition \emph{add Y then remove X} --- where X is the document that settles
-the decision in that episode. We add four controls: a \emph{null} re-run of the identical episode, a \emph{placebo} that
+For every factual episode we generate the intervention family of §3.5 (\emph{remove X}, \emph{only X}, \emph{invert X},
+\emph{add independent Y}, and the composition \emph{add Y then remove X}), where X is the document that settles the
+decision in that episode. We add four controls: a \emph{null} re-run of the identical episode, a \emph{placebo} that
 changes document identifiers and order only, a \emph{sham} that adds an irrelevant document, and a \emph{copy} that adds
 a dependent reproduction of X from an issuer under the same controlling authority, which must not count as
 corroboration. Operators that do not apply to an episode are skipped.
@@ -97,9 +97,9 @@ decision. We use this protocol for models that cannot run an interactive tool lo
 entire simulated trajectory, including invented document identifiers, instead of calling tools.
 
 \textbf{Decision models.} Basal 2.0-max (\citealp{kinas2026basal}; MLX, 8-bit), Liquid AI d1-3B (\citealp{liquid2026d1}) and GPT-6
-Luna on the OpenAI Decisions API choose one option from a list in a single forward pass and return calibrated
-probabilities. They receive the same documents as the one-pass protocol. They cannot declare grounds, so their
-receptivity is not measured; their reactivity is.
+Luna on the OpenAI Decisions API choose one option from a list in a single forward pass and return probabilities that
+their developers describe as calibrated (checked in Appendix A). They receive the same documents as the one-pass
+protocol. They cannot declare grounds, so their receptivity is not measured; their reactivity is.
 
 \begin{table*}
 \caption{Configurations in the pilot. \textsuperscript{a} The common core used for comparisons between configurations is
@@ -143,9 +143,7 @@ answers with the class prior (a perfect track record with no dependence on evide
 agent that treats every issuer as independent and copies as separate sources; and an agent that follows an irrelevant
 cue in document identifiers. Expected results were written down before the run (\texttt{paper/pilot/known\_groups.md}).
 These agents are excluded from the delegation test. The model configurations come from eight developers and include two
-three-size series from the closed-model developers. One base model appears in two forms: Basal 2.0-max is a decision
-fine-tune of Bielik 11B v3, which lets us ask whether decision training changes reactivity to evidence and not only
-outcome accuracy and calibration.
+three-size series from the closed-model developers.
 
 \subsection{Measures}
 
@@ -185,9 +183,9 @@ certify:
   report probabilities.
 \item
   \textbf{Judged process (B-READY-proc):} the same rule with wrong basis judged by an LLM reading the decision and its
-  stated grounds instead of by interventions --- the comparison of \emph{how} wrong-basis decisions are detected (the
-  judge test, §5.6); the registered primary comparison is with the track record (the delegation test). The judge (Claude
-  Haiku 5.5, fixed rubric) is applied post hoc.
+  stated grounds instead of by interventions; this is the comparison of \emph{how} wrong-basis decisions are detected
+  (the judge test, §5.6), whereas the registered primary comparison is with the track record (the delegation test). The
+  judge (Claude Haiku 5.5, fixed rubric) is applied post hoc.
 \item
   \textbf{Judged grounds (B-trace-judge):} an LLM score of the clarity and soundness of the agent-declared grounds, as
   proposed for ``behavioural metrics'' in delegation frameworks (\citealp{tomasev2026delegation}).
@@ -215,7 +213,9 @@ correction (\citealp{azevedo2026minimal}).
   procedure audit; we estimate the share of basis failures that the audit misses.
 \item
   \textbf{The declared-grounds test (H2).} Interventions detect mismatches between agent-declared grounds and actual
-  dependence more often than inspection of the declared grounds alone.
+  dependence more often than inspection of the declared grounds alone. As registered, this takes the interventions as
+  the reference, so the test reports the sensitivity and the false-positive rate of a static check of the declared
+  grounds against the interventional result, not a symmetric comparison of two detectors (§6.2).
 \item
   \textbf{Construct checks (CV1, CV2).} DSA is not reducible to outcome accuracy across configurations, and its variance
   decomposes into configuration, class and seed components.
@@ -228,12 +228,23 @@ classes, and a mixed-effects logistic regression of shifted outcome errors on ru
 effect. The sign test treats the \(k = 1\) and \(k = 2\) comparisons of one configuration as independent, which they are
 not, so its \(p\)-values are descriptive; the mixed model is the registered test. When two classes have the same
 certified bound at the boundary of the delegated set, a rule's shifted error is the average over its equally justified
-selections, the expected error under a random tie-break (amendment A7, made after interim results were known; §5.8). The
-mixed model treats every shifted episode as an independent observation although an episode enters both rules and both
-values of \(k\); a bootstrap over configurations, proposed at the A12 audit, was rerun on the final data (Table 4). The
-construct checks were registered as hypotheses but not operationalised; the statistics reported in §6.3 (correlations
-over (configuration, class) cells, a sums-of-squares decomposition and a seed component from the repeated runs) were
-fixed after the pilot data were in, so they are post hoc operationalisations of registered hypotheses
+selections, the expected error under a random tie-break (amendment A7, made after interim results were known; §5.8); in
+the mixed model each equally justified selection enters with its binomial counts weighted by one over the number of
+selections, as specified in amendment A11.5. The mixed model treats every shifted episode as an independent observation
+although an episode enters both rules and both values of \(k\); a bootstrap over configurations, proposed at the A12
+audit, was rerun on the final data (Table 4); it addresses the dependence between the comparisons of one configuration,
+not the sharing of the same episodes by every configuration, which no resampling of configurations removes. Shifted
+episodes are shared across configurations, rules and values of \(k\), so observations are crossed by configuration and
+episode. As a post hoc robustness check added before submission (3 November 2026), we also ran a two-way bootstrap that
+resamples configurations and base episodes independently, the same episode draws applying to every drawn configuration
+(1,000 resamples per cell, all successful), repeating certification, class selection and the mixed model in each
+resample with the A7 weights unchanged (\texttt{paper/pilot/bootstrap\_two\_way.py}). Its one-sided \(p\) is obtained by
+recentring the resampled estimates under \(H_0\!: \beta_{\mathrm{DSA}} = 0\) (the share of resamples with
+\(\beta^* - \hat\beta \le \hat\beta\)); the share of resamples with \(\beta_{\mathrm{DSA}} \ge 0\) and the percentile
+interval are reported descriptively. This check complements the registered mixed-effects test and does not replace it.
+The construct checks were registered as hypotheses but not operationalised; the statistics reported in §6.3
+(correlations over (configuration, class) cells, a sums-of-squares decomposition and a seed component from the repeated
+runs) were fixed after the pilot data were in, so they are post hoc operationalisations of registered hypotheses
 (\texttt{paper/pilot/construct\_validity.py}). Runs that end without a decision count as errors. Decisions recovered
 from text rather than a tool call are included and flagged, and excluded in a robustness check. For multi-run
 configurations the majority-vote variant of every measure is reported alongside the per-run variant.
@@ -258,7 +269,13 @@ fixed the remaining baselines, measures and the mixed model before the Bielik, G
 existed, with interim data of the other configurations known. The judge's rubric was frozen (A2) when aggregate results
 for the API models, Basal and d1 were already known, before any decision had been read for that purpose, and revised
 once after a 20-decision trial (A3). Two code audits (A8, A12) recomputed every reported number from the raw data with
-separately written code; the corrections they produced are logged, and none changed a count in the delegation test.
+separately written code; the corrections they produced are logged, and none changed a count in the delegation test. The
+analysis plan (\texttt{paper/pilot/preregistration.md}) is dated 25 October 2026 and was frozen in the author's own
+repository before the first calibration run, according to the author's records; every later change was recorded as a
+dated amendment. The plan was not deposited with an independent registry. The repository was created on GitHub on 25
+October 2026, and the earliest push that GitHub's event log still retains (28 October 2026) already contained the plan
+and the first pilot data, which attests that the plan existed by that date but not that it preceded the first runs; the
+public release of 1 November 2026 does not by itself attest its date.
 
 Four further amendments changed the set of configurations or their samples; each was written before the data it concerns
 existed. A4 equalised sample sizes: planned sizes had differed for budget reasons, and with 15 base episodes per class
@@ -269,4 +286,3 @@ developer of the AI system used to prepare this work (see Statements); the most 
 Astra) was not run, for cost. A9 dropped gpt-oss 20B, which duplicated the gpt-oss family; the question it would have
 answered, whether basis failures change with size within a family, is covered by the two three-size series.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

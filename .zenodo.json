@@ -1,7 +1,7 @@
 {
   "upload_type": "software",
-  "title": "WorkTrace: code and data for 'Which Decisions Can an AI Agent Take Without Review? A Pre-registered Pilot Comparing Evidence Tests, Track Records and LLM Judges'",
-  "version": "1.0",
+  "title": "WorkTrace: code and data for 'Which Decisions Can an AI Agent Take Without Review? A Prospectively Specified Pilot Comparing Evidence Tests, Track Records and LLM Judges'",
+  "version": "1.1",
   "language": "eng",
   "license": "Apache-2.0",
   "creators": [
@@ -11,7 +11,7 @@
       "orcid": "0009-0008-2928-0655"
     }
   ],
-  "description": "Code, data, run logs, pre-registration with all amendments, the ambiguity log with its legal check, the author's review files, reading notes and paper sources for the pre-registered pilot described in \"Which Decisions Can an AI Agent Take Without Review? A Pre-registered Pilot Comparing Evidence Tests, Track Records and LLM Judges\" (Szymon P. Pepliński, Generatywnie, 2026). Everything is synthetic: a fictional EU credit institution, generated registers, authorities and documents, and a policy that paraphrases public legal texts (AMLR, EBA guidelines, FATF Recommendations). No real data are used and no claim of regulatory compliance is made. Code: Apache-2.0. Texts, data, run logs, results and the paper (paper/latex/main.pdf): CC BY 4.0. Every number in the paper is reproducible from this archive without API access (see README.md).",
+  "description": "Code, data, run logs, the analysis plan frozen before data collection with all amendments, the ambiguity log with its legal check, the author's review files, reading notes and paper sources for the prospectively specified pilot described in \"Which Decisions Can an AI Agent Take Without Review? A Prospectively Specified Pilot Comparing Evidence Tests, Track Records and LLM Judges\" (Szymon P. Pepliński, Generatywnie, 2026). Everything is synthetic: a fictional EU credit institution, generated registers, authorities and documents, and a policy that paraphrases public legal texts (AMLR, EBA guidelines, FATF Recommendations). No real data are used and no claim of regulatory compliance is made. Code: Apache-2.0. Texts, data, run logs, results and the paper (paper/latex/main.pdf): CC BY 4.0. Every number in the paper is reproducible from this archive without API access (see README.md).",
   "keywords": [
     "AI agents",
     "delegation",
@@ -21,15 +21,15 @@
     "interventional testing",
     "anti-money laundering",
     "customer due diligence",
-    "pre-registered",
+    "prospectively specified",
     "synthetic data"
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/speplinski/worktrace/tree/v1.0",
+      "identifier": "https://github.com/speplinski/worktrace/tree/v1.1",
       "relation": "isIdenticalTo",
       "resource_type": "software"
     }
   ],
-  "publication_date": "2026-11-01"
+  "publication_date": "2026-11-03"
 }

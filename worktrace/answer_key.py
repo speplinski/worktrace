@@ -30,8 +30,10 @@ MISSING_EXCERPT = {"request": {"request_fresh_excerpt"},                    # or
                    "optional": {"no_action"}}                               # R3 does not require an excerpt
 
 
-def c3_answer(e: Episode, independence_shown: bool = True) -> set[str]:
-    """Oracle A for c3. With independence_shown=False exception R2(b) is never applied."""
+def c3_answer(e: Episode, independence_shown: bool = True, controller_required: bool = True) -> set[str]:
+    """Oracle A for c3. With independence_shown=False exception R2(b) is never applied. With controller_required=False the
+    policy's condition that the other source be independent of the register's controlling authority is dropped (the AMLR
+    wording, "another reliable source"; exploratory reading added 2026-11-03, not used by the registered key)."""
     reg = next((s for s in e.sources if s.authority == "A_CBR"), None)
     stm = _a_reliable_owner_statements(e)
     if reg is None or not stm:
@@ -57,7 +59,7 @@ def c3_answer(e: Episode, independence_shown: bool = True) -> set[str]:
     if not any(since and _d(since) > last_upd for _, _, _, since in stm):
         return {"report_to_register"}
     reg_ctrl = AUTHORITIES[reg.authority].controller
-    indep = [s for s, _, _, _ in stm if AUTHORITIES[s.authority].controller != reg_ctrl and s.copy_of is None]
+    indep = [s for s, _, _, _ in stm if (not controller_required or AUTHORITIES[s.authority].controller != reg_ctrl) and s.copy_of is None]
     if independence_shown and indep and not susp and not high:
         return {"request_customer_correction"}
     return {"report_to_register"}

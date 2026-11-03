@@ -1,0 +1,24 @@
+{
+ "beta": -0.078822135961794,
+ "wald_se": 0.13238869257220848,
+ "wald_p": 0.27579334186503784,
+ "n_cfg": 14,
+ "strata": {
+  "calibration/c3": 60,
+  "calibration/c5": 60,
+  "calibration/c6": 60,
+  "shifted/c3": 60,
+  "shifted/c5": 60,
+  "shifted/c6": 60
+ },
+ "B": 1000,
+ "fits": 1000,
+ "failed": 0,
+ "boot_se": 0.1447603046163672,
+ "p_normal_boot_se": 0.2930483675415317,
+ "p_recentred": 0.176,
+ "share_beta_ge_0": 0.339,
+ "pct_2_5": -0.3485365776185025,
+ "pct_97_5": 0.25362932980939606,
+ "seconds": 212
+}

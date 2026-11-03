@@ -52,7 +52,7 @@ CITES = {
     "Kim et al., 2026": "kim2026ledger", "Du & Chen, 2026": "du2026audita", "Chatrath et al., 2026": "chatrath2026ready",
     "Pang et al., 2026": "pang2026dnative", "Pawar et al., 2026": "pawar2026necessary", "Mahale, 2026": "mahale2026causal",
     "Bi et al., 2026": "bi2026nautil", "Hsu et al., 2026": "hsu2026arp", "Angelidis et al., 2026": "angelidis2026tba",
-    "Yu et al., 2026": "yu2026cxbench", "Jevons, 1865": "jevons1865coal", "Kinas, 2026": "kinas2026basal", "Liquid AI, 2026": "liquid2026d1", "Shukla et al., 2026": "shukla2026hedwig", "DosSantos DiSorbo & Ju, 2026": "dossantos2026escalate",
+    "Yu et al., 2026": "yu2026cxbench", "Jevons, 1865": "jevons1865coal", "Kinas, 2026": "kinas2026basal", "Microsoft, 2026": "microsoft2026agentssdk", "GitHub, 2026": "github2026copilotsdk", "Liquid AI, 2026": "liquid2026d1", "Shukla et al., 2026": "shukla2026hedwig", "DosSantos DiSorbo & Ju, 2026": "dossantos2026escalate",
 }
 
 
@@ -130,6 +130,17 @@ def tables_twocolumn(tex: str) -> str:
     return re.sub(r"\\begin\{longtable\}\[\]((?:\{[^\n]*\}))(.*?)\\end\{longtable\}", repl, tex, flags=re.S)
 
 
+def attach_table_notes(tex: str) -> str:
+    """A 'Notes to Table N.' paragraph and the footnotes that follow a table float move inside the float, so that
+    they are typeset under the table instead of wherever the text around the float lands."""
+    m = re.search(r"\\end\{tabular\}\n\\end\{table\*\}\n\n(Notes to Table \d+\..*?)\n\n(?=\\begin\{center\}\\rule)", tex, flags=re.S)
+    if not m:
+        return tex
+    notes = m.group(1).replace("\n\n", "\\par ")
+    block = "\\end{tabular}\n\\vspace{3pt}\\par\\begingroup\\footnotesize " + notes + "\\par\\endgroup\n\\end{table*}\n\n"
+    return tex[:m.start()] + block + tex[m.end():]
+
+
 def build_section(md_path: Path) -> set[str]:
     md, used = convert_citations(clean(md_path.read_text()))
     tex = subprocess.run(["pandoc", "-f", "markdown+tex_math_dollars-auto_identifiers", "-t", "latex",
@@ -142,7 +153,10 @@ def build_section(md_path: Path) -> set[str]:
     def cap(m):
         return m.group(2).replace("\\begin{table*}\n", "\\begin{table*}\n\\caption{" + m.group(1).strip() + "}\n", 1)
     tex = re.sub(r"QQCAPQQ(.*?)QQENDQQ\n*(.*?\\begin\{table\*\}\n)", cap, tex, flags=re.S)
+    tex = attach_table_notes(tex)
     tex = tex.replace("\\tightlist\n", "").replace("\\mathbb{1}", "\\mathds{1}")
+    # markdown "---" separators mark working sections in the drafts; they are not rules in print
+    tex = tex.replace("\\begin{center}\\rule{0.5\\linewidth}{0.5pt}\\end{center}\n", "")
     (OUT / (md_path.stem + ".tex")).write_text(f"% GENERATED from paper/draft/{md_path.name} by build.py — do not edit\n" + tex)
     return used
 

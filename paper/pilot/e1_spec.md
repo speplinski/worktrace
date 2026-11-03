@@ -116,7 +116,7 @@ For a factual episode E with decisive item X (known to the generator):
 
 ## 11. Cost estimate (verify rates before spending)
 
-Rates from the claude-api skill model table (cached 2026-10-06): Opus 5.5 $4 / $20 per MTok (cache read $0.20); Sonnet 5.5 $2 / $10 (cache read $0.20; correction 2026-10-31: the pricing page gives $0.10, used in `token_costs.py`); cache writes 1.25× (5-min TTL); Batch API −50% on all tokens. **Confirm on the official pricing page before any spend.** Script: `paper/pilot/cost_model.py`.
+Rates from the claude-api skill model table (cached 2026-10-06): Opus 5.5 $4 / $20 per MTok (cache read $0.20); Sonnet 5.5 $2 / $10 (cache read $0.20; correction 2026-10-31: the pricing page gives $0.10, used in `token_costs.py`; `worktrace/score.py`, which only enforces the cumulative spend cap during runs, kept $0.20 until 2026-11-03 and was then aligned, so the cap had been conservative for Sonnet by at most the difference on cache reads); cache writes 1.25× (5-min TTL); Batch API −50% on all tokens. **Confirm on the official pricing page before any spend.** Script: `paper/pilot/cost_model.py`.
 
 | Agent model | Token profile per run | Standard | Batch |
 |---|---|---|---|

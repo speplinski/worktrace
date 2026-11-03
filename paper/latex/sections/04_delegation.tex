@@ -15,15 +15,17 @@ For an episode \(E\) with action \(a(E)\) and normative action map \(A^*(E)\) (�
 
 and the \emph{unjustified-action} loss \(\ell_{\text{WT}}(E) = \max(\ell_{\text{out}}, \ell_{\text{basis}})\) (WT for
 WorkTrace, the name of the instrument), so that \(\ell_{\text{WT}} \ge \ell_{\text{out}}\) pointwise. An action is
-unjustified if it is wrong, or right but on a basis that fails a pre-registered intervention, for example by ignoring an
-inversion or surviving the removal of its only support. Control arms (null, placebo, sham, copy) are reported separately
-and do not enter \(\ell_{\text{basis}}\). Redundancy is handled by \(A^*\): if a redundant source survives \emph{remove
-\(X\)}, \(A^*\) does not change and an agent that keeps its action is not penalised. The guarantee below always holds
-\emph{relative to \(\mathcal{I}\)}; unjustified behaviour on features no intervention probes is invisible to it. In the
-theory only autonomous actions incur \(\ell_{\text{WT}}\), and escalation and refusal are charged through cost (§4.7).
-In the pilot the agent proposes an action on every episode and every proposal is scored against the admissible set, so
-an escalation is unjustified when escalation is not admissible, and the loss is computed over all episodes of the class
-(§4.2).
+unjustified if it is wrong, or right but on a basis that fails an intervention fixed in advance, for example by ignoring
+an inversion or surviving the removal of its only support. A basis failure records that the action was not reliable
+under the tested intervention family; it does not establish that the original decision was reached for the wrong reason,
+since an unstable agent or an error on the variant alone leaves the same record (§8). Control arms (null, placebo, sham,
+copy) are reported separately and do not enter \(\ell_{\text{basis}}\). Redundancy is handled by \(A^*\): if a redundant
+source survives \emph{remove \(X\)}, \(A^*\) does not change and an agent that keeps its action is not penalised. The
+guarantee below always holds \emph{relative to \(\mathcal{I}\)}; unjustified behaviour on features no intervention
+probes is invisible to it. In the theory only autonomous actions incur \(\ell_{\text{WT}}\), and escalation and refusal
+are charged through cost (§4.7). In the pilot the agent proposes an action on every episode and every proposal is scored
+against the admissible set, so an escalation is unjustified when escalation is not admissible, and the loss is computed
+over all episodes of the class (§4.2).
 
 The decomposition \(\ell_{\text{WT}} = \ell_{\text{out}} + (1-\ell_{\text{out}})\,\ell_{\text{basis}}\) has the same
 shape as the trajectory loss of ToolChain-CRC, whose Proposition 1 shows that calibrating on final answers cannot
@@ -49,9 +51,10 @@ decisions and \(k_c\) unjustified ones among them, where for the selective guara
 decisions of a selector fixed before calibration and for the pilot's whole-class rate it counts every episode of the
 class, the exact binomial p-value for \(H_c: R_c > \alpha_c\) is \(p_c = \Pr(\mathrm{Bin}(n_c, \alpha_c) \le k_c)\)
 (\citealp{clopper1934confidence}). If a within-class readiness threshold is used, thresholds are tested in a pre-specified
-fixed sequence (\citealp{angelopoulos2025ltt}). Classes are combined by Bonferroni, \(\delta_c = \delta/|\mathcal{C}|\), or by
-an allocation chosen on an independent split, as in Role-Stratified CRC (\citealp{rahman2026rolestratified}). The grant set is
-\(\hat G = \{c : p_c \le \delta_c\}\).
+fixed sequence (\citealp{angelopoulos2025ltt}). The B-conf baseline of the pilot instead applies a Bonferroni correction
+across its candidate confidence thresholds, as specified in amendment A11.2. Classes are combined by Bonferroni,
+\(\delta_c = \delta/|\mathcal{C}|\), or by an allocation chosen on an independent split, as in Role-Stratified CRC
+(\citealp{rahman2026rolestratified}). The grant set is \(\hat G = \{c : p_c \le \delta_c\}\).
 
 \textbf{Proposition 1 (simultaneous per-class guarantee).} Suppose the episodes in each \(D_c\) are i.i.d. draws from
 the generator's class-\(c\) distribution, future class-\(c\) episodes are drawn from the same distribution, and
@@ -117,19 +120,24 @@ seen; audited episodes are replayed with interventions to obtain \(X_t = \ell_{\
 \[\begin{aligned}M_t &= \prod_{s \le t} \big(1 + \lambda_s (X_s - \alpha'_c)\big),\\ \lambda_s &\in [0, 1/\alpha'_c) \text{ predictable},\end{aligned}\]
 and revokes at the first \(t\) with \(M_t \ge 1/\delta_{\text{rev}}\); by Ville's inequality the probability of a false
 revocation is at most \(\delta_{\text{rev}}\) under continuous monitoring (\citealp{waudbysmith2024betting};
-\citealp{podkopaev2022tracking}). Hysteresis, \(\alpha'_c > \alpha_c\) (e.g.~0.05 and 0.10), prevents a class whose true rate
-sits near \(\alpha_c\) from flapping. A revoked class returns to \emph{escalate}, and re-grant requires fresh evidence.
-Because failures are charged to the agent only when they are unjustified actions, not when the evidence could not have
-revealed the right action, revocation accumulates only agent-attributable failures (\citealp{castelfranchi2000trust}). A
-failure on a requirement triggers re-testing in every proceeding class that shares it.
+\citealp{podkopaev2022tracking}). Hysteresis, \(\alpha'_c > \alpha_c\) (with the pilot's \(\alpha_c = 0.10\), for example
+\(\alpha'_c = 0.15\)), prevents a class whose true rate sits near \(\alpha_c\) from flapping; the pilot grants classes
+at \(\alpha_c = 0.10\), so a revocation level for its grants would lie above 0.10. A revoked class returns to
+\emph{escalate}, and re-grant requires fresh evidence. Because failures are charged to the agent only when they are
+unjustified actions, not when the evidence could not have revealed the right action, revocation accumulates only
+agent-attributable failures (\citealp{castelfranchi2000trust}). A failure on a requirement triggers re-testing in every
+proceeding class that shares it.
 
 Data-driven per-class withdrawal already exists for outcome signals, explicitly in Digital Apprentice and implicitly in
 Minimal Oversight (\citealp{azevedo2026minimal}). What we add is withdrawal triggered by failed intervention tests, with
 hysteresis and re-testing across shared requirements. Unlike scheduled certificate resets (\citealp{khosravi2026csa}),
-revocation here is data-driven. Detection is slow: when the true rate doubles, the median delay is about 113 audited
-episodes at \(\alpha'_c = 0.05\). This argues for higher audit rates in high-stakes classes and is reported as a
-limitation. The grant--audit--revoke cycle has a classical precedent in continuous sampling inspection
-(\citealp{dodge1943sampling}).
+revocation here is data-driven. Detection is slow. In a simulation with \(\delta_{\text{rev}} = 0.05\) and the constant
+bet \(\lambda_s = 1/(1-\alpha'_c)\), the Kelly bet against a doubled rate, the median delay from a doubling of the true
+rate from \(\alpha'_c\) to \(2\alpha'_c\) is about 34 audited episodes at \(\alpha'_c = 0.15\) and about 118 at
+\(\alpha'_c = 0.05\) (50,000 simulated streams, fixed seed; \texttt{paper/pilot/revocation\_delay.py}). Revocation was
+specified but not exercised in the pilot, which tested granting only. This argues for higher audit rates in high-stakes
+classes and is reported as a limitation. The grant--audit--revoke cycle has a classical precedent in continuous sampling
+inspection (\citealp{dodge1943sampling}).
 
 \subsection{Cost and masking}
 

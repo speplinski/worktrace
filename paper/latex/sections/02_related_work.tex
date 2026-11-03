@@ -14,8 +14,8 @@ across tasks shows that trust can be transferred by matching task requirements t
 graduated by trust, with ``algorithmic circuit breakers'' for revocation and behavioural metrics as trust signals, and
 they note that current systems ``lack robust mechanisms for the dynamic assessment of competence''. Their framework is
 conceptual, without a measurement procedure or evaluation. \emph{We give an operational instance, tested in a
-pre-registered pilot: competence is estimated per decision class from intervention tests rather than assumed (Scerri) or
-read from reputation.}
+prospectively specified pilot: competence is estimated per decision class from intervention tests rather than assumed
+(Scerri) or read from reputation.}
 
 \textbf{Reasons-responsiveness and meaningful human control.} \citet{fischer1998responsibility} ground responsibility in
 a decision mechanism that is moderately reasons-responsive: it recognises reasons and reacts to them across a range of
@@ -27,8 +27,9 @@ is the first behavioural test of tracking for a foundation model. It varies deci
 for a single-step driving model and estimates the sensitivity of its decisions. It has no per-case ground truth for
 which fact should decide, no escalation option, and no link to delegation, and it does not separate recognising a reason
 from acting on it. \emph{DSA carries the tracking test to multi-step agents and to external evidence whose decisive role
-and redundancy are set by construction, relative to one reading of the policy. It scores receptivity and reactivity
-separately and uses the resulting profile to allocate autonomy.}
+and redundancy are set by construction, relative to one reading of the policy. It is designed to score receptivity and
+reactivity separately and to allocate autonomy from the resulting profile; the pilot measures reactivity and reports
+receptivity only through the declared-grounds test (§3.4).}
 
 \textbf{Traces, provenance and auditability.} Structured provenance has a long history (\citealp{w3c2013provo}). For LLM
 agents, LEDGER builds layered claim-to-evidence graphs over observed sessions and states the problem crisply:
@@ -100,18 +101,9 @@ and formalising law as code shows that statute text leaves choices the formalise
 of the policy that the oracles encode, report the primary result under every logged combination, and show that the
 choice of reading decided which delegation rule appeared to work (§6.1, §8).}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Legend: ✓ = present; ◐ = partial (see footnote); -- = absent. Columns: - \textbf{(a) Decision unit:} a single decision
-is the unit of analysis. - \textbf{(b) External-evidence interventions:} the agent's external evidence is changed and
-the agent is re-run. - \textbf{(c) Redundancy:} redundant or overdetermined evidence is handled. - \textbf{(d) Declared
-grounds:} the agent's own stated grounds are scored. - \textbf{(e) Per-class autonomy:} autonomy is allocated per class
-of decisions or tasks. - \textbf{(f) Revocation:} autonomy is withdrawn. - \textbf{(g) Held-out:} evaluation on held-out
-cases. - \textbf{(h) Shift:} evaluation under distribution shift. - \textbf{(i) Empirical:} empirical study with LLM
-agents.
 
 \begin{table*}
-\caption{Comparison with the closest work (✓ present; (✓) partial, see the notes; -- absent)}
+\caption{Comparison with the closest work (✓ present; ◐ partial, see the notes; -- absent)}
 \small
 \begin{tabular}{@{}
   >{\raggedright\arraybackslash}p{(\textwidth - 18\tabcolsep) * \real{0.4646}}
@@ -168,24 +160,28 @@ READY (\citealp{chatrath2026ready}) & -- & -- & -- & -- & ◐¹⁶ & ◐¹⁷ & 
 Certified deferral (\citealp{shen2026provable}) & ◐¹⁸ & -- & -- & -- & ◐¹⁹ & -- & ✓ & ◐²⁰ & ◐²¹ \\
 Role-Stratified CRC (\citealp{rahman2026rolestratified}) & ◐²² & ◐²³ & -- & -- & ◐²⁴ & -- & ✓ & ✓ & ✓ \\
 Conformal Selective Acting (\citealp{khosravi2026csa}) & ◐²⁵ & -- & -- & -- & -- & ◐²⁶ & ◐²⁷ & ✓ & ◐²⁸ \\
-\textbf{WorkTrace / DSA (this paper)} & ✓ & ✓ & ✓ & ✓ & ✓ & ◐²⁹ & ✓ & ✓ & ✓ \\
+\textbf{WorkTrace / DSA (this paper)} & ✓ & ✓ & ✓ & ◐³⁰ & ◐³¹ & ◐²⁹ & ✓ & ✓ & ✓ \\
 \bottomrule
 \end{tabular}
-\end{table*}
-
-Footnotes: 1. LEDGER: two qualitative case studies, no metrics. 2. TRACE: one record per claim or commitment. 3. TRACE:
+\vspace{3pt}\par\begingroup\footnotesize Notes to Table 1. Columns: (a) decision unit: a single decision is the unit of analysis; (b) external-evidence
+interventions: the agent's external evidence is changed and the agent is re-run; (c) redundancy: redundant or
+overdetermined evidence is handled; (d) declared grounds: the agent's own stated grounds are scored; (e) per-class
+autonomy: autonomy is allocated per class of decisions or tasks; (f) revocation: autonomy is withdrawn; (g) held-out:
+evaluation on held-out cases; (h) shift: evaluation under distribution shift; (i) empirical: empirical study with LLM
+agents.\par Footnotes: 1. LEDGER: two qualitative case studies, no metrics. 2. TRACE: one record per claim or commitment. 3. TRACE:
 argues that correlated sources add little (effective panel size); no tests. 4. DNative-Twin: replay under declared
 changes to recorded state; no LLM agent is re-run. 5. Ariadne: intervenes on the agent's generated reasoning steps, not
-on stated grounds about evidence. 6. Ariadne: single-model QA without tools; numbers internally inconsistent. 7. Pawar,
-AgentAbstain: single decision or task pair, not multi-step episodes. 8. Pawar: changes input factors of tool-free
-decisions. 9. AUDITA: live LLM pipelines, but evidence partly simulated. 10. CARE-Drive: varies facts written into a
-single prompt. 11. Pandey et al.: corrupted sources in synthetic payment episodes. 12. Prescribed, not implemented or
-evaluated. 13. Trust Before Autonomy: ``unanswerable variants'' correspond to removing the sole decisive source. 14.
-Hedwig: evaluated on 11 operations with an LLM judge. 15. Minimal Oversight: implicit, through a decaying success-rate
-estimate; simulation only. 16. READY: one global threshold per agent and workflow, with per-case accept or escalate. 17.
-READY: re-qualification on version changes, no statistical monitoring. 18. Shen: single multiple-choice answers, not
-agent decisions. 19. Shen: one certified confidence threshold per model--task pair. 20. Shen: threshold transfer between
-two tasks only; the certificate assumes no shift. 21. Shen: eleven small LLMs on multiple-choice QA, without tools. 22.
+on stated grounds about evidence. 6. Ariadne: single-model QA without tools; the report gives two sample sizes (30 and
+500) and two headline values for the same rate, so we read it as preliminary. 7. Pawar, AgentAbstain: single decision or
+task pair, not multi-step episodes. 8. Pawar: changes input factors of tool-free decisions. 9. AUDITA: live LLM
+pipelines, but evidence partly simulated. 10. CARE-Drive: varies facts written into a single prompt. 11. Pandey et al.:
+corrupted sources in synthetic payment episodes. 12. Prescribed, not implemented or evaluated. 13. Trust Before
+Autonomy: ``unanswerable variants'' correspond to removing the sole decisive source. 14. Hedwig: evaluated on 11
+operations with an LLM judge. 15. Minimal Oversight: implicit, through a decaying success-rate estimate; simulation
+only. 16. READY: one global threshold per agent and workflow, with per-case accept or escalate. 17. READY:
+re-qualification on version changes, no statistical monitoring. 18. Shen: single multiple-choice answers, not agent
+decisions. 19. Shen: one certified confidence threshold per model--task pair. 20. Shen: threshold transfer between two
+tasks only; the certificate assumes no shift. 21. Shen: eleven small LLMs on multiple-choice QA, without tools. 22.
 Role-Stratified CRC: individual argument fields of tool calls. 23. Role-Stratified CRC: prompt injections in tool
 outputs, contrasted with clean runs on recorded traces; agents are not re-run. 24. Role-Stratified CRC: thresholds per
 argument role, gating field values at run time, not autonomy; recalibration, no revocation. 25. Conformal Selective
@@ -193,6 +189,8 @@ Acting: act or abstain on single outputs in one stream. 26. Conformal Selective 
 fixed epoch boundaries; no data-driven revocation. 27. Conformal Selective Acting: risk is controlled online on the same
 stream; a held-out split only calibrates the score. 28. Conformal Selective Acting: RLVR-trained LLMs on benchmark
 streams, including live online fine-tuning, not agents with tools. 29. This paper: revocation is specified (§4.6) but
-not exercised in the pilot.
+not exercised in the pilot. 30. This paper: declared grounds are scored by an LLM judge for factual decisions only
+(§6.2); the joint receptivity × reactivity table of §3.5 is not reported. 31. This paper: the pilot exercises granting
+only; narrowing and revocation are specified (§4.5, §4.6) but not exercised.\par\endgroup
+\end{table*}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

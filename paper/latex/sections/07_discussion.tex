@@ -8,13 +8,19 @@ better basis for delegating a class of decisions than its track record. The regi
 it as support (§6.1): the advantage rests on one intervention arm, the removal of a register excerpt the policy does not
 require, whose correct answer a policy audit flagged during the pilot (the second arm the audit flagged, an inverted
 deed, does not carry it; §6.1), it disappears when the flagged arms are excluded or when the author's reviewed key is
-used, and in the exploratory multiverse of 60 combinations of four logged policy readings (24 distinct keys; §8) it
-survives only in combinations that include at least one reading stricter than the legal texts the policy paraphrases.
-The sensitivity analyses are post hoc, and the reviewed key rests on one reviewer. In sum, the pilot cannot tell the two
-rules apart, and the registered result would have been reported as a success had the answer key not been examined. Among
-the API configurations, a readiness gate built from only the null arm and the removal of a sole source was never worse
-than the full intervention family at matched coverage under the registered key and without the contested arms, and split
-1 : 1 with it under the reviewed key (§6.2); the pilot gives no evidence that the composed arms add delegation value.
+used, and in the exploratory multiverse of 60 combinations of four logged policy readings (§8) it reaches a nominal
+one-sided \(p < 0.05\) in ten of the 60 keys, without correction for multiplicity, each of which includes a reading
+stricter than the legal texts the policy paraphrases; one of the ten is the key that follows the policy's own wording
+with reporting admitted (\(p = 0.011\) on 7 comparisons; §8). Under the 30 further keys of the sensitivity analysis that
+drops the policy's own independence condition, which the legal text does not contain, it reaches \(p < 0.05\) under none
+(§8). The sensitivity analyses are post hoc, and the reviewed key rests on one reviewer. The registered estimate itself
+is less certain than the model reports: when the sampling of episodes enters the uncertainty (the two-way bootstrap of
+§5.7), its one-sided \(p\) is 0.052 on all data and 0.033 in the common core, and the 95\% intervals reach +0.04 and
++0.01. In sum, the pilot cannot tell the two rules apart, and the registered result would have been reported as a
+success had the answer key not been examined. Among the API configurations, a readiness gate built from only the null
+arm and the removal of a sole source was never worse than the full intervention family at matched coverage under the
+registered key and without the contested arms, and split 1 : 1 with it under the reviewed key (§6.2); the pilot gives no
+evidence that the composed arms add delegation value.
 
 \textbf{The key fed both sides of the test.} The certification step and the criterion it was judged by were scored
 against the same oracles. In the freshness class this produced an advantage that was itself right for the wrong reason
@@ -32,12 +38,13 @@ and it would have been cheaper still before them.
 mean different things at the two ends of the range. For the frontier agents between two fifths and four fifths of the
 basis failures lie on the contested arms, so their extent is a matter of the key (§6.3). For the local and decision
 models the failures are mostly non-reactions to the decisive evidence (§6.3), the deficit the known-groups check planted
-in the memorising agent and the instrument detected. Within the two three-size series, basis failures fall with size in
-the discrepancy class for the GPT-6 line (32\%, 30\%, 8\%) and in the freshness and onboarding classes for the Claude
-line (53\%, 45\%, 42\%; 7\%, 0\%, 0\%), and not in the other three series--class pairs; with 60 episodes per class these
-differences are descriptive. Basal 2.0-max's calibrated probabilities predict its own basis failures (AUROC 0.84), which
-suggests that decision models carry information about the basis of their answers that a confidence threshold could use,
-but the threshold rule cannot certify anything at this sample size.
+in the memorising agent and the instrument detected. Within the two three-size series, the basis loss
+\(\ell_{\text{basis}}\) falls with size in the discrepancy class for the GPT-6 line (32\%, 30\%, 8\%) and in the
+freshness and onboarding classes for the Claude line (53\%, 45\%, 42\%; 7\%, 0\%, 0\%; common core, calibration split,
+\texttt{paper/pilot/results\_core.md}), and not in the other three series--class pairs; with 60 episodes per class these
+differences are descriptive. Basal 2.0-max's reported probabilities, although overconfident (Appendix A), predict its
+own basis failures (AUROC 0.84), which suggests that decision models carry information about the basis of their answers
+that a confidence threshold could use, but the threshold rule cannot certify anything at this sample size.
 
 \textbf{Certification at sixty episodes.} With \(\alpha = 0.10\) and one failure tolerated, a class is certified only
 when it is almost clean. Under the registered key DSA certified only the onboarding class, in which escalation is always
@@ -57,17 +64,17 @@ First, an explanation is a report of one execution, and whether a decision depen
 relational property that cannot be read from one execution (\citealp{pandey2026local}). A judge can check that the stated
 reasons are consistent with the policy, which is what it did, and that is a different property. Stated reasons that read
 well and are unfaithful are a known failure mode (\citealp{turpin2023unfaithful}; \citealp{lanham2023measuring}); the pilot adds
-that a second model reading the same text passes most of the decisions the interventions mark as unfaithful. Second, a
-judge brings its own reading of the policy. In the onboarding class the Haiku judge read ``current register excerpt'' as
-the beneficial-ownership register, unlike the oracles and every agent, and that one reading produced about two thirds of
-the comparisons the judge-based rules lost (§6.1). A judge-gated autonomy rule, as proposed in delegation frameworks
-with behavioural metrics (\citealp{tomasev2026delegation}) or implemented in readiness qualification with an LLM-judged
-process defect (\citealp{chatrath2026ready}), therefore adds a second answer key rather than an independent check. Third, the
-signal that does exist in the trace is structural. The judge's check of the documents the agent named as decisive
-separated wrong-basis decisions from the rest better than its free-text verdict, and a mechanical comparison with a
-fixed list of decisive documents did not separate at all (§6.2): what carries the signal is a reading of the declaration
-against the policy. Declared grounds, as the typed decision records reviewed in §2 propose, are the part of a trace
-worth keeping, but checking them is itself an act of interpretation.
+that a second model reading the same text passes most of the decisions that fail an interventional test. Second, a judge
+brings its own reading of the policy. In the onboarding class the Haiku judge read ``current register excerpt'' as the
+beneficial-ownership register, unlike the oracles and every agent, and that one reading produced about two thirds of the
+comparisons the judge-based rules lost (§6.1). A judge-gated autonomy rule, as proposed in delegation frameworks with
+behavioural metrics (\citealp{tomasev2026delegation}) or implemented in readiness qualification with an LLM-judged process
+defect (\citealp{chatrath2026ready}), therefore adds a second answer key rather than an independent check. Third, the signal
+that does exist in the trace is structural. The judge's check of the documents the agent named as decisive separated
+wrong-basis decisions from the rest better than its free-text verdict, and a mechanical comparison with a fixed list of
+decisive documents did not separate at all (§6.2): what carries the signal is a reading of the declaration against the
+policy. Declared grounds, as the typed decision records reviewed in §2 propose, are the part of a trace worth keeping,
+but checking them is itself an act of interpretation.
 
 The limits of this result are the limits of the pilot. There is no third standard: the judge also flags about a sixth of
 the decisions that pass every intervention, and where the judge and the oracles read a rule differently, as in the
@@ -96,9 +103,20 @@ A factual decision by an agent with tools took three turns and 4,000--8,000 inpu
 4 26B, with six turns, 14,000), and a decision model took one call of 1,400--2,600 tokens. Certifying one class from 60
 episodes, averaging eight or nine arms per episode, took 7.5--9 times the tokens of the 60 factual decisions. At the
 list prices recorded in the specification (6 October 2026, checked against the pricing page on 31 October 2026), a
-factual decision cost between USD 0.0012 (Claude Haiku 5.5) and USD 0.035 (Claude Opus 5.5), and certifying one class
-between USD 0.49 and USD 13.69, six to seven times the cost of the factual decisions in the same calibration set; we
-give no prices for the other developers' models because their rates were not recorded. This cost is paid once per
+factual decision cost between USD 0.0001 (GPT-6 Luna on the Decisions API) and USD 0.035 (Claude Opus 5.5), and
+certifying one class between USD 0.05 (the Decisions API; USD 0.22 for GPT-6 Luna with tools) and USD 13.69 (Claude Opus
+5.5), six to seven times the cost of the factual decisions in the same calibration set for the Claude configurations and
+eight to nine times for the OpenAI ones (Claude rates as recorded on 6 October 2026, with Sonnet's cache-read rate
+corrected on 31 October; OpenAI rates as recorded in the run code on 26 October 2026). The local models and the two
+local decision models ran on the author's hardware and are not priced. The providers' usage exports for the whole pilot
+(25--31 October 2026) show USD 116.21 billed by Anthropic (Haiku 17.78 including the judge and the smoke test, Sonnet
+30.16, Opus 68.27) and USD 23.63 by OpenAI (the three agents, the Decisions API and the second judge); the token counts
+in the run logs agree with the billed counts to within 0.1\% in aggregate, and the logged tokens at the rates above come
+to within USD 0.04 of the billed total (\texttt{paper/pilot/billing\_check.md}), so the figures in this section are the
+billed rates, not a list-price estimate. The cost ratio is below the token ratio because the intervention arms re-read
+the unchanged documents from the prompt cache, billed at a tenth of the input price for Haiku and Luna and a twentieth
+for Sonnet, Opus, Terra and Sol at the recorded rates: for the Claude configurations cache reads were 58--81\% of the
+input-side tokens of a factual decision and 86--94\% of those of an intervention arm. This cost is paid once per
 configuration and class and then spread over every decision the certificate covers, plus the cost of sequential
 monitoring (§4.6). Against a human review of the same file, which takes minutes, it is small.
 
@@ -112,21 +130,18 @@ where it does not.
 \subsection{Applying the instrument where the agent is a product}
 
 A reader whose institution has one AI tool, an office assistant such as Microsoft 365 Copilot, will ask how any of this
-applies. The instrument needs three things from a configuration, none of which is a particular model. The configuration
-must be callable programmatically: certifying one class took about five hundred runs in the pilot, and monitoring
-continues in production. Its inputs must be controllable, since every intervention replaces one document in the file and
-the agent must not see the other variants of the same case. And it must return a decision with declared grounds. An
-assistant used by hand in a chat window meets none of these. An agent built in the institution's own tooling, with the
-institution's policy as its instructions and a tool that fetches the documents of a case, exposed through that tooling's
-programmatic interface, meets all three; at the time of writing (October 2026), the Microsoft stack offers this through
-agents built in Copilot Studio and called from the institution's own code through the Microsoft 365 Agents SDK or Direct
-Line (Microsoft Learn, ``Integrate a Copilot Studio agent with a web or native app using the Microsoft 365 Agents SDK'',
-accessed 31 October 2026), and GitHub's Copilot SDK (github.com/github/copilot-sdk, accessed 31 October 2026) lets
-development teams put frontier models from several developers behind custom tools, the form (a model behind a document
-tool) that the pilot's agents took directly on the developers' APIs. What is certified is then the artefact that would
-be deployed. Two consequences follow from the results above. A product that selects and updates its models silently
-changes the configuration under the certificate, so certificates are short-lived and sequential monitoring (§4.6)
-becomes the main instrument. And the convenient reviewer, the same assistant asked to check its own decisions, is the
-judge of §6.2, which passed most of the wrong-basis decisions it saw. The hard part is not the interface but the
-oracles: an institution has to write down its own readings of its own policy before any agent runs, which is the lesson
-of §7.1.
+applies. The instrument needs three things from a configuration, none of which is a particular model: it must be
+callable programmatically, since certifying one class took about five hundred runs in the pilot and monitoring continues
+in production; its inputs must be controllable, since every intervention replaces one document in the file and the agent
+must not see the other variants of the same case; and it must return a decision with declared grounds. An assistant used
+by hand in a chat window meets none of these. An agent built in the institution's own tooling, with the policy as its
+instructions and a tool that fetches the documents of a case, exposed through that tooling's programmatic interface,
+meets all three; at the time of writing (October 2026) the Microsoft stack offers this through Copilot Studio agents
+called from the institution's own code (\citealp{microsoft2026agentssdk}), and the GitHub Copilot SDK puts frontier models
+from several developers behind custom tools (\citealp{github2026copilotsdk}), the form the pilot's agents took directly on the
+developers' APIs. What is certified is then the artefact that would be deployed. Two consequences follow from the
+results above. A product that selects and updates its models silently changes the configuration under the certificate,
+so certificates are short-lived and sequential monitoring (§4.6) becomes the main instrument. And the convenient
+reviewer, the same assistant asked to check its own decisions, is the judge of §6.2, which passed most of the
+wrong-basis decisions it saw. The oracles remain the hard part: an institution has to write down its own readings of its
+own policy before any agent runs, which is the lesson of §7.1.

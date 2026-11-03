@@ -14,7 +14,7 @@ from pathlib import Path
 
 RATES = {  # $/MTok: input, output, cache_read ; cache write = 1.25 x input (5-min TTL)
     "claude-haiku-5-5": (0.10, 0.50, 0.01),
-    "claude-sonnet-5-5": (2.00, 10.00, 0.20),
+    "claude-sonnet-5-5": (2.00, 10.00, 0.10),  # cache read corrected from 0.20 to 0.10 on 2026-11-03 (pricing page, 2026-10-31), as in paper/pilot/token_costs.py; the run-time spend cap used 0.20
     "claude-opus-5-5": (4.00, 20.00, 0.20),
     # OpenAI, standard tier, short context (developers.openai.com/api/docs/pricing, read 2026-10-26)
     "gpt-6-luna": (0.10, 0.50, 0.01),

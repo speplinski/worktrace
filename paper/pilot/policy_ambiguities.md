@@ -67,7 +67,8 @@ entity uses it, inviting the customer is the required step and reporting follows
 derogation would be available on the text (register outdated, court record names the current owners, no alert,
 standard risk), so both actions would be admissible: the oracles' single answer (correction) and the author's first verdict (report,
 withdrawn on 2026-10-30) are both narrower than the text. The policy's R2 uses the same word ("may"), so the reading in
-entry 9 is the one closest to the text. In the exploratory check it changes no H3 number.
+entry 9 is the one closest to the text. In the exploratory check (reporting admitted in that entry's case) it changes no H3 number; reporting
+admissible wherever the derogation applies has not been varied as a dimension of the multiverse.
 
 **(iii) Filing of annual accounts as a "change" (entry 8; E03).** FATF INR.10 §23: CDD information "kept up-to-date
 and relevant by undertaking reviews of existing records, particularly for higher-risk categories of customers";
@@ -107,6 +108,17 @@ choices to the institution. The AMLR is more specific, and against it the policy
 review found contested: the independence condition in R2(b) (i) and "any change" in R3 (iii); in a third (ii) the
 oracles turned a permission into a single required answer. Among the 60 keys of the exploratory multiverse
 (`multiverse/multiverse.md`), the one closest to the texts (exception (b) available on another reliable source,
-annual accounts not a change, no excerpt required in the file) is row 3: on the final data (14 configurations), common core, DSA lower in 3 of 9 differing
-cells and higher in 4 (β_DSA = −0.01, one-sided p = 0.48); all data 3 : 4 of 8 (−0.00, 0.48). The "may" reading of
-(ii) changes no number. For phase 2 the policy text is to be aligned with the legal texts before any test is run.
+annual accounts not a change, no excerpt required in the file) is row 3 with the inverted deed scored as the oracles do and row 4
+with reporting also admitted for the deed (entry 2), a reading this legal check does not settle: on the final data (14 configurations),
+common core, row 3 gives DSA lower in 3 of 9 differing cells and higher in 4 (β_DSA = −0.01, one-sided p = 0.48; all data 3 : 4 of 8,
+−0.00, 0.48) and row 4 gives 4 : 3 of 7 (−0.09, 0.19; all data 4 : 3 of 7, −0.08, 0.20). The "may" reading of (ii) (entry 9) changes
+no number. Ten of the 60 keys give a nominal one-sided p < 0.05 in the common core (eleven on all data), without correction for
+multiplicity: seven treat a missing excerpt as missing evidence and the other three count annual accounts as a change with reporting
+admitted for the deed (rows 14, 18, 20; the literal-policy key, p = 0.011 on 7 cells). All 60 keys differ in at least one admissible set, and all keep the policy's condition that the other source be independent of the register's
+controlling authority (independence = shown decides it from the hidden controller field; = not shown never applies the exception); none implements the
+AMLR wording ("another reliable source"). Added 2026-11-03 after a review: a third independence reading, any reliable source, without the controller
+condition (rows 61–90; `worktrace/answer_key.py`, `controller_required=False`): it changes the admissible set of 1,162 of 34,580 core records and
+1,491 of 45,001 on all data; under none of the 30 keys does DSA reach p < 0.05 (deed as the oracles: p 0.13–0.99 core, 0.15–0.96 all data; reporting
+admitted: 0.25–1.00, 0.27–0.99). Row 63 (any reliable source, not a change, optional, oracle), the key that drops the controller condition and takes the lenient reading on the other
+three dimensions, gives 4 : 0 : 1 (β −0.09, p 0.14; all data 4 : 0 : 0, −0.08, 0.16). All 30 variants keep the oracles' single-action convention
+where the exception applies; "also report" concerns only the contested inverted deed. For phase 2 the policy text is to be aligned with the legal texts before any test is run.

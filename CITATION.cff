@@ -1,15 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite the paper. Code is Apache-2.0; texts, data, run logs, results and the paper are CC BY 4.0."
 type: software
-title: "WorkTrace: code and data for 'Which Decisions Can an AI Agent Take Without Review? A Pre-registered Pilot Comparing Evidence Tests, Track Records and LLM Judges'"
+title: "WorkTrace: code and data for 'Which Decisions Can an AI Agent Take Without Review? A Prospectively Specified Pilot Comparing Evidence Tests, Track Records and LLM Judges'"
 authors:
   - family-names: "Pepliński"
     given-names: "Szymon P."
     orcid: "https://orcid.org/0009-0008-2928-0655"
     affiliation: "Generatywnie"
-date-released: 2026-11-01
-version: "1.0"
-doi: 10.5281/zenodo.23868235
+date-released: 2026-11-03
+version: "1.1"
+doi: 10.5281/zenodo.23868234
 license: Apache-2.0
 repository-code: "https://github.com/speplinski/worktrace"
 url: "https://github.com/speplinski/worktrace"
@@ -19,4 +19,4 @@ keywords:
   - human oversight
   - evaluation
   - anti-money laundering
-  - pre-registered
+  - prospectively specified

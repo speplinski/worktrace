@@ -5,14 +5,14 @@ One-time setup (Terminal):
 ```bash
 brew install uv git                 # if missing
 # Ollama app must be running (menu-bar icon); models used: gpt-oss:20b (and later gpt-oss:120b)
-cd ~ && git clone https://github.com/speplinski/worktrace-paper.git && cd worktrace-paper
+cd ~ && git clone https://github.com/speplinski/worktrace.git && cd worktrace
 echo "WORKTRACE_API_KEY=sk-ant-api03-PASTE-YOUR-KEY" > .env     # never committed (.gitignore)
 ```
 
 Smoke test (≈ 30–90 min; ≈ $1–3 of API credit; Mac must stay awake):
 
 ```bash
-cd ~/worktrace-paper && git pull
+cd ~/worktrace && git pull
 caffeinate -i bash scripts/smoke.sh
 ```
 
@@ -47,7 +47,7 @@ uv pip install "basal[mlx] @ https://github.com/rkinas/basal/archive/refs/tags/v
 basal-serve --model Remek/basal-2.0-max-MLX-8bit --mode mlx --port 8000      # leave running in its own tab
 ```
 
-Then, in the worktrace-paper tab:
+Then, in the worktrace tab:
 
 ```bash
 uv run python -m worktrace.run --agent "basal:basal-2.0-max@http://127.0.0.1:8000" --n 1 --out runs/ping_basal20max.jsonl
